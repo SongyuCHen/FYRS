@@ -1,0 +1,492 @@
+.titleconent {
+	width: 770px;
+	height: 150px;
+	display: block;
+	position: absolute;
+}
+
+#sjxz {
+	width: 385px;
+	height: 150px;
+	float: left;
+}
+
+#selectmenu {
+	width: 385px;
+	height: 150px;
+	float: right;
+}
+
+.mainconent {
+	width: 770px;
+	height: 500px;
+	position: absolute;
+}
+
+#content {
+	width: 770px;
+	height: 500px;
+	margin-top: 150px;
+	border-top: 2px solid #96C8EB;
+}
+
+.selectcontent {
+	width: 280px;
+	height: 150px;
+	margin-left: 65px;
+	display: relative;
+}
+
+#select {
+	width: 250px;
+	height: 80px;
+	border: 1px;
+	padding-top: 5px;
+}
+
+.bianhua {
+	width: 280px;
+	height: 60px;
+}
+
+#scbb {
+	width: 100px;
+	height: 40px;
+	float: right;
+	margin-top: 5px
+}
+
+#tablecontent {
+	width: 750px;
+	height: 480px;
+	margin-top: 20px;
+	margin-left: 10px;
+	overflow: auto;
+}
+
+#tablenr {
+	width: 700px;
+	margin-left: 25px;
+}
+
+#tablenrone {
+	width: 700px;
+	margin-left: 25px;
+}
+
+#tablenrtwo{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablenrthree{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablenrfour{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablenrfive{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablenrsix{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablenrseven{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablenreight{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablenrnine{
+	width:700px;
+	margin-left:25px;
+}
+
+#tabletitle {
+	height: 30px;
+}
+
+#tabletitleone {
+	height: 30px;
+}
+
+#tabletitletwo{
+	height:30px;	
+}
+
+#tabletitlethree{
+	height:30px;
+}
+
+#tabletitlefour{
+	height:30px;
+}
+
+#tabletitlefive{
+	height:30px;
+}
+
+#tabletitlesix{
+	height:30px;
+}
+
+#tabletitleseven{
+	height:30px;
+}
+
+#tabletitleeight{
+	height:30px;
+}
+
+#tabletitlenine{
+	height:30px;
+}
+
+#tabletitle span {
+	font-size: 20px;
+	text-align: center;
+	display: block;
+}
+
+#tabletitleone span {
+	font-size: 20px;
+	text-align: center;
+	display: block;
+}
+
+#tabletitletwo span{
+	font-size:20px;
+	text-align:center;
+	display:block;
+}
+
+#tabletitlethree span{
+	font-size:20px;
+	text-align:center;
+	display:block;
+}
+
+#tabletitlefour span{
+	font-size:20px;
+	text-align:center;
+	display:block;
+}
+
+#tabletitlefive span{
+	font-size:20px;
+	text-align:center;
+	display:block;
+}
+
+#tabletitlesix span{
+	font-size:20px;
+	text-align:center;
+	display:block;
+}
+
+#tabletitleseven span{
+	font-size:20px;
+	text-align:center;
+	display:block;
+}
+
+#tabletitleeight span{
+	font-size:20px;
+	text-align:center;
+	display:block;
+}
+
+#tabletitlenine span{
+	font-size:20px;
+	text-align:center;
+	display:block;
+}
+
+#tablemenu {
+	width: 700px;
+	margin-left: 25px;
+}
+
+#tablemenuone {
+	width: 700px;
+	margin-left: 25px;
+}
+
+#tablemenutwo{
+	width:700px;
+	margin-left:25px;	
+}
+
+#tablemenuthree{
+	width:700px;
+	margin-left:25px;	
+}
+
+#tablemenufour{
+	width:700px;
+	margin-left:25px;	
+}
+
+#tablemenufive{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablemenusix{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablemenuseven{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablemenueight{
+	width:700px;
+	margin-left:25px;
+}
+
+#tablemenunine{
+	width:700px;
+	margin-left:25px;
+}
+
+#tableone {
+	width: 680px;
+	height: 250px;
+	border: 1px solid #ccc;
+}
+
+#tabletwo {
+	width: 680px;
+	height: 100px;
+	border: 1px solid #ccc;
+}
+
+#tablethree {
+	width: 680px;
+	height: 150px;
+	border: 1px solid #ccc;
+}
+
+#tablefour {
+	width: 680px;
+	height: 100px;
+	border: 1px solid #ccc;
+}
+
+#tableone tr {
+	height: 50px;
+	border: 1px solid #ccc;
+}
+
+#tableone td {
+	border: 1px solid #ccc;
+}
+
+#tabletwo tr {
+	height: 50px;
+	border: 1px solid #ccc;
+}
+
+#tabletwo td {
+	border: 1px solid #ccc;
+}
+
+#fgyjkp {
+	width: 1200px;
+	border: 1px solid #ccc;
+}
+
+#fgyjkpxst{
+	width:2000px;
+	border:1px solid #ccc;	
+}
+
+#fgyjkpmst{
+	width:2000px;
+	border:1px solid #ccc;	
+}
+
+#xzspt{
+	width:2000px;
+	border:1px solid #ccc;
+}
+
+#xzspt tr{
+	border: 1px solid #ccc;
+}
+
+#xzspt td{
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#fgyjkp tr {
+	border: 1px solid #ccc;
+}
+
+#fgyjkp td {
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#fgyjkpxst tr {
+	border: 1px solid #ccc;
+}
+
+#fgyjkpxst td {
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#fgyjkpmst tr {
+	border: 1px solid #ccc;
+}
+
+#fgyjkpmst td {
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#zxj{
+	width:1500px;
+	border:1px solid #ccc;
+}
+
+#zxj tr{
+	border: 1px solid #ccc;
+}
+
+#zxj td{
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#spjdt{
+	width:1500px;
+	border:1px solid #ccc;
+}
+
+#spjdt tr{
+	border: 1px solid #ccc;
+}
+
+#spjdt td{
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#laj{
+	width:1500px;
+	border:1px solid #ccc;
+}
+
+#laj tr{
+	border: 1px solid #ccc;
+}
+
+#laj td{
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#pcb{
+	width:1000px;
+	border:1px solid #ccc;
+}
+
+#pcb tr{
+	border: 1px solid #ccc;
+}
+
+#pcb td{
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#zwzj{
+	width:1500px;
+	border:1px solid #ccc;
+}
+
+#zwzj tr{
+	border: 1px solid #ccc;
+}
+
+#zwzj td{
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+	text-align:center;
+}
+
+#tablethree tr {
+	height: 50px;
+	border: 1px solid #ccc;
+}
+
+#tablefour tr {
+	height: 50px;
+	border: 1px solid #ccc;
+}
+
+#tablefour td {
+	border: 1px solid #ccc;
+}
+
+#tablethree td {
+	border: 1px solid #ccc;
+}
+
+td span {
+	text-align: center;
+	display: block;
+}
+
+#odd {
+	width: 100px;
+}
+
+#even {
+	width: 50px;
+}
+
+#even span {
+	cursor: pointer;
+}
+
+#loadingSpinner {
+	margin-left: 320px;
+	width: 50px;
+	height: 50px;
+}

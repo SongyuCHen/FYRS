@@ -1,0 +1,9 @@
+<div id="header" xmlns:jsp="http://java.sun.com/JSP/Page"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+
+    <span>
+       版权所有 淮安市中级人民法院  |  技术支持 南京铉盈网络科技有限公司
+    </span>
+</div>

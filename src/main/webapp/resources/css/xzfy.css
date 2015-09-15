@@ -1,0 +1,18 @@
+.xzfy_dlg{padding:0;width:250px;border:1px solid #458FBC;border-radius:4px;font-size:12px;}
+.xzfy_ul{height:360px;overflow-y:scroll;_height:360px;_overflow-y:scroll;}
+.xzfy_ul a{cursor: pointer;}
+.xzfy_ok{background:url('../images/ok.png');display:inline-block;width:20px;height:20px;margin-left:150px;_margin-left:100px;}
+.xzfy_cancel{background:url('../images/cancel.png');display:inline-block;width:20px;height:17px;margin-left:10px;}
+.treeview .hover,.treeview .active {color: black;background: #e6e6e6;}
+
+.xzyh_dlg{padding:0;width:154px;border:1px solid #458FBC;border-radius:4px;}
+.xzyh_ul{height:360px;overflow-y:scroll;}
+.xzyh_ul a{cursor: pointer;}
+.xzyh_ok{background:url('../img/ok.png');display:inline-block;width:20px;height:20px;margin-left:150px;_margin-left:100px;}
+.xzyh_cancel{background:url('../img/cancel.png');display:inline-block;width:20px;height:17px;margin-left:10px;}
+
+.xzry_dlg{padding:0;width:154px;border:1px solid #458FBC;border-radius:4px;}
+.xzry_ul{height:360px;overflow-y:scroll;}
+.xzry_ul a{cursor: pointer;}
+.xzry_ok{background:url('../img/ok.png');display:inline-block;width:20px;height:20px;margin-left:150px;_margin-left:100px;}
+.xzry_cancel{background:url('../img/cancel.png');display:inline-block;width:20px;height:17px;margin-left:10px;}

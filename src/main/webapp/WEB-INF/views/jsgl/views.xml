@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="mainLayout" name="jsgl/list">
+        <put-attribute name="content"
+            value="/WEB-INF/views/jsgl/list.jsp" />
+    </definition>
+    <definition extends="mainLayout" name="jsgl/show">
+        <put-attribute name="content"
+            value="/WEB-INF/views/jsgl/show.jsp" />
+    </definition>
+    <definition extends="mainLayout" name="jsgl/update">
+        <put-attribute name="content"
+            value="/WEB-INF/views/jsgl/edit.jsp" />
+    </definition>
+    <definition extends="mainLayout" name="jsgl/create">
+        <put-attribute name="content"
+            value="/WEB-INF/views/jsgl/edit.jsp" />
+    </definition>                                  
+</tiles-definitions>

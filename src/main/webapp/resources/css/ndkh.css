@@ -1,0 +1,75 @@
+.main_content{
+	width:700px;
+	height:450px;
+	/*background-color:black;*/
+	margin-left:35px;
+	padding-top:30px;
+}
+
+#content{
+	width:500px;
+	height:400px;
+	/*background-color:blue;*/
+	margin-left:100px;
+	
+}
+
+#content_bottom{
+	width:500px;
+	height:50px;
+	/*background-color:blue;*/	
+	margin-left:100px;
+	padding-left:160px;
+}
+
+.main_content_bottom{
+	width:780px;
+	height:50px;
+	text-align: right;
+}
+
+.add_btn{
+	float: right;
+	width: 70px;
+	height: 20px;
+	color: #FFF;
+	background-color: #0A4E7B;
+	border: solid 1px #003555;
+	cursor: pointer;
+}
+
+#chart_legend{
+	width:300px;
+	height:30px;
+}
+
+#youxiu{
+	width: 40px;
+	height: 15px;
+	color: #FFF;
+	background-color: #00FF00;
+	border: solid 1px #00FF00;
+	
+}
+
+#chenzhi{
+	width: 40px;
+	height: 15px;
+	color: #FFF;
+	background-color: #0000FF;
+	border: solid 1px #0000FF;
+}
+
+#qita{
+	width: 40px;
+	height: 15px;
+	color: #FFF;
+	background-color: #FF0000;
+	border: solid 1px #FF0000;
+}
+
+#youxiu span{
+	font-size: 20px;
+}
+
+

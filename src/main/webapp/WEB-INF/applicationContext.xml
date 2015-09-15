@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd   
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd   
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd   
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd     
+      http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring
+     http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd"
+	default-lazy-init="true" default-autowire="byName"
+	xmlns:util="http:  //www.springframework.org/schema/util">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>WEB-INF/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="parentDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="poolPreparedStatements" value="true" />
+		<property name="defaultAutoCommit" value="true" />
+	</bean>
+
+    <bean id="dataSource" class="nju.software.fyrs.dynamicds.DynamicDataSource">
+		<property name="targetDataSources">
+			<map key-type="java.lang.String">
+				<entry key="fyrsBackup" value-ref="fyrsBackupDataSource"/>
+				<entry key="fyrs" value-ref="fyrsDataSource"/>
+				<entry key="yjda" value-ref="yjdaDataSource"/>
+				<entry key="xfServer" value-ref="xfServerDataSource"/>
+			</map>
+		</property>
+		<property name="defaultTargetDataSource" ref="fyrsDataSource" />
+	</bean>
+	
+	<bean id="fyrsDataSource" parent="parentDataSource">
+		<property name="url" value="${jdbc.url}" />
+	</bean>
+	
+	<bean id="fyrsBackupDataSource" parent="parentDataSource">
+		<property name="url" value="${jdbc.url.backup}" />
+	</bean>
+	
+	<bean id="yjdaDataSource" parent="parentDataSource">
+		<property name="url" value="${jdbc.url.yjda}" />
+	</bean>
+	
+	<bean id="xfServerDataSource" parent="parentDataSource">
+		<property name="url" value="${jdbc.url.xfserver}" />
+		<property name="username" value="${jdbc.username.xfserver}" />
+		<property name="password" value="${jdbc.password.xfserver}" />
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<value> hibernate.dialect=${hibernate.dialect}
+				hibernate.query.substitutions=true
+				hibernate.show_sql=true
+				hibernate.hbm2ddl.auto=none
+			</value>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>nju.software.fyrs.data.dataobject.Menu</value>
+				<value>nju.software.fyrs.data.dataobject.Role</value>
+				<value>nju.software.fyrs.data.dataobject.RoleMenu</value>
+				<value>nju.software.fyrs.data.dataobject.User</value>
+				<value>nju.software.fyrs.data.dataobject.UserRole</value>
+				<value>nju.software.fyrs.data.dataobject.Pub_DmbDO</value>
+				<value>nju.software.fyrs.data.dataobject.Pub_DmbDOId</value>
+				<value>nju.software.fyrs.data.dataobject.RysxXlxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxJianglixx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxSfks</value>
+				<value>nju.software.fyrs.data.dataobject.RysxFlzw</value>
+				<value>nju.software.fyrs.data.dataobject.RysxZyjszw</value>
+				<value>nju.software.fyrs.data.dataobject.RysxXwxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxHbgb</value>
+				<value>nju.software.fyrs.data.dataobject.Wdxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxKhxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxJiaoliuxx</value>
+				<value>nju.software.fyrs.data.dataobject.Mc</value>
+				<value>nju.software.fyrs.data.dataobject.RysxDjxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxJtxx</value>
+				<value>nju.software.fyrs.data.dataobject.Jgxx</value>
+				<value>nju.software.fyrs.data.dataobject.Field</value>
+				<value>nju.software.fyrs.data.dataobject.RysxSyyyx</value>
+				<value>nju.software.fyrs.data.dataobject.Ryjbxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxSwxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxLdbz</value>
+				<value>nju.software.fyrs.data.dataobject.RysxGzxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxTxl</value>
+				<value>nju.software.fyrs.data.dataobject.Log</value>
+				<value>nju.software.fyrs.data.dataobject.RysxWyxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxPhoto</value>
+				<value>nju.software.fyrs.data.dataobject.RysxXzzw</value>
+				<value>nju.software.fyrs.data.dataobject.RysxLog</value>
+				<value>nju.software.fyrs.data.dataobject.Dm</value>
+				<value>nju.software.fyrs.data.dataobject.RysxGwy</value>
+				<value>nju.software.fyrs.data.dataobject.RysxBzxx</value>
+				<value>nju.software.fyrs.data.dataobject.TableDO</value>
+				<value>nju.software.fyrs.data.dataobject.RysxCgxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxPxxx</value>
+				<value>nju.software.fyrs.data.dataobject.Dwxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxZzmm</value>
+				<value>nju.software.fyrs.data.dataobject.RysxZdxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxJlxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxZjxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxCcxx</value>
+				<value>nju.software.fyrs.data.dataobject.RysxJzzw</value>
+				<value>nju.software.fyrs.data.dataobject.RykZz</value>
+				<value>nju.software.fyrs.data.dataobject.RykRc</value>
+				<value>nju.software.fyrs.data.dataobject.RykFzb</value>
+				<value>nju.software.fyrs.data.dataobject.RykLs</value>
+				<value>nju.software.fyrs.data.dataobject.RywhLog</value>
+				<value>nju.software.fyrs.data.dataobject.Jlwh</value>
+				<value>nju.software.fyrs.data.dataobject.DzrsRsNdkhb</value>
+				<value>nju.software.fyrs.data.dataobject.KhjlYear</value>
+				<value>nju.software.fyrs.data.dataobject.DdTable</value>
+				<value>nju.software.fyrs.data.dataobject.RysxTablekey</value>
+				<value>nju.software.fyrs.data.dataobject.Gdtj</value>
+				<value>nju.software.fyrs.data.dataobject.GdtjTjbtj</value>
+				<value>nju.software.fyrs.data.dataobject.DdField</value>
+				<value>nju.software.fyrs.data.dataobject.Wdgl</value>
+                <value>nju.software.fyrs.data.dataobject.SdcxCondition</value>
+                <value>nju.software.fyrs.data.dataobject.SysBackPlan</value>
+                <value>nju.software.fyrs.data.dataobject.SysBackup</value>
+                <value>nju.software.fyrs.data.dataobject.RyjbxxFzb</value>
+                <value>nju.software.fyrs.data.dataobject.FzbJlxx</value>
+                <value>nju.software.fyrs.data.dataobject.FzbPhoto</value>
+            <!--     <value>nju.software.fyrs.data.dataobject.Jgbg</value> --> 
+                <value>nju.software.fyrs.data.dataobject.RysxYujing</value>
+                <value>nju.software.fyrs.data.dataobject.RysxHt</value>
+                <value>nju.software.fyrs.data.dataobject.RysxHdbz</value>
+                <value>nju.software.fyrs.data.dataobject.RysxXiujia</value>
+                <value>nju.software.fyrs.data.dataobject.RysxZjbg</value>
+                <value>nju.software.fyrs.data.dataobject.RysxBmbd</value>
+                <value>nju.software.fyrs.data.dataobject.RysxFljl</value>
+                <value>nju.software.fyrs.data.dataobject.RysxShebao</value>
+                <value>nju.software.fyrs.data.dataobject.YyglZhaolu</value>
+                <value>nju.software.fyrs.data.dataobject.YyglPxjh</value>
+                
+			</list>
+
+		</property>
+	</bean>
+
+
+	<!-- Repository -->
+
+
+	<bean id="exceptionResolver" class="nju.software.fyrs.service.SystemExceptionResolver">
+		<property name="defaultErrorView" value="error"></property>
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">error</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 缓存-->
+	<ehcache:annotation-driven cache-manager="ehCacheManager" />
+	<bean id="ehCacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="/WEB-INF/ehcache.xml"></property>
+	</bean> 
+
+
+	<!-- 定义本地化处理器 基于session -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
+
+	<bean id="responseBuilder" class="nju.software.fyrs.web.ResponseBuilder" />
+
+	<!-- 事务处理 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 加入spring提供的事务管理机制，线程绑定session -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- 配置事务的传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 配置事务拦截器拦截哪些类的哪些方法,一般设置成拦截Service -->
+  	<aop:config>
+		<aop:pointcut id="bussinessService"
+			expression="execution(public * nju.software.fyrs.service.*.*(..))" />
+		<aop:advisor pointcut-ref="bussinessService" advice-ref="txAdvice" />
+	</aop:config>
+
+  	<bean id="baseTxService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		abstract="true">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="proxyTargetClass" value="true" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="load*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> 
+		</bean> -->
+
+	<!-- Service -->
+	<bean id="menuService" class="nju.software.fyrs.service.impl.MenuService"></bean>
+	<bean id="roleService" class="nju.software.fyrs.service.impl.RoleService"></bean>
+	<bean id="roleMenuService" class="nju.software.fyrs.service.impl.RoleMenuService"></bean>
+	<bean id="fyService" class="nju.software.fyrs.service.impl.FyServiceImpl"></bean>
+	<bean id="userService" class="nju.software.fyrs.service.impl.UserServiceImpl"></bean>
+	<bean id="rsFyService" class="nju.software.fyrs.service.impl.RsFyServiceImpl"></bean>
+	<bean id="jgxxService" class="nju.software.fyrs.service.impl.JgxxServiceImpl"></bean>
+	<bean id="ryjbxxService" class="nju.software.fyrs.service.impl.RyjbxxServiceImpl"></bean>
+	<bean id="rywhLogService" class="nju.software.fyrs.service.impl.RywhLogServiceImpl"></bean>
+	<bean id="logService" class="nju.software.fyrs.service.impl.LogServiceImpl"></bean>
+	<bean id="mcService" class="nju.software.fyrs.service.impl.McServieImpl"></bean>
+	<bean id="dwxxService" class="nju.software.fyrs.service.impl.DwxxServiceImpl"></bean>
+	<bean id="dmService" class=" nju.software.fyrs.service.impl.DmServiceImpl"></bean>
+	<bean id="jlwhService" class="nju.software.fyrs.service.impl.JlwhServiceImpl"></bean>
+	<bean id="rysxFlzwServiceImpl" class="nju.software.fyrs.service.impl.RysxFlzwServiceImpl"></bean>
+	<bean id="rysxXlxxService" class="nju.software.fyrs.service.impl.RysxXlxxServiceImpl"></bean>
+    <bean id="sdcxService" class="nju.software.fyrs.service.impl.SdcxServiceImpl"></bean>
+    <bean id="sysBackPlanService" class="nju.software.fyrs.service.impl.SysBackPlanServiceImpl"></bean>
+    <bean id="sysBackupService" class="nju.software.fyrs.service.impl.SysBackupServiceImpl"></bean>
+    
+	<bean id="yjdaNdkhService" class="nju.software.fyrs.service.impl.YjdaNdkhServiceImpl"></bean>
+  	<bean id="yjdaScbbService" class="nju.software.fyrs.service.impl.YjdaScbbServiceImpl"></bean>
+	<bean id="ldjcService" class="nju.software.fyrs.service.impl.LdjcServiceImpl"></bean>
+	<bean id="ddTableService" class="nju.software.fyrs.service.impl.DdTableServiceImpl"></bean>
+	<bean id="ddFieldService" class="nju.software.fyrs.service.impl.DdFieldServiceImpl"></bean>
+	<bean id="rykService" class="nju.software.fyrs.service.impl.RykServiceImpl"></bean>
+	<bean id="gdtjService" class="nju.software.fyrs.service.impl.GdtjServiceImpl"></bean>
+	<bean id="wdglService" class="nju.software.fyrs.service.impl.WdglServiceImpl"></bean>	
+	<bean id="sdcxConditionService" class="nju.software.fyrs.service.impl.SdcxConditionServiceImpl"></bean>
+	<bean id="fzbJlxxService" class="nju.software.fyrs.service.impl.FzbJlxxServiceImpl"></bean>
+	<bean id="md5Signature" class="nju.software.fyrs.service.sign.MD5Signature"/>
+	<bean id="ryviewConvertor" class="nju.software.fyrs.service.convertor.RyviewConvertor"></bean>
+	<bean id="yujingService" class="nju.software.fyrs.service.impl.YujingServiceImpl"></bean>
+	<bean id="pxjhService" class="nju.software.fyrs.service.impl.YyglPxjhServiceImpl"></bean>
+	<bean id="zhaoluService" class="nju.software.fyrs.service.impl.YyglZhaoluServiceImpl"></bean>
+	<bean id="hdbzService" class="nju.software.fyrs.service.impl.HdbzServiceImpl"></bean>
+	<!-- manager -->
+	<bean id="ryjbxxManager" class="nju.software.fyrs.biz.manager.impl.RyjbxxManagerImpl"></bean>
+	<bean id="yjdaNdkhManager" class="nju.software.fyrs.biz.manager.impl.YjdaNdkhManagerImpl"></bean>
+	
+	
+	<bean id="UserRoleDAO" class="nju.software.fyrs.data.dao.UserRoleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- DAO -->
+	<bean id="menuDAO" class="nju.software.fyrs.data.dao.MenuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="roleMenuDAO" class="nju.software.fyrs.data.dao.RoleMenuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="roleDAO" class="nju.software.fyrs.data.dao.RoleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="userDAO" class="nju.software.fyrs.data.dao.UserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+
+	</bean>
+	<bean id="pub_DmbDao" class="nju.software.fyrs.data.dao.Implements.Pub_DmbDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="rysxXlxxDAO" class="nju.software.fyrs.data.dao.RysxXlxxDAO"></bean>
+	<bean id="rysxJianglixxDAO" class="nju.software.fyrs.data.dao.RysxJianglixxDAO">
+	</bean>
+	<bean id="rysxSfksDAO" class="nju.software.fyrs.data.dao.RysxSfksDAO"></bean>
+	<bean id="rysxFlzwDAO" class="nju.software.fyrs.data.dao.RysxFlzwDAO"></bean>
+	<bean id="rysxZyjszwDAO" class="nju.software.fyrs.data.dao.RysxZyjszwDAO"></bean>
+	<bean id="rysxXwxxDAO" class="nju.software.fyrs.data.dao.RysxXwxxDAO"></bean>
+	<bean id="rysxHbgbDAO" class="nju.software.fyrs.data.dao.RysxHbgbDAO"></bean>
+	<bean id="wdxxDAO" class="nju.software.fyrs.data.dao.WdxxDAO"></bean>
+	<bean id="rysxKhxxDAO" class="nju.software.fyrs.data.dao.RysxKhxxDAO"></bean>
+	<bean id="rysxJiaoliuxxDAO" class="nju.software.fyrs.data.dao.RysxJiaoliuxxDAO"></bean>
+	<bean id="mcDAO" class="nju.software.fyrs.data.dao.McDAO"></bean>
+	<bean id="rysxDjxxDAO" class="nju.software.fyrs.data.dao.RysxDjxxDAO"></bean>
+	<bean id="rysxJtxxDAO" class="nju.software.fyrs.data.dao.RysxJtxxDAO"></bean>
+	<bean id="jgxxDAO" class="nju.software.fyrs.data.dao.JgxxDAO"></bean>
+	<bean id="fieldDAO" class="nju.software.fyrs.data.dao.FieldDAO"></bean>
+	<bean id="rysxSyyyxDAO" class="nju.software.fyrs.data.dao.RysxSyyyxDAO"></bean>
+	<bean id="ryjbxxDAO" class="nju.software.fyrs.data.dao.RyjbxxDAO"></bean>
+	<bean id="rysxSwxxDAO" class="nju.software.fyrs.data.dao.RysxSwxxDAO"></bean>
+	<bean id="rysxLdbzDAO" class="nju.software.fyrs.data.dao.RysxLdbzDAO"></bean>
+	<bean id="rysxGzxxDAO" class="nju.software.fyrs.data.dao.RysxGzxxDAO"></bean>
+	<bean id="rysxTxlDAO" class="nju.software.fyrs.data.dao.RysxTxlDAO"></bean>
+	<bean id="logDAO" class="nju.software.fyrs.data.dao.LogDAO"></bean>
+	<bean id="rysxWyxxDAO" class="nju.software.fyrs.data.dao.RysxWyxxDAO"></bean>
+	<bean id="rysxPhotoDAO" class="nju.software.fyrs.data.dao.RysxPhotoDAO"></bean>
+	<bean id="rysxXzzwDAO" class="nju.software.fyrs.data.dao.RysxXzzwDAO"></bean>
+	<bean id="rysxLogDAO" class="nju.software.fyrs.data.dao.RysxLogDAO"></bean>
+	<bean id="dmDAO" class="nju.software.fyrs.data.dao.DmDAO"></bean>
+	<bean id="rysxGwyDAO" class="nju.software.fyrs.data.dao.RysxGwyDAO"></bean>
+	<bean id="rysxBzxxDAO" class="nju.software.fyrs.data.dao.RysxBzxxDAO"></bean>
+	<bean id="tableDAO" class="nju.software.fyrs.data.dao.TableDAO"></bean>
+	<bean id="rysxCgxxDAO" class="nju.software.fyrs.data.dao.RysxCgxxDAO"></bean>
+	<bean id="rysxPxxxDAO" class="nju.software.fyrs.data.dao.RysxPxxxDAO"></bean>
+	<bean id="dwxxDAO" class="nju.software.fyrs.data.dao.DwxxDAO"></bean>
+	<bean id="rysxZzmmDAO" class="nju.software.fyrs.data.dao.RysxZzmmDAO"></bean>
+	<bean id="rysxZdxxDAO" class="nju.software.fyrs.data.dao.RysxZdxxDAO"></bean>
+	<bean id="rysxJlxxDAO" class="nju.software.fyrs.data.dao.RysxJlxxDAO"></bean>
+	<bean id="rysxZjxxDAO" class="nju.software.fyrs.data.dao.RysxZjxxDAO"></bean>
+	<bean id="rysxCcxxDAO" class="nju.software.fyrs.data.dao.RysxCcxxDAO"></bean>
+	<bean id="rysxJzzwDAO" class="nju.software.fyrs.data.dao.RysxJzzwDAO"></bean>
+	<bean id="rywhLogDAO" class="nju.software.fyrs.data.dao.RywhLogDAO"></bean>
+	<bean id="maxBHDAO" class="nju.software.fyrs.data.dao.MaxBHDAO"></bean>
+	<bean id="jlwhDAO" class="nju.software.fyrs.data.dao.JlwhDAO"></bean>
+	<bean id="rysxTablekeyDAO" class="nju.software.fyrs.data.dao.RysxTablekeyDAO"></bean>
+	<bean id="ddTableDAO" class="nju.software.fyrs.data.dao.DdTableDAO"></bean>
+	<bean id="gdtjDAO" class="nju.software.fyrs.data.dao.GdtjDAO"></bean>
+	<bean id="gdtjTjbtjDAO" class="nju.software.fyrs.data.dao.GdtjTjbtjDAO"></bean>
+	<bean id="ddFieldDAO" class="nju.software.fyrs.data.dao.DdFieldDAO"></bean>
+	<bean id="sdcxDao" class="nju.software.fyrs.data.dao.SdcxDao"></bean>
+	<bean id="sdcxConditionDAO" class="nju.software.fyrs.data.dao.SdcxConditionDAO"></bean>
+	<bean id="sysBackupDAO" class="nju.software.fyrs.data.dao.SysBackupDAO"></bean>
+	<bean id="sysBackPlanDAO" class="nju.software.fyrs.data.dao.SysBackPlanDAO"></bean>
+	<bean id="yjdaScbbDAO" class="nju.software.fyrs.data.dao.YjdaScbbDAO"></bean>
+	<bean id="ndkhDAO" class="nju.software.fyrs.data.dao.NdkhDAO"></bean>
+	<bean id="ryjbxxFzbDAO" class="nju.software.fyrs.data.dao.RyjbxxFzbDAO"></bean>
+	<bean id="fzbJlxxDAO" class="nju.software.fyrs.data.dao.FzbJlxxDAO"></bean>
+	<bean id="fzbPhotoDAO" class="nju.software.fyrs.data.dao.FzbPhotoDAO"></bean>
+	<bean id="rykZzDAO" class="nju.software.fyrs.data.dao.RykZzDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="rykRcDAO" class="nju.software.fyrs.data.dao.RykRcDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="rykFzbDAO" class="nju.software.fyrs.data.dao.RykFzbDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="rykLsDAO" class="nju.software.fyrs.data.dao.RykLsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dzrsRsNdkhbDAO"
+		class="nju.software.fyrs.data.dao.DzrsRsNdkhbDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="khjlYearDAO"
+		class="nju.software.fyrs.data.dao.KhjlYearDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="wdglDAO" class="nju.software.fyrs.data.dao.WdglDAO"></bean>
+	<bean id="xtglDrdcDAO" class="nju.software.fyrs.data.dao.XtglDrdcDAO"></bean>
+	<bean id="hdbzDAO" class="nju.software.fyrs.data.dao.HdbzDAO"></bean>
+	<!--  
+	<bean id="jgbgDAO" class="nju.software.fyrs.data.dao.JgbgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	-->
+	<bean id="rysxHtDAO" class="nju.software.fyrs.data.dao.RysxHtDAO"></bean>
+	<bean id="yujingDAO" class="nju.software.fyrs.data.dao.YujingDAO"></bean>
+	<bean id="xiujiaDAO" class="nju.software.fyrs.data.dao.RysxXiujiaDAO"></bean>
+	<bean id="shebDAO" class="nju.software.fyrs.data.dao.RysxShebDAO"></bean>
+	<bean id="zjbdDAO" class="nju.software.fyrs.data.dao.RysxZjbdDAO"></bean>
+	<bean id="bmbdDAO" class="nju.software.fyrs.data.dao.RysxBmbdDAO"></bean>
+	<bean id="fljlDAO" class="nju.software.fyrs.data.dao.RysxFljlDAO"></bean>
+	<bean id="pxjhDAO" class="nju.software.fyrs.data.dao.YyglPxjhDAO"></bean>
+	<bean id="zhaoluDAO" class="nju.software.fyrs.data.dao.YyglZhaoluDAO"></bean>
+	<!-- aop 配置拦截所有信息操作的方法 add 1 delete 2 update 3 -->
+	<!-- 拦截这些方法后的处理-->
+      <aop:config proxy-target-class="true">
+        <aop:pointcut id="add" expression="execution(* nju.software.fyrs.data.dao.*.interceptAdd*(..))"></aop:pointcut>
+        <aop:pointcut id="update" expression="execution(* nju.software.fyrs.data.dao.*.interceptUpdate*(..))"></aop:pointcut>
+        <aop:pointcut id="delete" expression="execution(* nju.software.fyrs.data.dao.*.interceptDelete*(..))"></aop:pointcut>
+     
+        
+        <aop:aspect ref="rywhLogService">
+            <aop:after-returning method="dealAddMethod" pointcut-ref="add" returning="returnValue"></aop:after-returning>
+            <aop:after-returning method="dealDeleteMethod" pointcut-ref="delete" returning="returnValue"></aop:after-returning>
+            <aop:after-returning method="dealUpdateMethod" pointcut-ref="update" returning="returnValue"></aop:after-returning>
+       </aop:aspect>
+    </aop:config> 
+    <!-- aop 配置拦截所有信息操作的方法 add 1 delete 2 update 3 -->
+	<!--  task -->
+	
+	<!-- 备份数据库的类 -->
+    <bean id="databaseupJob" class="nju.software.fyrs.database.DatabaseUpTask"> 
+       <property name="sysBackupService">
+           <ref bean="sysBackupService"/>
+       </property>
+    </bean>
+    <!-- 定义调用对象和调用对象的方法 -->
+    <bean id="jobtask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!-- 调用的类 -->
+        <property name="targetObject">
+            <ref bean="databaseupJob"/>
+        </property>
+        <!-- 调用类中的方法 -->
+        <property name="targetMethod">
+            <value>databaseDoBackupTask</value>
+        </property>
+    </bean>
+    <!-- 定义触发时间 -->
+    <bean id="doTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobtask"/>
+        </property>
+        <!-- cron表达式 -->
+        <property name="cronExpression">
+            <value>0 0 1 * * ?</value>
+        </property>
+    </bean>
+    <!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序  -->
+    <bean id="scheduler" lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="doTime"/>
+            </list>
+        </property>
+    </bean>
+    <!--  task -->
+</beans>
+
+  

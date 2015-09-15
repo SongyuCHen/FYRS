@@ -1,0 +1,4 @@
+use master
+go
+dump database $databaseName TO '$databaseSavePath'
+go

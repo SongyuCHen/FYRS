@@ -1,0 +1,22 @@
+use master  
+go
+sp_dboption $dataBaseName,"single user",true
+go	
+use  $dataBaseName
+go
+checkpoint
+go
+use master 
+go
+load database $dataBaseName from '$dataBaseFilePath'
+go
+online database $dataBaseName
+go
+use master 
+go
+sp_dboption $dataBaseName,"single user",false
+go
+use  $dataBaseName
+go
+checkpoint
+go

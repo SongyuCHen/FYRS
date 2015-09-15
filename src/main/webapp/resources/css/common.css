@@ -1,0 +1,226 @@
+/* ie.css */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "Microsoft YaHei";
+}
+
+li{list-style:none;}
+a{text-decoration:none;}
+body{
+	font-size:12px;
+	font-family: "Microsoft YaHei";
+	background-color: #5483A3;
+}
+
+.sublist_display{
+	display:none;
+}
+.menu_title_clicked{
+	color:#FFFFFF;
+	background:url(../images/left_menu_1.png) 0 0 no-repeat;
+}
+.menu_sub_clicked{
+	color:#FF6600;
+}
+/*glryxx.css*/
+.wapper{
+	width:1024px;
+/*	height:768px;*/
+	height: 920px;
+	margin:0 auto;
+	background:url(../images/body_back.png) 0 0 repeat-y;
+	border:solid 1px #5483A3;
+}
+.header{
+	margin:0 auto;
+	height:35px;
+	background:url(../images/top_right.png) 0 0 repeat-x;
+	border-bottom:solid 1px #033556;
+}
+#top_left{
+	width:310px;
+	float:left;
+	height:35px;
+	background:url(../images/top_left.png) 0 0 no-repeat;
+}
+.main_contain{
+	height:689px;
+}
+.top_menu{
+	height:20px;
+}
+.user_welcome{
+	height:20px;
+	background:url(../images/user_welcome_bac.png) 0 0 repeat-x;
+	border-top:solid 1px #064D77;
+	border-bottom:solid 1px FFFFFF;
+}
+.main_title{
+	height:83px;
+	background:url(../images/sub_top.png) 0 0 repeat-x;
+	position:relative;
+	border-top:solid 1px #064D77;
+}
+#title_icon{
+	width:50px;
+	height:56px;
+	background:url(../images/fy.png) 0 0 no-repeat;
+	position:absolute;
+	margin:10px 0 0 35px;
+}
+#title_text{
+	width:252px;
+	height:38px;
+	background:url(../images/rsxxxt.png) 0 0 no-repeat;
+	position:absolute;
+	margin:23px 0 0 98px;
+}
+.main{
+/*	height:585px;*/
+	height:817px;
+	margin:0 auto;
+}
+.left_menu{
+	width:195px;
+	/* 585px;*/
+	height: 817px;
+	float:left;
+	position:relative;
+}
+.right_content{
+	float:left;
+    width:825px;
+	height:100%;
+	position:relative;
+}
+#current_position{
+	width:100%;
+	height:28px;
+	background:url(../images/main_right_top_bg.png) 0 0 no-repeat;
+}
+
+#position_text{
+	font-size:12px;
+	color:#FFFFFF;
+	position:absolute;
+	margin:8px 0 0 40px;
+}
+#left_border{
+	width:7px;
+	height:100%;
+	background:url(../images/main_left.png) 0 0 repeat-y;
+	position:absolute;
+	margin:0;
+}
+#menu{
+	width:177px;
+	/*585px;*/
+	height:817px;
+	background:url(../images/left_menu_bac.png) 0 0 repeat-y;
+	margin:0 0 0 7px;
+	position:relative;
+}
+#menu_title{
+	height:27px;
+	width:177px;
+	background:url(../images/left_menu_top.png) 0 0 repeat-x;
+	border-left:solid 1px #489AD1;
+	border-right:solid 1px #489AD1;
+}
+#cdlb{
+	width:61px;
+	height:16px;
+	background:url(../images/cdlb.png) 0 0 no-repeat;
+	position:absolute;
+	margin:5px 0 0 59px;
+}
+#menu_open{
+	background:url(../images/left_menu_open.png) 0 0 no-repeat;
+	position:absolute;
+	top:40%;
+	right:3px;
+	width:6px;
+	height:102px;
+}
+#content_footer{
+	width:100%;
+	height:19px;
+	background:url(../images/main_right_bottom_bg.png) 0 0 no-repeat;
+}
+#menu_list{
+	height:94%;
+	width:100%;
+	/*position:relative;*/
+	position:absolute;
+	overflow-y:auto;
+	overflow-x:hidden; 
+}
+#menu_list li{
+	width:167px;
+	height:25px;
+	margin:7px auto 0;
+	cursor: pointer;
+}
+#menu_list li a{
+	color: white;
+	display: block;
+	width: 167px;
+	line-height: 24px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+}
+.list{
+	background:url(../images/left_menu_2.png) 0 0 no-repeat;
+}
+.list a{
+	color:#FFFFFF;
+	/*text-align:center;*/
+}     
+.footer span{
+	font-size:12px;
+	color:#FFFFFF;
+	position:relative;
+	top:16px;
+	left:35%;
+}  
+.clicked_a{
+	color:#FF6600;
+	display:none;
+}
+.dataTable a{
+	cursor:pointer;
+}
+
+#menu_list .sub_list a{
+	color: #033556;
+	border-bottom: 1px;
+	border-radius: 4px;
+}
+
+#menu_list .sub_list:hover{
+	color: #fff;
+	background-color: #5483A3;
+	border-radius: 4px;
+}
+
+#menu_list .sub_list a:hover{
+	color: #fff;
+	border-radius: 4px;
+}
+
+#menu_list li .menu_sub_clicked{
+	color: #fff;
+	background-color: #033556;
+	border-radius: 4px;
+}
+/*修正datepicker中select文字颜色继承白色的问题*/
+button, input, optgroup, select, textarea {
+    color: #000;
+}
+.ui-datepicker-title{
+	color: #000;
+}

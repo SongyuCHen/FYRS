@@ -1,0 +1,52 @@
+<div id="header" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <div class="headerWrap">
+        <div class="head-1">
+            <div class="head-1-left">
+                <span style="margin-left: 20px;">用户登录：您好，<a id="personCode" data-headShowKey="${headShowKey}"  data-headIsOnlyLook="${headIsOnlyLook}" style="color: white;" href="javascript:void(0);" onclick="linkToPerson()">${currentUsername}! </a> <a style="visibility:hidden;">占</a> ${loginTime}</span>
+            </div>
+            <div class="head-1-right">
+            	<ul>
+                <li><img src="/resources/images/head-login.png"/><a href="javascript:void(0);"  onclick="changePassword();">修改密码</a></li>
+                <li><img src="/resources/images/head-logout.png"/><a href="/logout.do">退出系统</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="head-2">
+           <span style="visibility:hidden;">占位符</span>
+        </div>
+       <div class="head-title">
+       		<div class="head-title-left">
+                <img src="/resources/images/main_list_left.png"/>
+            </div>
+            <div class="head-title-home">
+                <a href="#"><img src="/resources/images/home.png"/></a>
+            </div>
+            <div class="head-title-content">
+                <ul>
+                    <c:forEach items="${headerMenus}" var="headMenu">
+                        <c:choose>
+                            <c:when test="${headMenu.menuName == currentHeaderMenuName}">
+                                <li  style="background-image: url(/resources/images/button-title-selected-1.png)">
+                                	<div class="menu_container"><a href="${headMenu.href}">${headMenu.menuName}</a></div>
+                                    
+                                </li>
+                            </c:when>
+                            <c:when test="${headMenu.menuName=='业绩档案' }">
+                             
+                            </c:when>
+                            <c:otherwise>
+                                <li>
+                                	<div class="menu_container"><a href="${headMenu.href}">${headMenu.menuName}</a></div>
+                                </li>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

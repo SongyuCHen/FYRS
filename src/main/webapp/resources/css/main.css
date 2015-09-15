@@ -1,0 +1,375 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Microsoft YaHei";
+}
+
+li{list-style:none;}
+a{text-decoration:none;}
+body{
+	font-size:12px;
+	font-family: "Microsoft YaHei";
+	background-color: #5483A3;
+}
+
+.page {
+    margin: 0 auto;
+    width: 1004px;
+    position:relative;
+    background-image: url(/resources/images/background.png);
+    background-repeat: repeat-y;
+    border: 1px solid #5483A3;
+}
+
+.headerWrap {
+    width:100%;
+    margin: 0 auto;
+    height: 180px;
+}
+.contentWrap
+{
+    background-color: #5483A3;
+	margin: 0px auto;
+	background: url('/resources/images/body_back.png') repeat-y scroll 0px 0px transparent;
+	clear: both;
+	min-height: 500px;
+	padding-bottom: 10px;
+}
+.contentLeftWrap
+{
+    width:  188px;
+    float: left;
+}
+.contentLeftWrap #header{
+	height: 100%;
+}
+.contentLeft{
+	height: 100%;
+}
+.contentMiddleWrap
+{
+    background-image: url('/resources/images/left_menu_open.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 185px;
+	width: 6px;
+	height: 102px;
+}
+
+.contentRightWrap
+{
+	margin-top: 3px;
+	margin-right: 6px;
+    float: right;
+}
+.contentRightWrap-box-outer
+{
+	width: 804px;
+}
+.contentRightWrap-box-inner
+{
+    width: 100%;
+}
+.contentRightWrap-title
+{
+	color:white;
+    height: 35px;
+    padding-left: 40px;
+    padding-top: 7px;
+    background: url('/resources/images/main_right_top_bg.png') no-repeat scroll 0px 0px transparent;
+}
+.contentRightWrap-content
+{
+    padding: 15px;
+    background: url('/resources/images/main_right_bg.png') repeat-y scroll 0px 0px transparent;
+    margin-top: -7px;
+    min-height: 460px;
+}
+.footerWrap
+{
+	vertical-align:top;
+    clear: both;
+    text-align: center;
+    background-color: #5483A3;
+    color: #FFF;
+	height: 30px;
+	line-height: 30px;
+}
+.head-1
+{
+    margin: 0 auto;
+    font-size: 12px;
+    color: white;
+    height: 35px;
+	background: url('/resources/images/top_right.png') repeat-x scroll 0px 0px transparent;
+	border-bottom: 1px solid #033556;
+}
+
+.head-1-right
+{
+    float: right;
+	position: relative;
+}
+
+.head-1-right ul{
+	position: absolute;
+	right: 0px;
+	width: 200px;
+	top: -9px;
+}
+
+.head-1-right ul li{
+	display: inline;
+	width: 100px;
+	margin: 0px 7px;
+}
+
+.head-1-right ul li a
+{
+    color: white;
+	margin-left: 5px;
+}
+
+.head-1-right ul li a:hover
+{
+    cursor: pointer;
+}
+
+.head-1-right ul li img
+{
+   margin-top: -3px;
+}
+
+.head-1-left
+{
+    position: relative;
+	top: 8px;
+}
+
+
+.head-2
+{
+	clear:both;
+    height: 110px;
+    background-image: url(/resources/images/top_background_new.png);
+    background-repeat: no-repeat;
+}
+.head-title
+{
+    text-align: left;
+    height: 41px;
+	background: url('/resources/images/top_right.png') repeat-x scroll 0px 0px #033556;
+   
+}
+
+.head-title-left{
+	float: left;
+	height: 35px;
+}
+.head-title-home
+{
+    height: 22px;
+    margin-left:26px;
+    margin-top:8px;
+    float: left;
+}
+.head-title-content
+{
+    text-align: center;
+    margin-left: 20px;
+    float: left;
+
+}
+.head-title-content ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.head-title-content ul li
+{
+    width: 101px;
+    height:34px;
+    background-image: url(/resources/images/header-title-n.png);
+    background-repeat: no-repeat;
+    margin-left: 2px;
+    margin-top: 6px;
+    float:left;
+}
+.head-title-content ul li:hover
+{
+	background-image: url(/resources/images/button-title-selected-1.png);
+}
+.head-title-content ul li a
+{
+    text-decoration: none;
+    color:white;
+    display: block;
+}
+
+.head-blank
+{
+    height: 12px;
+    background-image: url(/resources/images/stitle-blank.png);
+}
+
+#left_border{
+	width: 7px;
+	height: 100%;
+	background: url('/resources/images/main_left.png') repeat-y scroll 0px 0px transparent;
+	position: absolute;
+	margin: 0px;
+}
+
+#left-menu{
+	width: 179px;
+	background: url('/resources/images/left_menu_bac.png') repeat-y scroll 0px 0px transparent;
+	margin: 0px 0px 0px 7px;
+	position: relative;
+	padding-bottom: 10px;
+	min-height: 487px;
+}
+.menu-head
+{
+    text-align: center;
+    height: 28px;
+    margin-top: 4px;
+    background-image: url(/resources/images/middle-left-head-title.png);
+    background-repeat: no-repeat;
+}
+ .menu-head .menu-head-text
+{
+	font-family: "Microsoft YaHei";
+	color:white;
+	text-align: center;
+	line-height: 28px;
+}
+.menu-content{
+	width: 179px;
+	background-image: url(/resources/images/left_menu_bac.png) repeat-y scroll 0px 0px transparent;
+}
+.button-menu
+{
+    text-align: center;
+    width: 167px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 14px;
+    padding-top: 3px;
+    background-image: url(/resources/images/button-nomal.png);
+    background-repeat: no-repeat;
+}
+.menu-content ul
+{
+    list-style: none;
+    margin: 0 13px;
+    padding: 0px;
+    text-align: center;
+}
+
+.menu-content ul li
+{
+    text-align: center;
+    width: 75px;
+    height: 85px;
+    background-image: url(/resources/images/button-nomal.png);
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    padding-top: 3px;
+    float:left;
+    background-position: 50% 0;
+}
+
+.menu-content ul li a
+{
+    text-decoration: none;
+    display: block;
+    height:75px;
+    padding-top:60px;
+}
+.fyrs-button-red-backgournd
+{
+	font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+    font-size: 0.8em;
+	text-align:center;
+    width:50px;
+    heigth:21px;
+    background: url("/resources/images/button_red_background.png");
+    background-repeat: no-repeat;
+}
+
+.menu_container{
+	font: bold 14px sans-serif;
+	margin-top: 5px;
+}
+
+.menu-head-text{
+	font: bold 14px sans-serif;
+}
+
+.menu-content .menu_container{	
+	font: bold 12px sans-serif;
+    width:75px;
+}
+
+.operation .op_button {
+	float: right;
+}
+
+/*重置jquery-ui中输入控件的字体*/
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: inherit;
+    font-size: 100%;
+}
+/*为底部按钮组留空间*/
+.popDialog{
+  	padding-bottom: 50px;
+  	position: relative;
+}
+/*底部按钮组*/
+.bottom-btn-bar{
+	width: 90%;
+	margin: 0 auto;
+	padding: 13px 10px 0 10px;
+	border-top: 1px solid #96C8EB;
+	position: absolute;
+	bottom: 13px;
+	left: 5px;
+	right: 5px;
+	text-align: center;
+}
+/*bootstrap label外边距调整*/
+.form-horizontal .row{
+	margin-right: 0px;
+    margin-left: 0px;
+}
+.form-horizontal .form-group {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.form-horizontal .control-label{
+	padding-right: 0px;
+}
+/*uniform 文件上传宽度调整*/
+div .uploader{
+	width: 169px;
+}
+/*修正datepicker中select文字颜色继承白色的问题*/
+button, input, optgroup, select, textarea {
+    color: #000;
+}
+/*修正datepicker中年月下拉菜单无法显示在一行的问题*/
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width: 45%;
+}
+.element-display-none
+{
+	display: none;	
+}
+.element-vis
+{
+  visibility: visible;
+}

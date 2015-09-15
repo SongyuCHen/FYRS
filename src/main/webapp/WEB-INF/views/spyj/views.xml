@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="mainLayout" name="spyj/show">
+        <put-attribute name="content"
+            value="/WEB-INF/views/spyj/show.jsp" />
+    </definition>                         
+</tiles-definitions>

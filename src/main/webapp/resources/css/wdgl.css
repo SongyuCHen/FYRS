@@ -1,0 +1,40 @@
+#queryForm {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: #166092;
+	background-color: #EEF7FD;
+	border-bottom: 2px solid #96C8EB;
+}
+
+#queryForm .single-line{
+	height: 30px;
+	width: 100%;
+	margin: 10px;
+}
+
+#queryForm .single-line div{
+	margin-left: 45px;
+	float: left;
+}
+
+#queryForm .single-line div label{
+	text-align: right;
+	width: 70px;
+}
+#addWdBtn{
+	margin-bottom: 10px;
+	float: right;
+}
+#addWdForm{
+	width: 98%;
+}
+#editWdForm{
+	width: 98%;
+}
+#wdList{
+	clear: both;
+}
+
+.wdDialog .required{
+	color: red;
+}

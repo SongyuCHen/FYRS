@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+   <menu menuName="人员信息" menuType="1" orderNumber="1" href="/main/ryxx/head.do" uniqueName="ryxx">
+       <menu menuName="在职库" menuType="2" orderNumber="1" href="/main/ryxx/zzk.do" uniqueName="ryxx-zzk"> </menu>
+       <menu menuName="历史库" menuType="2" orderNumber="21" href="/main/ryxx/lsk.do" uniqueName="ryxx-lsk"></menu>
+       <menu menuName="非在编人员" menuType="2" orderNumber="41" href="/main/ryxx/fzbry.do" uniqueName="ryxx-fzbry"></menu>
+       <menu menuName="人才库" menuType="2" orderNumber="61" href="/main/ryxx/rck.do" uniqueName="ryxx-rck"></menu>
+       <menu menuName="花名册" menuType="2" orderNumber="81" href="/main/ryxx/hmc.do" uniqueName="ryxx-hmc"></menu>
+   </menu>
+    <menu menuName="单位信息" menuType="1" orderNumber="1" href="/main/dwxx/head.do" uniqueName="dwxx">
+        <menu menuName="维护单位信息" menuType="2" orderNumber="1" href="/main/dwxx/whdwxx.do" uniqueName="dwxx-whdwxx"></menu>
+        <menu menuName="维护内设机构" menuType="2" orderNumber="21" href="/main/dwxx/whnsjg.do" uniqueName="dwxx-whnsjg"></menu>
+        <menu menuName="维护奖励信息" menuType="2" orderNumber="41" href="/main/dwxx/whjlxx.do" uniqueName="dwxx-whjlxx"></menu>
+    </menu>
+    <menu menuName="查询统计" menuType="1" orderNumber="1" href="/main/cxtj/head.do" uniqueName="cxtj">
+        <menu menuName="简单查询" menuType="2" orderNumber="1" href="/main/cxtj/jdcx.do" uniqueName="cxtj-jdcx"></menu>
+        <menu menuName="深度查询" menuType="2" orderNumber="21" href="/main/cxtj/sdcx.do" uniqueName="cxtj-sdcx"></menu>
+        <menu menuName="领导决策" menuType="2" orderNumber="41" href="/main/cxtj/ldjc.do" uniqueName="cxtj-ldjc"></menu>
+        <menu menuName="固定统计" menuType="2" orderNumber="61" href="/main/cxtj/gdtj.do" uniqueName="cxtj-gdtj"></menu>
+        <menu menuName="自定义统计" menuType="2" orderNumber="81" href="/main/cxtj/zdytj.do" uniqueName="cxtj-zdytj"></menu>
+    </menu>
+    <menu menuName="业绩档案" menuType="1" orderNumber="1" href="/main/yjda/head.do" uniqueName="yjda">
+        <menu menuName="审判业绩" menuType="2" orderNumber="1" href="/main/yjda/spyj.do" uniqueName="yjda-spyj"></menu>
+        <menu menuName="年度考核" menuType="2" orderNumber="21" href="/main/yjda/ndkh.do" uniqueName="yjda-ndkh"></menu>
+    </menu>
+    <menu menuName="人事留痕" menuType="1" orderNumber="1" href="/main/rslh/head.do" uniqueName="rslh">
+        <menu menuName="人员留痕" menuType="2" orderNumber="1" href="/main/rslh/rylh.do" uniqueName="rslh-rylh"></menu>
+        <menu menuName="系统留痕" menuType="2" orderNumber="21" href="/main/rslh/xtlh.do" uniqueName="rslh-xtlh"></menu>
+    </menu>
+    <menu menuName="文档管理" menuType="1" orderNumber="1" href="/main/wdgl/head.do" uniqueName="wdgl">
+    	<menu menuName="文档管理" menuType="2" orderNumber="1" href="/main/wdgl/wdgl.do" uniqueName="wdgl-wdgl"></menu>
+    </menu>
+    <menu menuName="系统管理" menuType="1" orderNumber="1" href="/main/xtgl/head.do" uniqueName="xtgl">
+        <menu menuName="权限管理" menuType="2" orderNumber="1" href="/main/xtgl/qxgl.do" uniqueName="xtgl-qxgl"></menu>
+        <menu menuName="角色管理" menuType="2" orderNumber="21" href="/main/xtgl/jsgl.do" uniqueName="xtgl-jsgl"></menu>
+        <menu menuName="代码维护" menuType="2" orderNumber="41" href="/main/xtgl/dmwh.do" uniqueName="xtgl-dmwh"></menu>
+        <menu menuName="导入导出" menuType="2" orderNumber="61" href="/main/xtgl/drdc.do" uniqueName="xtgl-drdc"></menu>
+        <menu menuName="备份恢复" menuType="2" orderNumber="81" href="/main/xtgl/bfhf.do" uniqueName="xtgl-bfhf"></menu>
+        <menu menuName="信息修改日志" menuType="2" orderNumber="101" href="/main/xtgl/xxxgrz.do" uniqueName="xtgl-xxxgrz"></menu>
+        <menu menuName="系统日志" menuType="2" orderNumber="121" href="/main/xtgl/xtrz.do" uniqueName="xtgl-xtrz"></menu>
+    </menu>
+    <menu menuName="人事管理权限" menuType="3" orderNumber="1" href="" uniqueName="rsglqx">
+        <menu menuName="下级法院人事管理" menuType="4" orderNumber="1" href="" uniqueName="rsglqx-xjfyrsgl"></menu>
+        <menu menuName="本院人事管理" menuType="4" orderNumber="21" href="" uniqueName="rsglqx-byrsgl"></menu>
+        <menu menuName="查看本院及下级法院人事信息" menuType="4" orderNumber="41" href="" uniqueName="rsglqx-ckbyjxjfyrsxx"></menu>
+        <menu menuName="查看本院人事信息" menuType="4" orderNumber="61" href="" uniqueName="rsglqx-ckbyrsxx"></menu>
+    </menu>
+</menus>

@@ -1,0 +1,642 @@
+@CHARSET "UTF-8";
+
+/* dlg */
+.dlg-wrap {
+	border: none;
+	border-radius: 0;
+	background: #fff;
+	box-shadow: 0px 0px 10px #000;
+	padding: 0;
+}
+
+.dlg-wrap .ui-dialog-titlebar {
+	background: #b0b0b0;
+	border-radius: 0;
+	border: 1px solid #7f7f7f;
+	border-width: 0 0 1px;
+	padding: 0 1em;
+	line-height: 25px;
+	font-size: 14px;
+	font-weight: normal;
+	text-shadow: 1px 1px #7f7f7f;
+}
+
+.dlg-wrap .ui-dialog-titlebar .ui-state-hover {
+	background: none;
+	border: none;
+	padding: 1px;
+}
+
+.dlg-wrap .ui-dialog-titlebar .ui-icon-closethick {
+	background: url(../images/dlg_title_close.png);
+}
+
+.dlg-wrap .ui-dialog-titlebar .ui-state-hover .ui-icon-closethick {
+	background: url(../images/dlg_title_close_hover.png);
+}
+
+.dlg-wrap .ui-dialog-titlebar img {
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+.dlg-wrap .ui-dialog-content {
+	font-size: 12px;
+	padding: 10px 2em 2em;
+}
+
+.dlg-wrap .dlg-content {
+	border: 1px solid #ccc;
+	padding: 1em;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.dlg-wrap .dlg-header {
+	line-height: 30px;
+	border-bottom: 3px solid #ccc;
+	padding-left: 10px;
+}
+
+.dlg-wrap .dlg-main {
+	border-top: 1px solid #ccc;
+	margin-top: 1px;
+	padding-top: 8px;
+	overflow: hidden;
+}
+
+.dlg-wrap .dlg-main table {
+	border-collapse: collapse;
+	line-height: 25px;
+}
+
+.dlg-wrap .dlg-main th {
+	padding: 0;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+.dlg-wrap .dlg-main label {
+	width: 8em;
+}
+
+.dlg-wrap .dlg-main textarea {
+	resize: none;
+}
+
+.dlg-wrap .dlg-main .dlg-text {
+	margin: 0;
+}
+
+.dlg-wrap .dlg-oper {
+	position: relative;
+	top: -5px;
+	background: #d1e4f3;
+	border: 1px solid #4d8fcb;
+	overflow: hidden;
+	box-shadow: 0 3px 1px #ccc;
+	background: #d1e4f3;
+	line-height: 30px;
+}
+
+.dlg-wrap .dlg-oper ul {
+	list-style: none;
+	float: right;
+	margin-right: 34px;
+}
+
+.dlg-wrap .dlg-oper li {
+	float: left;
+	margin-left: 8px;
+}
+
+.dlg-wrap .dlg-oper input {
+	border: 1px solid #8599b1;
+	border-radius: 4px;
+	background: url(../images/dlg_oper_btn.png);
+	line-height: 22px;
+	padding: 0;
+	width: 83px;
+	color: #385484;
+	cursor: pointer;
+}
+
+/* alert */
+#j_alert .dlg-content {
+	border: none;
+	background: none;
+}
+
+#j_alert .dlg-oper {
+	border: none;
+	background: none;
+	box-shadow: none;
+	top: 10px;
+}
+
+#j_alert .dlg-oper input {
+	margin: 0 auto;
+	display: block;
+	margin-top: 25px;
+}
+#j_alert .alertImg{
+	background:url(../images/alertImg.png);
+	width:64px;
+	height:64px;
+	position: relative;
+	top: -3px;
+	left: -20px;
+}
+#j_alert .alert-content{
+	margin-left: 65px;
+	margin-top: -95px;
+}
+#j_alert p{
+	font-family:"宋体";
+	font-size:12px;
+	line-height:14pt;
+}
+#j_alert .alertAh{
+	border-top: dashed;
+	border-top-width: 1px;
+	margin-top: 12px;
+	padding-top: 12px;
+}
+#j_alert .alertText{
+	margin-left: 18px;
+	margin-top: 12px;
+}
+
+/*
+ * 结案信息弹窗
+ */
+#dlg_jaxx .dlg-content {
+	padding-bottom: 75px;
+}
+
+#dlg_jaxx .dlg-main {
+	padding-top: 3em;
+}
+
+#dlg_jaxx .dlg-main th {
+	text-align: right;
+	width: 80px;
+	padding: 3px 0;
+}
+
+#dlg_jaxx .dlg-main td {
+	padding: 3px 0;
+}
+
+#dlg_jaxx .dlg-main .dlg-text {
+	width: 158px;
+}
+
+#dlg_jaxx .dlg-main textarea {
+	width: 420px;
+	height: 4em;
+}
+
+#dlg_jaxx .dlg-main .dlg-readonly {
+	background: #eee;
+	border: 1px solid #a5a5a5;
+	padding: 2px 1px;
+}
+
+/*
+ * 审判人员变更
+ */
+#dlg_sprybg .dlg-content {
+	padding-bottom: 32px;
+}
+
+#dlg_sprybg .dlg-main {
+	padding-top: 3em;
+}
+
+#dlg_sprybg .sprybg-wfpry {
+	float: left;
+	width: 110px;
+}
+
+#dlg_sprybg .sprybg-oper {
+	float: left;
+	width: 60px;
+}
+
+#dlg_sprybg .sprybg-oper input {
+	width: 22px;
+	line-height: 22px;
+	border: 1px solid #8599b1;
+	border-radius: 3px;
+	padding: 0;
+	font-family: "宋体";
+	background: url(images/dlg_sprybg_btn.png);
+	cursor: pointer;
+	margin: 0 auto;
+	display: block;
+}
+
+#dlg_sprybg .sprybg-oper .j_sprybg_l2r {
+	margin-top: 70px;
+}
+
+#dlg_sprybg .sprybg-oper .j_sprybg_r2l {
+	margin-top: 43px;
+}
+
+#dlg_sprybg .sprybg-yfpry {
+	float: left;
+	width: 340px;
+}
+
+#dlg_sprybg .sprybg-bgyy {
+	clear: left;
+	line-height: 32px;
+	padding-top: 16px;
+}
+
+#dlg_sprybg .sprybg-bgyy textarea {
+	width: 450px;
+	height: 45px;
+}
+
+#dlg_sprybg .dataTables_wrapper {
+	border: solid #ccc;
+	border-width: 1px;
+}
+
+#dlg_sprybg .dataTables_scrollHead {
+	background: url(../images/dlg_sprybg_thead.png);
+	line-height: 2em;
+}
+
+#dlg_sprybg .dataTables_scrollHead th {
+	border-right: 1px solid #ccc;
+}
+
+#dlg_sprybg .dataTables_scrollBody {
+	border-top: 1px solid #ccc;
+	background: #eee;
+	line-height: 2em;
+}
+
+#dlg_sprybg .dataTables_scrollBody td {
+	padding: 0;
+}
+
+#dlg_sprybg .dataTables_scrollBody input {
+	padding: 0;
+}
+
+#dlg_sprybg .treeview .hitarea{background:none;}
+#dlg_sprybg .treeview li{background:none;}
+#dlg_sprybg .filetree li{padding:0;}
+#dlg_sprybg .treeview ul{margin-top:0;}
+#dlg_sprybg .cy{margin-left:1.5em;}
+#dlg_sprybg .fpcwxx{color:red;}
+
+/*
+ * 变更记录
+ */
+#dlg_bgjl .dlg-content {
+	height: 434px;
+	overflow-y: auto;
+}
+
+#dlg_bgjl .dlg-main {
+	padding-top: 16px;
+}
+
+#dlg_bgjl .dlg-main div {
+	background: #f5f4f4;
+	border: 1px solid #cdcdcd;
+	border-radius: 5px;
+	position: relative;
+	margin-bottom: 22px;
+	padding: 0 54px;
+}
+
+#dlg_bgjl .dlg-main input {
+	width: 22px;
+	line-height: 22px;
+	border: 1px solid #8599b1;
+	border-radius: 3px;
+	padding: 0;
+	margin: 0;
+	position: absolute;;
+	top: -1px;
+	left: -1px;
+	background: url(../images/dlg_sprybg_btn.png);
+}
+
+/*
+ * 分案移交弹窗
+ */
+#j_dlg .Faselect  select {
+	width: 136px;
+	height: 21px;
+}
+
+#dlg_fa .dlg-content {
+	padding-bottom: 4em
+}
+
+/*
+ * 法院间移送
+ */
+#dlg_ys tr {
+	line-height: 30px;
+}
+
+/*
+ *刑事案由弹窗
+ */
+#dlg_saay .dlg-header span{margin-left:120px;}
+#dlg_saay .dlg-header .xzaycw{margin-left:120px;color:red;}
+#dlg_saay .dlg-main{height:300px;overflow-y:auto;}
+
+/**
+ * 杜波,2012/12/25
+ * 常用工具配置
+ */
+#dlg_cygjpz .dlg-main ul {
+	padding-bottom:65px;
+}
+
+#dlg_cygjpz .dlg-main li {
+	float: left;
+	width: 80px;
+}
+
+#dlg_cygjpz .dlg-main a {
+	color: #2d8dc7;
+	display: block;
+	padding: 41px 0 9px;
+	text-align: center;
+	position: relative;
+	cursor: move;
+}
+
+#dlg_cygjpz .dlg-main a:hover {
+	background: url(img/_list_hover.png);
+	border: 1px solid #a9ccde;
+	border-radius: 4px;
+	padding: 40px 0 8px
+}
+
+#dlg_cygjpz .dlg-main u {
+	position: absolute;
+	top: 9px;
+	left: 24px;
+}
+
+#dlg_cygjpz li.ui-sortable-placehoder {
+	background: url(img/_list_hover.png);
+	border: 1px solid #a9ccde;
+	border-radius: 4px;
+	height: 63px;
+	width: 78px;
+}
+
+
+/**
+ * 杜波,2012/12/26
+ * 我的系统配置
+ */
+#dlg_wdxtpz .dlg-main ul {
+	padding-bottom:65px;
+}
+
+#dlg_wdxtpz .dlg-main li {
+	float: left;
+	width: 80px;
+}
+
+#dlg_wdxtpz .dlg-main a {
+	color: #2d8dc7;
+	display: block;
+	padding: 41px 0 9px;
+	text-align: center;
+	position: relative;
+	cursor: move;
+}
+
+#dlg_wdxtpz .dlg-main a:hover {
+	background: url(img/_list_hover.png);
+	border: 1px solid #a9ccde;
+	border-radius: 4px;
+	padding: 40px 0 8px
+}
+
+#dlg_wdxtpz .dlg-main u {
+	position: absolute;
+	top: 9px;
+	left: 24px;
+}
+
+#dlg_wdxtpz li.ui-sortable-placehoder {
+	background: url(img/_list_hover.png);
+	border: 1px solid #a9ccde;
+	border-radius: 4px;
+	height: 63px;
+	width: 78px;
+}
+/*
+ *选择为空时候的alert
+ */
+#empty_alert .alertImg{
+	background:url(../img/alertImg.png);
+	width:64px;
+	height:64px;
+	position: relative;
+	top: 12px;
+	left: -11px;
+}
+#empty_alert p{
+	margin-left: 82px;
+	margin-top: -52px;
+	font-family:"宋体";
+	font-size:12px;
+	line-height:14px;
+}
+#empty_alert .j_ok{
+	border: 1px solid #8599b1;
+	border-radius: 4px;
+	background: url(../images/dlg_oper_btn.png);
+	line-height: 22px;
+	margin-top: 52px;
+	margin-bottom: -4px;
+	margin-left: 83px;
+	padding: 0;
+	width: 83px;
+	color: #385484;
+	cursor: pointer;
+}
+
+/*按钮样式class用于js直接add*/
+.dlg_main_btn{
+	border: 1px solid #8599b1;
+	border-radius: 4px;
+	background: url(../images/dlg_oper_btn.png);
+	line-height: 22px;
+	padding: 0;
+	width: 83px;
+	color: #385484;
+	cursor: pointer;
+}
+
+/*打开备忘录弹窗样式css*/
+#memo_dlg .dlg-main{border:none;}
+#memo_dlg .dlg-main p input{position:absolute;right:20px;top:24px;line-height:22px;}
+.last_bwl{line-height:24px;position:relative;border-bottom:none;padding:20px 0px;margin-left:20px;}
+.not_last_bwl{line-height:24px;position:relative;border-bottom:1px dashed #000;padding:20px 0px;margin-left:20px;}
+
+/*新增备忘录弹窗样式css*/
+#modal-dialog .dlg-main table th{text-align:right;padding:2px 8px;}
+#modal-dialog .dlg-main input{width:260px;margin-top:4px;}
+#modal-dialog .dlg-main textarea{width:258px;height:90px;margin-top:6px;}
+
+/**
+ * 杜波,2013/1/15
+ * 文书类别选择
+ */
+#dlg_wslbxz .wslbxz-content-left{border:1px solid #77A0AB;float:left;width:186px;}
+#dlg_wslbxz .wslbxz-content-right{float:left;margin-left:10px;width:300px;}
+#dlg_wslbxz .selected{color:red;}
+#dlg_wslbxz table{border-right:1px solid #4d8fcb;border-top:1px solid #4d8fcb;line-height:2em;}
+#dlg_wslbxz td{border-left:1px solid #4d8fcb;border-bottom:1px solid #4d8fcb;padding:0px .5em;cursor:pointer;}
+#dlg_wslbxz .filetree li{padding:3px 0 3px 16px;}
+/**
+ * 新增案件弹窗
+ */
+#dlg_xz select{
+	width:250px;
+}
+/*
+审限延长与审限扣除弹窗样式css
+*/
+#dlg_sxyc select{
+	width:150px;
+}
+#dlg_sxkc select{
+	width:150px;
+}
+#dlg_sxyc input{
+	width:146px;
+}
+#dlg_sxkc input{
+	width:146px;
+}
+#dlg_sxkc .dlg-readonly {
+	background: #eee;
+	border: 1px solid #a5a5a5;
+	padding: 2px 1px;
+}
+/*
+法庭申请管理弹窗样式css
+*/
+#dlg_ftsqgl select{
+	width:150px;
+}
+#dlg_ftsqgl input{
+	width:146px;
+}
+#dlg_ftsqgl .dlg-readonly {
+	background: #eee;
+	border: 1px solid #a5a5a5;
+	padding: 2px 1px;
+}
+/*
+案件上诉弹窗
+*/
+#dlg_ajss .Faselect  select {
+	width: 136px;
+	height: 21px;
+}
+
+#dlg_ajss .dlg-content {
+	padding-bottom: 2em
+}
+#dlg_ajss select{
+	margin-left: 2px;
+	width: 133px;
+}
+#dlg_ajss .Ajssxxlb2{
+	margin-top: 15px;
+}
+/*
+复制立案弹窗样式css
+*/
+#dlg_fzla .dlg-header input{
+	border: 1px solid #8599b1;
+	border-radius: 4px;
+	background: url(../images/dlg_oper_btn.png);
+	line-height: 22px;
+	padding: 0;
+	width: 50px;
+	color: #385484;
+	cursor: pointer;
+	margin-left:15px;
+}
+#dlg_fzla .dlg-main{
+	margin-top:5px;
+}
+#dlg_fzla .dlg-main input{
+	margin-bottom:5px;
+	margin-top:2px;
+}
+#dlg_fzla .fzlags{
+	width:50px;
+}
+#dlg_fzla .dlg-main p{
+	color:red;
+}
+
+/*行政职务*/
+.odd_td {
+	text-align: right;
+	width: 100px;
+}
+.even_td {
+	width: 161px;
+}
+/*.btn {
+	width: 48px;
+	height: 20px;
+	background-color: #FF6600;
+	border: solid 1px #D04500;
+	color: #FFFFFF;
+	margin-top: 35px;
+}*/
+.ui-widget-header{
+	background:url(../images/dlg_title.png) 0 0 no-repeat;
+	color:#FFFFFF;
+	border:0;
+}
+.ui-dialog{
+	padding:0;
+}
+.ui-widget-content{
+	border:0;	
+}
+
+.ui-dialog-content table{
+	margin-top: 15px;
+}
+
+.ui-dialog-content table tr{
+	height: 45px;
+}
+/*底部按钮组*/
+.bottom-btn-bar{
+	width: 90%;
+	margin: 0 auto;
+	padding: 13px 10px 0 10px;
+	border-top: 1px solid #96C8EB;
+	position: absolute;
+	bottom: 13px;
+	left: 5px;
+	right: 5px;
+	text-align: center;
+}

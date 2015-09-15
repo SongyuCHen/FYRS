@@ -1,0 +1,2 @@
+// Ìí¼ÓÓÃ»§
+insert into t_user(id,fy,password,rybh,username) values(3,51,'admin','1234567897','username2');¡¢
