@@ -15,7 +15,7 @@ body{
 
 .page {
     margin: 0 auto;
-    width: 1004px;
+    width: 100%;
     position:relative;
     background-image: url(/resources/images/background.png);
     background-repeat: repeat-y;
@@ -25,20 +25,19 @@ body{
 .headerWrap {
     width:100%;
     margin: 0 auto;
-    height: 180px;
+    height: 160px;
 }
 .contentWrap
 {
     background-color: #5483A3;
 	margin: 0px auto;
-	background: url('/resources/images/body_back.png') repeat-y scroll 0px 0px transparent;
 	clear: both;
-	min-height: 500px;
+	min-height: 520px;
 	padding-bottom: 10px;
 }
 .contentLeftWrap
 {
-    width:  188px;
+    width: 24.5%;
     float: left;
 }
 .contentLeftWrap #header{
@@ -61,12 +60,14 @@ body{
 .contentRightWrap
 {
 	margin-top: 3px;
-	margin-right: 6px;
+	margin-right: 0px;
     float: right;
+    width:75%;
+    
 }
 .contentRightWrap-box-outer
 {
-	width: 804px;
+	width: 100%;
 }
 .contentRightWrap-box-inner
 {
@@ -74,16 +75,16 @@ body{
 }
 .contentRightWrap-title
 {
-	color:white;
+	color:black;
     height: 35px;
     padding-left: 40px;
     padding-top: 7px;
-    background: url('/resources/images/main_right_top_bg.png') no-repeat scroll 0px 0px transparent;
+    background-color:#EDEDED;
 }
 .contentRightWrap-content
 {
     padding: 15px;
-    background: url('/resources/images/main_right_bg.png') repeat-y scroll 0px 0px transparent;
+    background-color:#EDEDED;
     margin-top: -7px;
     min-height: 460px;
 }
@@ -159,17 +160,21 @@ body{
 .head-title
 {
     text-align: left;
-    height: 41px;
-	background: url('/resources/images/top_right.png') repeat-x scroll 0px 0px #033556;
+    height: 50px;
+	background-color:#EDEDED;
+	padding-top:3px;
+	padding-left:5px;
    
 }
 
 .head-title-left{
 	float: left;
 	height: 35px;
+	width:250px;
+	margin-top:5px;
 }
 .head-title-home
-{
+{	
     height: 22px;
     margin-left:26px;
     margin-top:8px;
@@ -193,15 +198,15 @@ body{
 {
     width: 101px;
     height:34px;
-    background-image: url(/resources/images/header-title-n.png);
-    background-repeat: no-repeat;
-    margin-left: 2px;
+    background-color:#49749D;
+    margin-left: 20px;
     margin-top: 6px;
     float:left;
+    border-radius:5px;
 }
 .head-title-content ul li:hover
 {
-	background-image: url(/resources/images/button-title-selected-1.png);
+	/*background-image: url(/resources/images/button-title-selected-1.png);*/
 }
 .head-title-content ul li a
 {
@@ -225,31 +230,31 @@ body{
 }
 
 #left-menu{
-	width: 179px;
-	background: url('/resources/images/left_menu_bac.png') repeat-y scroll 0px 0px transparent;
-	margin: 0px 0px 0px 7px;
+	width: 100%;
+	margin: 0px;
 	position: relative;
 	padding-bottom: 10px;
-	min-height: 487px;
+	min-height: 520px;
 }
 .menu-head
 {
     text-align: center;
     height: 28px;
-    margin-top: 4px;
-    background-image: url(/resources/images/middle-left-head-title.png);
-    background-repeat: no-repeat;
+    margin-top: 3px;
+    background-color:#EDEDED;
 }
  .menu-head .menu-head-text
 {
 	font-family: "Microsoft YaHei";
-	color:white;
+	color:black;
 	text-align: center;
 	line-height: 28px;
 }
 .menu-content{
-	width: 179px;
-	background-image: url(/resources/images/left_menu_bac.png) repeat-y scroll 0px 0px transparent;
+	margin-top:2px;
+	width: 100%;
+	min-height:500px;
+	background-color:#EDEDED;
 }
 .button-menu
 {
@@ -306,6 +311,10 @@ body{
 	margin-top: 5px;
 }
 
+.menu_container img{
+	width:14px;
+	height:14px;
+}
 .menu-head-text{
 	font: bold 14px sans-serif;
 }
@@ -372,4 +381,60 @@ button, input, optgroup, select, textarea {
 .element-vis
 {
   visibility: visible;
+}
+
+
+/*ui´óÐÞ¸Ä*/
+.head-3{
+	clear:both;
+    height: 110px;
+   	background-color:#49749D;
+   	padding-top:15px;
+}
+
+.head-3-left{
+	float:left;
+}
+
+
+.head-3 .zh_title{
+	font-size:35px;
+	color:white;
+}
+
+.head-3 .en_title{
+	font-size:19px;
+	color:white;
+}
+
+.head-3-right{
+	float: right;
+	position: relative;
+}
+.head-3-right ul{
+	position: absolute;
+	right: 0px;
+	width: 120px;
+	top: -9px;
+}
+
+.head-3-right ul li{
+	display: inline;
+	width: 60px;
+	margin: 0px;
+}
+
+.head-3-right ul li a
+{
+}
+
+.head-3-right ul li a:hover
+{
+    cursor: pointer;
+}
+
+.head-3-right ul li img
+{
+	width:60px;
+	height:60px;
 }

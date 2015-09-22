@@ -4,7 +4,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
     <div class="headerWrap">
-        <div class="head-1">
+       <!--   <div class="head-1">
             <div class="head-1-left">
                 <span style="margin-left: 20px;">用户登录：您好，<a id="personCode" data-headShowKey="${headShowKey}"  data-headIsOnlyLook="${headIsOnlyLook}" style="color: white;" href="javascript:void(0);" onclick="linkToPerson()">${currentUsername}! </a> <a style="visibility:hidden;">占</a> ${loginTime}</span>
             </div>
@@ -18,29 +18,44 @@
         <div class="head-2">
            <span style="visibility:hidden;">占位符</span>
         </div>
+        -->
+        <div class="head-3">
+        	<div class="head-3-left">
+        		<p class="zh_title">淮安市中级人民法院人员考评系统</p>
+        		<p class="en_title">HUAIAN INTERMEDIATE PEOPLE'S COURT PERSONNEL EVALUATION SYSTEM</p>
+        	</div>
+        	<div class="head-3-right">
+        		<ul>
+                <li><a href="javascript:void(0);"  onclick="changePassword();"><img src="/resources/images/User-Lock-256.png"/></a></li>
+                <li><a href="/logout.do"><img src="/resources/images/Login-Door-256.png"/></a></li>
+                </ul>
+        	</div>
+        </div>
+        
        <div class="head-title">
        		<div class="head-title-left">
-                <img src="/resources/images/main_list_left.png"/>
-            </div>
-            <div class="head-title-home">
-                <a href="#"><img src="/resources/images/home.png"/></a>
+				<div class="input-group">
+					<input type="text" class="form-control"/>
+					<span class="input-group-addon glyphicon glyphicon-search"></span>
+				</div>
             </div>
             <div class="head-title-content">
                 <ul>
                     <c:forEach items="${headerMenus}" var="headMenu">
                         <c:choose>
-                            <c:when test="${headMenu.menuName == currentHeaderMenuName}">
+                           <!--   <c:when test="${headMenu.menuName == currentHeaderMenuName}">
                                 <li  style="background-image: url(/resources/images/button-title-selected-1.png)">
                                 	<div class="menu_container"><a href="${headMenu.href}">${headMenu.menuName}</a></div>
                                     
                                 </li>
                             </c:when>
+                            -->
                             <c:when test="${headMenu.menuName=='业绩档案' }">
                              
                             </c:when>
                             <c:otherwise>
                                 <li>
-                                	<div class="menu_container"><a href="${headMenu.href}">${headMenu.menuName}</a></div>
+                                	<div class="menu_container"><a href="${headMenu.href}"><!-- <img src="/resources/images/${headMenu.menuName}.png"/> -->${headMenu.menuName}</a></div>
                                 </li>
                             </c:otherwise>
                         </c:choose>
