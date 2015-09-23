@@ -3,7 +3,6 @@
      version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
-
     <div class="contentLeft">
     	<div id="left-menu">
 	       <!--   <div class="menu-head">
@@ -17,16 +16,19 @@
 	        </div>-->
 	         <div class="menu-content">
 	            <ul>
+	            	<li>
+	            	<div class="menu_container head-parent-menu"><a href="#"><img/><span> ${currentHeaderMenuName}</span></a></div>
+	            	</li>
 	                <c:forEach items="${leftMenus}" var="leftMenu">
 	                    <c:choose>
 	                        <c:when test="${leftMenu.menuName == currentSelectLeftMenu}">
 	                            <li>
-	                            	<div class="menu_container"><a href="${leftMenu.href}"><img src="/resources/images/${leftMenu.uniqueName}.png"/><span>${leftMenu.menuName}</span></a></div>
+	                            	<img class="tree-line" src="/resources/images/tree-line.png"/><div class="menu_container"><a href="${leftMenu.href}"><img src="/resources/images/${leftMenu.uniqueName}.png"/><span>${leftMenu.menuName}</span></a></div>
 	                            </li>
 	                        </c:when>
 	                        <c:otherwise>
 	                            <li>
-	                            	<div class="menu_container"><a href="${leftMenu.href}"><img src="/resources/images/${leftMenu.uniqueName}.png"/><span>${leftMenu.menuName}</span></a></div>
+	                            	<img class="tree-line" src="/resources/images/tree-line.png"/><div class="menu_container"><a href="${leftMenu.href}"><img src="/resources/images/${leftMenu.uniqueName}.png"/><span>${leftMenu.menuName}</span></a></div>
 	                            </li>
 	                        </c:otherwise>
 	                    </c:choose>	
