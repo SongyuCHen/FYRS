@@ -21,12 +21,12 @@
 	                    <c:choose>
 	                        <c:when test="${leftMenu.menuName == currentSelectLeftMenu}">
 	                            <li>
-	                            	<div class="menu_container"><img src="/resources/images/${leftMenu.uniqueName}.png"/><a href="${leftMenu.href}">${leftMenu.menuName}</a></div>
+	                            	<div class="menu_container"><a href="${leftMenu.href}"><img src="/resources/images/${leftMenu.uniqueName}.png"/><span>${leftMenu.menuName}</span></a></div>
 	                            </li>
 	                        </c:when>
 	                        <c:otherwise>
 	                            <li>
-	                            	<div class="menu_container"><img src="/resources/images/${leftMenu.uniqueName}.png"/><a href="${leftMenu.href}">${leftMenu.menuName}</a></div>
+	                            	<div class="menu_container"><a href="${leftMenu.href}"><img src="/resources/images/${leftMenu.uniqueName}.png"/><span>${leftMenu.menuName}</span></a></div>
 	                            </li>
 	                        </c:otherwise>
 	                    </c:choose>	

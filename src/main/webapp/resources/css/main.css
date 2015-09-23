@@ -286,21 +286,16 @@ body {
 }
 
 .menu-content ul li {
-	padding-left:30px;
+	padding-left:10px;
 	width: 150px;
 	height: 40px;
 	margin-top: 10px;
 	padding-top: 3px;
+	background-color:#49749D;
+	border-radius:3px;
 }
 
-.menu-content ul li a {
-	text-decoration: none;
-	height: 30px;
-}
-.menu-content ul li img{
-	height:30px;
-	width:30px;
-}
+
 
 .fyrs-button-red-backgournd {
 	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
@@ -317,15 +312,17 @@ body {
 }
 
 .menu_container img{
-	width:35px;
-	height:35px;
+	width:40px;
+	height:40px;
 	
+}
+.menu_container a{
+	color:white;
 }
 
 .menu_container span{
 	position:relative;
 	left:-5px;
-	top:2px;
 }
 
 .menu-head-text {
@@ -333,7 +330,7 @@ body {
 }
 
 .menu-content .menu_container {
-	font: bold 12px sans-serif;
+	font: bold 14px sans-serif;
 	width: 150px;
 }
 
