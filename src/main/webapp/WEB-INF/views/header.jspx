@@ -25,7 +25,7 @@
         	</div>
         	<div class="head-3-right">
         		<ul>
-                <li><a href="javascript:void(0);"  onclick="changePassword();"><img src="/resources/images/User-Lock-256.png"/></a></li>
+                <li><a href="javascript:void(0);"  onclick="changePassword();"><img src="/resources/images/suoding.png"/></a></li>
                 <li><a href="/logout.do"><img src="/resources/images/Login-Door-256.png"/></a></li>
                 </ul>
         	</div>
