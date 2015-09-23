@@ -6,7 +6,7 @@
 
     <div class="contentLeft">
     	<div id="left-menu">
-	        <div class="menu-head">
+	       <!--   <div class="menu-head">
 	          <span class="menu-head-text">
 	          <c:forEach items="${headerMenus}" var="headMenu">
 	            <c:if test="${headMenu.menuName == currentHeaderMenuName}">
@@ -14,19 +14,19 @@
 	            </c:if>
 	          </c:forEach>
 	          </span>
-	        </div>
+	        </div>-->
 	         <div class="menu-content">
 	            <ul>
 	                <c:forEach items="${leftMenus}" var="leftMenu">
 	                    <c:choose>
 	                        <c:when test="${leftMenu.menuName == currentSelectLeftMenu}">
-	                            <li style="background-image: url(/resources/images/${leftMenu.uniqueName}.png)" >
-	                            	<div class="menu_container"><a href="${leftMenu.href}">${leftMenu.menuName}</a></div>
+	                            <li>
+	                            	<div class="menu_container"><img src="/resources/images/${leftMenu.uniqueName}.png"/><a href="${leftMenu.href}">${leftMenu.menuName}</a></div>
 	                            </li>
 	                        </c:when>
 	                        <c:otherwise>
-	                            <li style="background-image: url(/resources/images/${leftMenu.uniqueName}.png)">
-	                            	<div class="menu_container"><a href="${leftMenu.href}">${leftMenu.menuName}</a></div>
+	                            <li>
+	                            	<div class="menu_container"><img src="/resources/images/${leftMenu.uniqueName}.png"/><a href="${leftMenu.href}">${leftMenu.menuName}</a></div>
 	                            </li>
 	                        </c:otherwise>
 	                    </c:choose>	

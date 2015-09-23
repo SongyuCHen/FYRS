@@ -56,7 +56,10 @@
         <div class="contentRightWrap">
             <div class="contentRightWrap-box-outer">
                 <div class="contentRightWrap-box-inner">
-                    <div class="contentRightWrap-title noprint" >当前位置： >> ${currentHeaderMenuName} >> ${currentSelectLeftMenu} </div>
+                    <div class="contentRightWrap-title noprint" >
+                   		 <span class="location-left">${currentSelectLeftMenu}</span>
+                   		 <span class="location-right">当前位置： > ${currentHeaderMenuName} > ${currentSelectLeftMenu}</span>
+                    </div>
                     <div class="contentRightWrap-content clearfix">
                         <tiles:insertAttribute name="content" />
                     </div>

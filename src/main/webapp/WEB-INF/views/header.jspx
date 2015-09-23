@@ -21,8 +21,7 @@
         -->
         <div class="head-3">
         	<div class="head-3-left">
-        		<p class="zh_title">淮安市中级人民法院人员考评系统</p>
-        		<p class="en_title">HUAIAN INTERMEDIATE PEOPLE'S COURT PERSONNEL EVALUATION SYSTEM</p>
+        		<img src="/resources/images/banner-logo.png"/>
         	</div>
         	<div class="head-3-right">
         		<ul>
@@ -55,7 +54,7 @@
                             </c:when>
                             <c:otherwise>
                                 <li>
-                                	<div class="menu_container"><a href="${headMenu.href}"><!-- <img src="/resources/images/${headMenu.menuName}.png"/> -->${headMenu.menuName}</a></div>
+                                	<div class="menu_container"><a href="${headMenu.href}"><img src="/resources/images/${headMenu.uniqueName}.png"/><span> ${headMenu.menuName}</span></a></div>
                                 </li>
                             </c:otherwise>
                         </c:choose>
