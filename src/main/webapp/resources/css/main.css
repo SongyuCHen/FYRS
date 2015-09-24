@@ -53,7 +53,10 @@ body {
 }
 
 .contentLeft {
-	height: 100%;
+	background-color: #EDEDED;
+	min-height: 600px;
+	border:2px solid gray;
+	border-left:0px;
 }
 
 .contentMiddleWrap {
@@ -70,6 +73,10 @@ body {
 	margin-right: 0px;
 	float: right;
 	width: 75%;
+	min-height:600px;
+	background-color: #EDEDED;
+	border:2px solid gray;
+	border-right:0px;
 }
 
 .contentRightWrap-box-outer {
@@ -84,8 +91,7 @@ body {
 	height: 60px;
 	padding-left: 40px;
 	padding-top: 7px;
-	background-color: #EDEDED;
-	border:2px solid gray;
+	border-bottom:2px solid gray;
 }
 
 .contentRightWrap-title .location-left {
@@ -101,10 +107,7 @@ body {
 
 .contentRightWrap-content {
 	padding: 15px;
-	background-color: #EDEDED;
 	margin-top: -7px;
-	min-height: 460px;
-	border:2px solid gray;
 }
 
 .footerWrap {
@@ -262,10 +265,7 @@ body {
 }
 
 .menu-content {
-	border:2px solid gray;
 	width: 100%;
-	min-height: 540px;
-	background-color: #EDEDED;
 }
 
 .button-menu {
