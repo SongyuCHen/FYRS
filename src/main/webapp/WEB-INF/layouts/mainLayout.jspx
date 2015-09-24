@@ -38,7 +38,6 @@
    
     <!-- 全局脚本 -->
     <script type="text/javascript" src="/resources/js/global.js"><jsp:text/></script>
-     <script type="text/javascript" src="/resources/js/menu.js"><jsp:text/></script>
     <!-- 全局样式 -->
     <spring:url value="/resources/css/main.css" var="app_css_url" />
     <link rel="stylesheet" type="text/css" media="screen" href="${app_css_url}" />
@@ -74,5 +73,6 @@
     </div>
 </div>
 <div id="changePassword_dlg"></div>
+<script type="text/javascript" src="/resources/js/menu.js"><jsp:text/></script>
 </body>
 </html>

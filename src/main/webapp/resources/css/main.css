@@ -22,7 +22,7 @@ body {
 
 .page {
 	margin: 0 auto;
-	width: 100%;
+	width:1000px;
 	position: relative;
 	background-image: url(/resources/images/background.png);
 	background-repeat: repeat-y;
