@@ -554,6 +554,8 @@ $(function(){
 	  
 var initTable = function(dataTableId){
    	  $roles_oTable=$("#"+dataTableId+" .dataTable").dataTable({
+   		'iDisplayLength' : 10,
+   		"sPaginationType" : "full_numbers",
  		'bFilter' : false,
         'bSort' : false,
         'bLengthChange' : false,
@@ -575,7 +577,6 @@ var initTable = function(dataTableId){
  			}
  		},
 		'bSortClasses' : false,
-		'iDisplayLength' : 10,
 		'bRetrieve':true,
 		'bDestory':true
 	});
@@ -589,7 +590,7 @@ var initTable = function(dataTableId){
 		</button>
 	</div>
 	<div id="bzgl_list">
-		<table id="dataTable" data-maxindex="" class="dataTable" cellspacing="0" width="100%">
+		<table id="dataTable" data-maxindex="" class="dataTable cell-border" cellspacing="0" width="100%">
 			<thead>
 				<tr>
 					<th width="200px">统计表编号</th>
