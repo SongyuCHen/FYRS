@@ -29,7 +29,7 @@ public class RslhXtlhController {
 	    public String showJdcx(Model model,HttpServletResponse response,HttpServletRequest request)
 	    {
 	       
-	       MenuShowUtils.headerMenu(request,model, roleMenuService,"系统留痕");
+	       MenuShowUtils.headerMenu(request,model, roleMenuService,"人事留痕");
 		   MenuShowUtils.leftMenu(request,model, roleMenuService, "rslh");
 	       model.addAttribute("currentSelectLeftMenu","系统留痕");
 	       model.addAttribute("dataSource",RolesUtil.getUserContext(request).getCurrentDataSource());
