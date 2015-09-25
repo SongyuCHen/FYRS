@@ -16,9 +16,8 @@
 .qxgl-head {
 	padding: 15px;
 	margin-bottom: 15px;
-	color: #166092;
-	background-color: #EEF7FD;
-	border-bottom: 2px solid #96C8EB;
+	color: black;
+	background-color:#EDEDED;
 }
 
 .qxgl-head span {
@@ -683,15 +682,16 @@ function zzktableBind(){
 	//  初始化表格
 	var initTable = function(dataTableId) {
 		$roles_oTable = $("#" + dataTableId + " #dataTable").dataTable({
+			'iDisplayLength' : 10,
 			"sPaginationType" : "full_numbers",
 			"bStateSave" : true,
-			'bPaginate' : false,
+			'bPaginate' : true,
 			'bAutoWidth' : false,
 			"aoColumnDefs" : [ {
 				"bSortable" : false,
 				"aTargets" : [ 0, 3, 4, 5, 6, 7, 8, 9]
 			} ],
-			"sScrollY" : "300px",
+			//"sScrollY" : "300px",
 			"bLengthChange" : false,
 			"bFilter" : false,
 			"oLanguage" : {
