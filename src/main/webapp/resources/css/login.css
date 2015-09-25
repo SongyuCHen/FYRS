@@ -6,8 +6,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body{
-	margin-top: -3px;
-	background: url(../images/left_add_2.jpg) repeat-x;
+	background: url(../images/left_add_3.jpg) repeat-x;
 }
 
 li{list-style:none;}
@@ -15,10 +14,10 @@ a{text-decoration:none;}
 
 /*login*/
 .login_contain{
-	height:628px;
-	width:1200px;
+	height:768px;
+	width:991px;
 	margin:0 auto;
-	background:url(../images/background07.jpg);
+	background:url(../images/background_07.png);
 }
 .login_header{
 	height:239px;
@@ -31,15 +30,15 @@ a{text-decoration:none;}
 	/* background:url(../images/login-1.png) 0 0 no-repeat; */
 }
 #login_form{
-	width:300px;
+	width:350px;
 	/* float:right */;
-	padding-top:27px;
-	padding-left:32px;
+	padding-top:55px;
+	padding-left:80px;
 	padding-right:8px;
 }
 
 .input-control{
-	margin-bottom: 6px;
+	margin-bottom: 15px;
 }
 
 .footer{
@@ -62,4 +61,13 @@ a{text-decoration:none;}
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
     font-family: inherit;
     font-size: 100%;
+}
+
+button.btn{
+	width:70px;
+}
+
+.remember-me{
+	position:relative;
+	top:5px;
 }

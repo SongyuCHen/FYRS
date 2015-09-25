@@ -127,18 +127,15 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-md-9 input-control" style="display:inline-block;">
+						<div class="col-md-5 input-control remember-me" style="display:inline-block;">
 							<input type="checkbox" id="rememberPW" style="display:inline-block;"/>
 							<label for="rememberPW">记住密码&nbsp;</label><span style="color:red;"><c:if test="${result!=null}">${result}</c:if></span>
 						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-2"></div>
-						<div class="btn-group col-md-9" style="display:inline-block;">
+						<div class="btn-group col-md-7" style="display:inline-block;">
 							<button type="submit" class="btn btn-primary login_btn" style="display:inline-block;">
 								<span class="glyphicon glyphicon-log-in"></span> 登录
 							</button>
-							<button type="reset" class="btn btn-success" style="display:inline-block;">
+							<button type="reset" class="btn btn-primary" style="display:inline-block;">
 								<span class="glyphicon glyphicon-refresh"></span> 重置
 							</button>
 						</div>
