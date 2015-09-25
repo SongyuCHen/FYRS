@@ -9,11 +9,10 @@
    
     <style type="text/css">
     #jdcx_head{
-    	padding-top: 5px;
-    	margin-bottom: 15px;
-		color: #166092;
-		background-color: #EEF7FD;
-		border-bottom: 2px solid #96C8EB;
+    	padding: 15px;
+	margin-bottom: 15px;
+	color: black;
+	background-color:#EDEDED;
 	}
      #jdcx_head div
       {

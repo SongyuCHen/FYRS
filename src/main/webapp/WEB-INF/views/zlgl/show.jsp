@@ -21,7 +21,6 @@
 	margin-bottom: 15px;
 	color: black;
 	background-color:#EDEDED;
-		color: black;
 		font-size: 120%;
 		text-align:center;
       }

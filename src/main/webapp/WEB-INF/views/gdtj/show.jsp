@@ -120,7 +120,7 @@
 								"<td>X_07</td>"+
 								"<td><a href='X_07.do' target='_blank'>徐州中院 2014干部编制、职级变动台账</a></td>"+
 							 "</tr>";
-		 var html_head="<table id='dataTable' class='dataTable' cellspacing='0' width='100%'>"+
+		 var html_head="<table id='dataTable' class='dataTable cell-border' cellspacing='0' width='100%'>"+
 							"<thead>"+
 								"<tr>"+
 								"<th width='200px'>统计表编号</th>"+
@@ -185,6 +185,7 @@
      }); // jquery
      var initTable = function(dataTableId){
    	  $roles_oTable=$("#"+dataTableId+" .dataTable").dataTable({
+   		"sPaginationType" : "full_numbers",
  			'bFilter' : false,
            'bSort' : false,
            'bLengthChange' : false,

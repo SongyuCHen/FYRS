@@ -16,9 +16,8 @@
 .qxgl-head {
 	padding: 15px;
 	margin-bottom: 15px;
-	color: #166092;
-	background-color: #EEF7FD;
-	border-bottom: 2px solid #96C8EB;
+	color: black;
+	background-color:#EDEDED;
 }
 
 .qxgl-head span {

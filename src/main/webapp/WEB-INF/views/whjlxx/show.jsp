@@ -12,11 +12,10 @@
      #whjlxx_xzfy
      {
          text-align: center;
-         padding: 15px 0;
-	     background-color: #EEF7FD;
-	     border-bottom: 2px solid #96C8EB;
-		 margin-bottom: 5px;
-		 color: #166092;
+         padding: 15px;
+	margin-bottom: 15px;
+	color: black;
+	background-color:#EDEDED;
 		 font-size: 120%;
      }
       #whjlxx_list

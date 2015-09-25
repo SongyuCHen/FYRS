@@ -9,11 +9,10 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/zdybq.css" />
 <style type="text/css">
 	.qxgl-head{
-		padding:15px;
-    	margin-bottom: 15px;
-		color: #166092;
-		background-color: #EEF7FD;
-		border-bottom: 2px solid #96C8EB;
+		padding: 15px;
+	margin-bottom: 15px;
+	color: black;
+	background-color:#EDEDED;
 	}
 </style>
 <script type="text/javascript">
