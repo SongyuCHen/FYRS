@@ -1,0 +1,59 @@
+.time-line-wrapper{
+	position:relative;
+}
+
+.time-line-day .time-line-time{
+	float:left;
+	clear:both;
+	width:160px;
+	height:40px;
+	background-image:url("../images/time-bg.png");
+	color:white;
+	font-size:20px;
+	padding-top:5px;
+	text-align:center;
+	margin-bottom:20px;
+	z-index:2;
+	position:relative;
+}
+
+.time-line-wrapper img#time-line-line{
+	position:absolute;
+	top:0px;
+	left:48px;
+	z-index:1;
+	width:35px;
+}
+
+.time-line-item{
+	margin-top:20px;
+}
+
+.time-line-day .time-line-dot{
+	clear:both;
+	width:46px;
+	height:46px;
+	background-image:url("../images/time-dot.png");
+	position:relative;
+	margin-left:40px;
+	float:left;
+	z-index:2;
+	position:relative;
+}
+
+
+.time-line-day .time-line-panel{
+	float:left;
+	margin-left:20px;
+	width:750px;
+}
+
+
+.time-line-day .time-line-panel .panel{
+        	padding:5px;
+        	border:#909090 1px solid;background:#fff;color:#333;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+-moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
+-webkit-box-shadow: 2px 2px 10px #909090;/*safari»òchrome*/
+box-shadow:2px 2px 10px #909090;/*opera»òie9*/
+        }

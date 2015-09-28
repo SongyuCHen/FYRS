@@ -9,6 +9,8 @@
 <script src="/resources/jstree/jquery.jstree.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="/resources/css/demo_table.css" />
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/time-line.css" />
 
 <style type="text/css">
 #rylh-head {
@@ -128,9 +130,52 @@
 #time-right-content-ul li a {
 	margin-left: 15px;
 }
+
+.tableHead th{
+	text-align:center;
+}
 </style>
 <script type="text/javascript">
 	$(function() {
+		/* $("#infoTable").dataTable({
+   			'sPaginationType' : 'full_numbers',
+   			'iDisplayLength' : 10,
+			"sPaginationType" : "full_numbers",
+			"bStateSave" : true,
+			'bPaginate' : true,
+			'bAutoWidth' : false,
+			"bLengthChange" : false,
+			"bFilter" : false,
+  			'oLanguage' : {
+  				"sProcessing" : "处理中...",
+  				"sLengthMenu" : "显示 _MENU_ 项结果",
+  				"sZeroRecords" : "没有匹配结果",
+  				"sInfo" : "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+  				"sInfoEmpty" : "显示第 0 至 0 项结果，共 0 项",
+  				"sInfoFiltered" : "(由 _MAX_ 项结果过滤)",
+  				"sInfoPostFix" : "",
+  				"sSearch" : "搜索:",
+  				"sUrl" : "",
+  				"oPaginate" : {
+  					"sFirst" : "首页",
+  					"sPrevious" : "上页",
+  					"sNext" : "下页",
+  					"sLast" : "末页"
+  				}
+  			}
+   		}); */
+   		var timeShowHeight = 0;
+   		$("#time-show .time-line-time").each(function(){
+   			timeShowHeight += $(this).height()+20;
+   		});
+   		$("#time-show .time-line-panel").each(function(){
+   			timeShowHeight += $(this).height();
+   		});
+		$("#time-line-line").css("height",timeShowHeight);
+		
+		
+		
+		
 		$('#jbbbxz_dlg').dialog({
 			autoOpen : false,
 			bgiframe : true,
@@ -337,6 +382,7 @@
 					<th width="80px">报表</th>
 					
 					<th width="80px">操作</th>
+					<th width="80px"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -346,7 +392,78 @@
 			</tbody>
 		</table>
 	</div>
-	<div id="time-show"></div>
+	<div id="time-show" class="time-line-wrapper">
+		<img id="time-line-line" src="/resources/images/time-line.png"/>
+		<div class="time-line-day">
+			<div class="time-line-time">2015年9月28日</div>
+			<div class="time-line-item">
+				<div class="time-line-dot"></div>
+				<div class="time-line-panel">
+					<div class= "panel panel-default">				
+  						<div class="panel-heading">Panel heading without title</div>
+  						<div class="panel-body">
+    						Panel content
+  						</div>
+  					</div>
+				</div>
+			</div>
+			<div class="time-line-item">
+				<div class="time-line-dot"></div>
+				<div class="time-line-panel">
+					<div class= "panel panel-default">				
+  						<div class="panel-heading">Panel heading without title</div>
+  						<div class="panel-body">
+    						Panel content
+  						</div>
+  					</div>
+				</div>
+			</div>
+		</div>
+		<div class="time-line-day">
+			<div class="time-line-time">2015年9月26日</div>
+			<div class="time-line-item">
+				<div class="time-line-dot"></div>
+				<div class="time-line-panel">
+					<div class= "panel panel-default">				
+  						<div class="panel-heading">Panel heading without title</div>
+  						<div class="panel-body">
+    						Panel content
+  						</div>
+  					</div>
+				</div>
+			</div>
+		</div>
+		<div class="time-line-day">
+			<div class="time-line-time">2015年9月26日</div>
+			<div class="time-line-item">
+				<div class="time-line-dot"></div>
+				<div class="time-line-panel">
+					<div class= "panel panel-default">				
+  						<div class="panel-heading">Panel heading without title</div>
+  						<div class="panel-body">
+    						Panel content
+  						</div>
+  					</div>
+				</div>
+			</div>
+		</div>
+		<div class="time-line-day">
+			<div class="time-line-time">2015年9月26日</div>
+			<div class="time-line-item">
+				<div class="time-line-dot"></div>
+				<div class="time-line-panel">
+					<div class= "panel panel-default">				
+  						<div class="panel-heading">Panel heading without title</div>
+  						<div class="panel-body">
+    						Panel content
+  						</div>
+  					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+	</div>
 	<div class="xzfy_dlg" isOnlyXzFy="0" isBmSelected="1" isFyAndBm="0"></div>
 	<div id="jbbbxz_dlg" style="display:none;"></div>
 </body>
