@@ -14,6 +14,15 @@ function makeLRalign(){
 	$(".contentRightWrap").css("height",h+"px");
 	
 }
+
+function adjustLR(){
+	var nh = $("#zzk_list").height()+$("#zzk_list").position().top;
+	//alert(nh+","+(screen.height-350)+","+$("#zzk_list").height()+","+$("#zzk_list").position().top);
+	if(nh>screen.height-350){
+		$(".contentLeftWrap").height(nh+"px");
+		$(".contentRightWrap").height(nh+"px");
+	}
+}
 $(function() {
 	var w = screen.width;
 	if(w<1366){
@@ -27,6 +36,7 @@ $(function() {
 	}else{
 		$(".contentRightWrap").css("width",(w*0.8)+"px");
 	}
+
 	
 	makeLRalign();
 	var headMenuName = $(".head-parent-menu span").text();

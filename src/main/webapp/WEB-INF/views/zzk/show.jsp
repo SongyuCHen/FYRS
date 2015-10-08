@@ -712,6 +712,7 @@ function zzktableBind(){
 				}
 			}
 		});
+		adjustLR();
 	};
 
 	// 当部门被选择时
