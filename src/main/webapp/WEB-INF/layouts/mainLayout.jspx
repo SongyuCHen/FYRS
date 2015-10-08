@@ -48,7 +48,7 @@
     <div class="headerWrap noprint">
         <tiles:insertAttribute name="header" />
     </div>
-    <div class="contentWrap clearfix">
+    <div class="contentWrap">
         <div class="contentLeftWrap noprint">
             <tiles:insertAttribute name="menu" />
         </div>
