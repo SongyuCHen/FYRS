@@ -40,7 +40,6 @@
     <!-- 全局样式 -->
     <spring:url value="/resources/css/main.css" var="app_css_url" />
     <link rel="stylesheet" type="text/css" media="screen" href="${app_css_url}" />
-    
     <title>法院人事</title>
 </head>
 <body>

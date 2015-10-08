@@ -19,7 +19,15 @@ $(function() {
 	if(w<1366){
 		w = 1366;
 	}
-	$(".page").css("width",(w-20)+"px");
+	w = w -25;
+	$(".page").css("width",w+"px");
+	$(".contentLeftWrap").css("width",w*0.2+"px");
+	if($.browser.version == "8.0"){
+		$(".contentRightWrap").css("width",(w*0.78)+"px");
+	}else{
+		$(".contentRightWrap").css("width",(w*0.8)+"px");
+	}
+	
 	makeLRalign();
 	var headMenuName = $(".head-parent-menu span").text();
 	var pic_url = "";

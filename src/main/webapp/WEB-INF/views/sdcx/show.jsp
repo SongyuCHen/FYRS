@@ -880,7 +880,7 @@
 			'iDisplayLength' : 10,
 			'bRetrieve' : true,
 			'bDestory' : true,
-			"scrollY": "300px",
+			"sScrollY": "300px",
 			"sScrollX" : "100%", // 横向滚动条
 			"scrollCollapse": true,
 		});
