@@ -46,6 +46,10 @@ body {
 .contentLeftWrap {
 	width: 20%;
 	float: left;
+	background-color: #EDEDED;
+	/*min-height: 600px;*/
+	border:2px solid gray;
+	border-left:0px;
 }
 
 .contentLeftWrap #header {
@@ -53,10 +57,7 @@ body {
 }
 
 .contentLeft {
-	background-color: #EDEDED;
-	min-height: 600px;
-	border:2px solid gray;
-	border-left:0px;
+	
 }
 
 .contentMiddleWrap {
@@ -73,7 +74,7 @@ body {
 	margin-right: 0px;
 	float: right;
 	width: 80%;
-	min-height:600px;
+	/*min-height:600px;*/
 	background-color: white;
 	border:2px solid gray;
 	border-right:0px;
