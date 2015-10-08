@@ -29,6 +29,11 @@ a{text-decoration:none;}
 	margin:0 auto;
 	/* background:url(../images/login-1.png) 0 0 no-repeat; */
 }
+
+/*remove the scroll bar of dialog*/
+.ui-dialog .ui-dialog-content{
+	overflow:visible;
+}
 #login_form{
 	width:350px;
 	/* float:right */;
