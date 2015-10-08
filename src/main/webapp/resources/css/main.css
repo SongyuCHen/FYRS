@@ -218,6 +218,7 @@ body {
 	background-color: #49749D;
 	margin-left: 20px;
 	margin-top: 6px;
+	margin-top:/*\**/0\9;
 	float: left;
 	border-radius: 5px;
 }

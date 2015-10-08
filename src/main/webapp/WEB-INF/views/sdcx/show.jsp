@@ -91,9 +91,6 @@
 #resultShow_list
 {
   text-align: center;
-  width: 750px;
-  height: 470px;
-  overflow: scroll;
 }
 </style>
 <script type="text/javascript">
