@@ -25,10 +25,11 @@
        }
        #whdwxx_table tr
        {
-         height: 25px;
+         height: 30px;
        }
        #whdwxx_table tr td
        {
+       	padding-top:5px;
          width:150px;
        }
        #whdwxx_save
