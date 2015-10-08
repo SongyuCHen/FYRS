@@ -19,32 +19,21 @@
         margin-top: 10px;
         margin-bottom:10px;
       }
-      
-      #jdcx_head .odd-four
-      {
-         margin-left: 100px;
-      }
-      #jdcx_head .odd-two
-      {
-         margin-left: 125px;
-      }
-      #jdcx_head .even-two
-      {
-        margin-left: 120px;
-      }
-      #jdcx_head .even-three
-      {
-        margin-left: 107px;
-      }
+   
       
       #jdcx_head span select
       {
         width:150px;
       }
+      
+      #jdcx_head span.off1word{
+      	padding-left:28px;
+      }
+      #jdcx_head span.off2word{
+      	padding-left:40px;
+      }
       #jdcx_find
       {
-        margin-top: 5px;
-        margin-left: 300px;
       }
        #line_branch
       {
@@ -340,66 +329,86 @@
 </head>
 <body>
     <div id="jdcx_head">
-    <div><span class="odd-four">法律职务&nbsp;&nbsp;
-    <select name="flzw">
-     <option value="-1"></option>
-      <c:forEach items="${flzws}" var="flzw">
-         <option value="${flzw.NDm}">${flzw.CMc}</option>
-      </c:forEach>
-      
-     </select></span><span class="even-two">部门&nbsp;&nbsp;
-    <select name="bm">
-     <option value="-1"></option>
-        <c:forEach items="${bms}" var="bm">
-         <option value="${bm.NDm}">${bm.CMc}</option>
-      </c:forEach>
-    </select></span></div>
-    <div><span class="odd-four">职务类别&nbsp;&nbsp;
-    <select name="zwlb">
-     <option value="-1"></option>
-       <c:forEach items="${zwlbs}" var="zwlb">
-         <option value="${zwlb.NDm}">${zwlb.CMc}</option>
-      </c:forEach>
-    </select></span><span class="even-two">专业&nbsp;&nbsp;
-    <select name="zy">
-     <option value="-1"></option>
-        <c:forEach items="${zys}" var="zy">
-         <option value="${zy.NDm}">${zy.CMc}</option>
-      </c:forEach>
-    </select></span></div>
-    <div><span class="odd-two">职级&nbsp;&nbsp;
-    <select name="zj">
-     <option value="-1"></option>
-       <c:forEach items="${zjs}" var="zj">
-         <option value="${zj.NDm}">${zj.CMc}</option>
-      </c:forEach>
-    </select></span><span class="even-two">等级&nbsp;&nbsp;
-    <select name="dj">
-     <option value="-1"></option>
-       <c:forEach items="${djs}" var="dj">
-         <option value="${dj.NDm}">${dj.CMc}</option>
-      </c:forEach>
-    </select></span></div>
-    <div><span class="odd-two">学历&nbsp;&nbsp;
-    <select name="xl">
-     <option value="-1"></option>
-        <c:forEach items="${xls}" var="xl">
-         <option value="${xl.NDm}">${xl.CMc}</option>
-      </c:forEach>
-    </select></span><span class="even-three">人员库&nbsp;&nbsp;
-    <select name="ryk">
-       <c:forEach items="${ryks}" var="ryk">
-         <option value="${ryk.NDm}">${ryk.CMc}</option>
-      </c:forEach>
-    </select></span></div>
-    <div id="jdcx_find" class="btn-group">
-       <button type="button" class="btn btn-primary" id="jdcx_btn_find">
-       		<span class="glyphicon glyphicon-search"></span> 查询
-       </button>
-       <button type="button" class="btn btn-success" id="jdcx_btn_reset">
-       		<span class="glyphicon glyphicon-refresh"></span> 重置
-       </button>
-    </div>
+    	<div class="row">
+    		<span class="col-md-4">法律职务&nbsp;&nbsp;
+    			<select name="flzw">
+     				<option value="-1"></option>
+      					<c:forEach items="${flzws}" var="flzw">
+         					<option value="${flzw.NDm}">${flzw.CMc}</option>
+      					</c:forEach>
+      			</select>
+      		</span>
+      		<span class="col-md-4 off2word">部门&nbsp;&nbsp;
+    			<select name="bm">
+     				<option value="-1"></option>
+        				<c:forEach items="${bms}" var="bm">
+         					<option value="${bm.NDm}">${bm.CMc}</option>
+      					</c:forEach>
+    			</select>
+    		</span>    			
+    		<span class="col-md-4">职务类别&nbsp;&nbsp;
+    			<select name="zwlb">
+     				<option value="-1"></option>
+       					<c:forEach items="${zwlbs}" var="zwlb">
+         					<option value="${zwlb.NDm}">${zwlb.CMc}</option>
+      					</c:forEach>
+    			</select>
+    		</span>
+    	</div>
+    	<div class="row">
+    		<span class="col-md-4 off2word">专业&nbsp;&nbsp;
+    			<select name="zy">
+     				<option value="-1"></option>
+        			<c:forEach items="${zys}" var="zy">
+         				<option value="${zy.NDm}">${zy.CMc}</option>
+      				</c:forEach>
+    			</select>
+    		</span>
+    		<span class="col-md-4 off2word">职级&nbsp;&nbsp;
+    			<select name="zj">
+     				<option value="-1"></option>
+       				<c:forEach items="${zjs}" var="zj">
+         				<option value="${zj.NDm}">${zj.CMc}</option>
+      				</c:forEach>
+    			</select>
+    		</span>
+    		<span class="col-md-4 off2word">等级&nbsp;&nbsp;
+    			<select name="dj">
+     				<option value="-1"></option>
+       				<c:forEach items="${djs}" var="dj">
+         				<option value="${dj.NDm}">${dj.CMc}</option>
+      				</c:forEach>
+    			</select>
+    		</span>
+    	</div>
+    	<div class="row">
+    		<span class="col-md-4 off2word">学历&nbsp;&nbsp;
+    			<select name="xl">
+     				<option value="-1"></option>
+        			<c:forEach items="${xls}" var="xl">
+         				<option value="${xl.NDm}">${xl.CMc}</option>
+      				</c:forEach>
+    			</select>
+    		</span>
+    		<span class="col-md-4 off1word">人员库&nbsp;&nbsp;
+    			<select name="ryk">
+       				<c:forEach items="${ryks}" var="ryk">
+         				<option value="${ryk.NDm}">${ryk.CMc}</option>
+      				</c:forEach>
+    			</select>
+    		</span>
+    	</div>
+    	<div class="row">
+    		<span class="col-md-10"></span>
+    		<span class="col-md-2 btn-group"  id="jdcx_find">
+    			<button type="button" class="btn btn-primary" id="jdcx_btn_find">
+       				<span class="glyphicon glyphicon-search"></span> 查询
+       			</button>
+       			<button type="button" class="btn btn-success" id="jdcx_btn_reset">
+       				<span class="glyphicon glyphicon-refresh"></span> 重置
+       			</button>
+    		</span>
+    	</div>
     </div> 
     
 	<div id="jdcx_middle">
