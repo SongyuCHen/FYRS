@@ -4,7 +4,7 @@
 <head>
 </head>
 <body>
-	<div style="overflow:auto;width:773px;height:534px">
+	<div style="margin:0 auto;width:800px;">
 		<div id="chart_flzw" style="height:400px"></div>
 		<div id="chart_fgdj" style="height:400px"></div>
 		<div id="chart_xzzw" style="height:400px"></div>
