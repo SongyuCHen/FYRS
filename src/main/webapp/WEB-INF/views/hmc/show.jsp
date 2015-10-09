@@ -11,11 +11,10 @@
 	<style>
 	#rylh-head
       {
-        padding: 15px 0;
-        padding-bottom: 0px;
-        background-color: #EEF7FD;
-		border-bottom: 2px solid #96C8EB;
-		color: #166092;
+       padding: 15px;
+	margin-bottom: 15px;
+	color: black;
+	background-color:#EDEDED;
 		font-size: 120%;
       }
       #columsSelectTable {
@@ -49,7 +48,7 @@
 }
 #hmc_list
 {
-  overflow: auto; 
+
 }
 	</style>
 	<script type="text/javascript">
@@ -361,6 +360,7 @@
 			'bFilter' : false,
 			'bSort' : false,
 			'bLengthChange' : false,
+			"bAutoWidth": true,
 			'oLanguage' : {
 				"columnDefs":[{"visible":false,"targets":-1}],
 				"sProcessing" : "处理中...",
@@ -384,6 +384,7 @@
 			'bRetrieve' : true,
 			'bDestory' : true
 		});
+		adjustLR("hmc_list");
 	};
 	</script>
 </head>

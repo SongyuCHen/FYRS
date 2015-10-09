@@ -15,8 +15,8 @@ function makeLRalign(){
 	
 }
 
-function adjustLR(){
-	var nh = $("#zzk_list").height()+$("#zzk_list").position().top;
+function adjustLR(id){
+	var nh = $("#"+id).height()+$("#"+id).position().top;
 	//alert(nh+","+(screen.height-350)+","+$("#zzk_list").height()+","+$("#zzk_list").position().top);
 	if(nh>screen.height-350){
 		$(".contentLeftWrap").height(nh+"px");

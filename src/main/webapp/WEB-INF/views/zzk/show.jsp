@@ -712,7 +712,7 @@ function zzktableBind(){
 				}
 			}
 		});
-		adjustLR();
+		adjustLR("zzk_list");
 	};
 
 	// 当部门被选择时

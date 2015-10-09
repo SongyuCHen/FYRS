@@ -690,7 +690,7 @@ function hbktableBind(){
 				"bSortable" : false,
 				"aTargets" : [ 0, 3, 4, 5, 6, 7, 8, 9, 10 ]
 			} ],
-			"sScrollY" : "300px",
+			//"sScrollY" : "300px",
 			"bLengthChange" : false,
 			"bFilter" : false,
 			"oLanguage" : {
@@ -711,6 +711,7 @@ function hbktableBind(){
 				}
 			}
 		});
+		adjustLR("hbk_list");
 	};
 
 	// 当部门被选择时

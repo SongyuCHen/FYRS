@@ -333,7 +333,7 @@ function rcktableBind(){
 				"bSortable" : false,
 				"aTargets" : [0,3,4,5,6,7,8,9]
 			} ],
-			"sScrollY" : "300px",
+			//"sScrollY" : "300px",
 			"bAutoWidth": true,
 			"bLengthChange" : false,
 			"bFilter":false,
@@ -355,6 +355,7 @@ function rcktableBind(){
 				}
 			}
 		});
+		adjustLR("zzk_list");
 	};
 
 	// 当部门被选择时
