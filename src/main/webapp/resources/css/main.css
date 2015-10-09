@@ -190,7 +190,7 @@ body {
 	text-align: left;
 	height: 50px;
 	background-color: #EDEDED;
-	padding-top: 3px;
+	padding-top: 0px;
 	padding-left: 5px;
 }
 
@@ -221,9 +221,9 @@ body {
 }
 
 .head-title-content ul li {
-	width: 120px;
-	height: 34px;
-	background-color: #49749D;
+	width: 110px;
+	height: 40px;
+	/*background-color: #3d6cb2;*/
 	margin-left: 20px;
 	margin-top: 6px;
 	margin-top/*\**/:0\9;
@@ -334,6 +334,12 @@ img.tree-line{
 
 .menu_container {
 	font: bold 14px sans-serif;
+	background-color:#3d6cb2;
+	border:#909090 1px solid;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=0,strength=6) 
+　　　　　　  progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=90,strength=6) 
+　　　　　　　progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=180,strength=6) 
+　　　　　　　progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=270,strength=6)";
 }
 
 .menu_container img{
@@ -358,7 +364,6 @@ img.tree-line{
 	float:left;
 	font: bold 14px sans-serif;
 	width: 130px;
-	background-color:#49749D;
 	border-radius:3px;
 }
 
