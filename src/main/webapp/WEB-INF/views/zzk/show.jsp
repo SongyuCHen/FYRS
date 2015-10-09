@@ -57,6 +57,19 @@
 	width: 250px;
 	height: 30px;
 }
+
+.searching{
+	float:left;
+	width:250px;
+	position:relative;
+	top:-2px;
+}
+.searching-icon{
+	float:left;
+	position:relative;
+	left:-20px;
+	top:8px;
+}
 </style>
 <script type="text/javascript">
 function zzktableBind(){
@@ -812,6 +825,12 @@ function zzktableBind(){
 				</select>
 			</div>
 		</div>
+	</div>
+	<div class="searching">
+		<input type="text" class="form-control" style="display:inline"/>	
+	</div>
+	<div class="searching-icon">
+		<span class="glyphicon glyphicon-search"></span>
 	</div>
 	<div class="operation btn-group">
 		<button type="button" class="btn btn-primary btn-sm" id="zzktj">
