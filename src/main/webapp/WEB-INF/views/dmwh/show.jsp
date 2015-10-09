@@ -20,6 +20,10 @@
       {
         color: red;
       }
+      
+      .operation{
+      	float:right;
+      }
    </style>
    <script type="text/javascript">
      $(function(){
@@ -215,11 +219,12 @@
 			          </c:forEach>
 			        </select>
 			    </div>
-			    
-			    <button id="btnCustomDm" class="btn btn-primary" data-btn_type="0" style="display:inline-block;">
-	        		<span class="glyphicon glyphicon-pencil"></span> 自定义代码
-	        	</button>
 	        </div>
+    </div>
+    <div class="operation">
+    	<button id="btnCustomDm" class="btn btn-primary" data-btn_type="0" style="display:inline-block;">
+	        		<span class="glyphicon glyphicon-pencil"></span> 自定义代码
+	     </button>
     </div>
 	<div id="dmwh_list" class="main_list">
 		<table id="dataTable" class="dataTable" cellspacing="0" width="100%">
