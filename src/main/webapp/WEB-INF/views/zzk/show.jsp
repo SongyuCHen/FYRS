@@ -58,18 +58,6 @@
 	height: 30px;
 }
 
-.searching{
-	float:left;
-	width:250px;
-	position:relative;
-	top:-2px;
-}
-.searching-icon{
-	float:left;
-	position:relative;
-	left:-20px;
-	top:8px;
-}
 </style>
 <script type="text/javascript">
 function zzktableBind(){
@@ -694,7 +682,7 @@ function zzktableBind(){
 	}); // jquery
 	//  初始化表格
 	var initTable = function(dataTableId) {
-		$roles_oTable = $("#" + dataTableId + " #dataTable").dataTable({
+		var $roles_oTable = $("#" + dataTableId + " #dataTable").DataTable({
 			'iDisplayLength' : 10,
 			"sPaginationType" : "full_numbers",
 			"bStateSave" : true,
@@ -706,7 +694,7 @@ function zzktableBind(){
 			} ],
 			//"sScrollY" : "300px",
 			"bLengthChange" : false,
-			"bFilter" : false,
+			"bFilter" : true,
 			"oLanguage" : {
 				"sProcessing" : "处理中...",
 				"sLengthMenu" : "显示 _MENU_ 项结果",
@@ -715,7 +703,8 @@ function zzktableBind(){
 				"sInfoEmpty" : "显示第 0 至 0 项结果，共 0 项",
 				"sInfoFiltered" : "(由 _MAX_ 项结果过滤)",
 				"sInfoPostFix" : "",
-				"sSearch" : "搜索:",
+				//"sSearch" : "搜索:",
+				"sSearch" : "",
 				"sUrl" : "",
 				"oPaginate" : {
 					"sFirst" : "首页",
@@ -826,12 +815,9 @@ function zzktableBind(){
 			</div>
 		</div>
 	</div>
-	<div class="searching">
-		<input type="text" class="form-control" style="display:inline"/>	
-	</div>
-	<div class="searching-icon">
-		<span class="glyphicon glyphicon-search"></span>
-	</div>
+	<img src="/resources/images/loading.gif" id="loadingSpinner"/>
+	<div class="searching-icon"><span class="glyphicon glyphicon-search"></span></div>
+	
 	<div class="operation btn-group">
 		<button type="button" class="btn btn-primary btn-sm" id="zzktj">
 			<span class="glyphicon glyphicon-plus"></span> 添加
@@ -852,8 +838,7 @@ function zzktableBind(){
 			<span class="glyphicon glyphicon-arrow-down"></span> 下移
 		</button>
 	</div>
-	<img src="/resources/images/loading.gif" id="loadingSpinner"
-		style="display:none;" />
+	
 	<div id="zzk_list" class="main_list" width="80%">
 		<table id="dataTable" class="dataTable">
 			<thead>

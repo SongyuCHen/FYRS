@@ -26,6 +26,10 @@ function adjustLR(id){
 	$(".contentRightWrap").height(nh+"px");
 	
 }
+
+
+
+
 $(function() {
 	var w = screen.width;
 	if(w<1366){
@@ -50,5 +54,6 @@ $(function() {
 		}
 	});
 	$(".head-parent-menu img").attr("src", pic_url);
+	
 });
 

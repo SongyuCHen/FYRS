@@ -479,3 +479,37 @@ button,input,optgroup,select,textarea {
 	height:40px;
 	float:left;
 }
+
+
+#dataTable_filter{
+	float:left;
+	position:absolute;
+	top:-32px;
+	left:-7px;
+}
+
+#dataTable_filter input{
+	width:250px;
+	height:30px;
+	padding-top:5px;
+	padding-left:5px;
+	padding-right:20px;
+}
+
+.searching-icon{
+	float:left;
+	position:relative;
+	left:230px;
+	top:7px;
+	z-index:2;
+}
+
+#loadingSpinner{
+	display:none;
+	width:100px;
+	height:100px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	z-index:10;
+}
