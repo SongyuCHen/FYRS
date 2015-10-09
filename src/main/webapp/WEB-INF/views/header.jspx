@@ -32,12 +32,14 @@
         </div>
         
        <div class="head-title">
+       <!-- 
        		<div class="head-title-left">
 				<div class="input-group">
 					<input type="text" class="form-control"/>
 					<span class="input-group-addon glyphicon glyphicon-search"></span>
 				</div>
             </div>
+            -->
             <div class="head-title-content">
                 <ul>
                     <c:forEach items="${headerMenus}" var="headMenu">
