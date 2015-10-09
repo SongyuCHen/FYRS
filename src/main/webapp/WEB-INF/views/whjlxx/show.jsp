@@ -152,7 +152,7 @@
      var initTable = function(dataTableId){
    	  $roles_oTable=$("#"+dataTableId+" #dataTable").dataTable({
    		   "sPaginationType" : "full_numbers",
-   		   //"sScrollX" : "100%", // 横向滚动条
+   		   "sScrollX" : "100%", // 横向滚动条
 		   //"sScrollY" : "300px",
    		   'bFilter' : false,
            'bSort' : false,
@@ -197,6 +197,7 @@
     	  initDataTable(fydm,bmbh);
       };
      var initDataTable = function(fydm,bmbh){
+    	 $("#loadingSpinner").show();
 		 $.ajax({
 	    	  url:"/main/dwxx/whjlxxDetail.aj",
 	    	  type:"POST",
@@ -224,7 +225,7 @@
 				  $("#whjlxx_list  #dataTable_wrapper").remove();
 				  $("#whjlxx_list").append(html);
 				  initTable("whjlxx_list");
-				
+				  $("#loadingSpinner").hide();
 	    	  }
 	      }); 
 	 };
@@ -252,6 +253,8 @@
 			<span class="glyphicon glyphicon-plus"></span> 添加奖励
 		</button>
 	</div>
+	<img src="/resources/images/loading.gif" id="loadingSpinner"
+		style="display:none;" />
 	<div id="whjlxx_list" class="main_list" >
 		<table id="dataTable" class="dataTable" cellspacing="0"  width="100%">
 			<thead>
