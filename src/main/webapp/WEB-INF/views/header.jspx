@@ -3,7 +3,7 @@
      version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
-    <div class="headerWrap">
+    <div>
        <!--   <div class="head-1">
             <div class="head-1-left">
                 <span style="margin-left: 20px;">用户登录：您好，<a id="personCode" data-headShowKey="${headShowKey}"  data-headIsOnlyLook="${headIsOnlyLook}" style="color: white;" href="javascript:void(0);" onclick="linkToPerson()">${currentUsername}! </a> <a style="visibility:hidden;">占</a> ${loginTime}</span>

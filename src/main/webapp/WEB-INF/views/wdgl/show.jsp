@@ -189,7 +189,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<div class="col-md-offset-3 col-md-8">
+				<div class="float-right">
 					<button class="btn btn-primary" type="submit">
 						<span class="glyphicon glyphicon-ok"></span> 确定
 					</button>
