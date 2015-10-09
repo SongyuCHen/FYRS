@@ -92,6 +92,13 @@
 {
   text-align: center;
 }
+
+.contentLeftWrap{
+	height:650px;
+}
+.contentRightWrap{
+	height:650px;
+}
 </style>
 <script type="text/javascript">
 //声明一个可以存放树型ID 的 map，生成不重复的 ID 
@@ -880,9 +887,8 @@
 			'iDisplayLength' : 10,
 			'bRetrieve' : true,
 			'bDestory' : true,
-			"sScrollY": "300px",
+			//"sScrollY": "300px",
 			"sScrollX" : "100%", // 横向滚动条
-			"scrollCollapse": true,
 		});
 	};
 	 // 生成一个不重复 ID 函数

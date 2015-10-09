@@ -261,8 +261,8 @@
      var initTable = function(dataTableId){
    	  $roles_oTable=$("#"+dataTableId+" #dataTable").dataTable({
    		   "sPaginationType" : "full_numbers", 
-   		   "sScrollX" : "100%", // 横向滚动条
-		   "sScrollY" : "200px",
+   		   //"sScrollX" : "100%", // 横向滚动条
+		   //"sScrollY" : "200px",
    		   'bFilter' : true,
            'bSort' : false,
            'bLengthChange' : false,
@@ -284,10 +284,11 @@
  				}
  			},
  			'bSortClasses' : false,
-           'iDisplayLength' : 6,
+           'iDisplayLength' : 10,
            'bRetrieve':true,
            'bDestory':true
  		});
+   	  	adjustLR("jdcx_list");
      };
      function myPrint(input,title){
 
