@@ -13,7 +13,6 @@
       }
       #qxgl_list
       {
-        overflow: auto;
       }
       #qxgl_list
       {
@@ -146,6 +145,7 @@
             'bRetrieve':true,
             'bDestory':true
   		});
+    	  adjustLR("qxgl_list");
       }
      
       // 当部门被选择时

@@ -101,6 +101,7 @@
            'bRetrieve':true,
            'bDestory':true
  		});
+   	  adjustLR("gzlgl_list");
      };
      var selectFyAfter = function(){
   	   var fydm = $(".xzfy_fybh").val();

@@ -199,6 +199,7 @@
            'bRetrieve':true,
            'bDestory':true
  		});
+   	  adjustLR("dmwh_list");
      };
    </script>
 </head>

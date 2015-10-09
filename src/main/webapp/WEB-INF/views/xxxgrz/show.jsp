@@ -89,6 +89,7 @@
            'bRetrieve':true,
            'bDestory':true
  		});
+   	  	adjustLR("xxxgrz_list");
      }
    </script>
 </head>

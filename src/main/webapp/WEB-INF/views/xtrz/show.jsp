@@ -89,6 +89,7 @@
            'bRetrieve':true,
            'bDestory':true
  		});
+   	  adjustLR("xtrz_list");
      }
    </script>
 </head>

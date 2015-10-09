@@ -19,6 +19,13 @@
 	background-color:#EDEDED;
 		font-size: 110%;
      }
+     
+     .contentLeftWrap{
+     	height:650px;
+     }
+     .contentRightWrap{
+     	height:650px;
+     }
    </style>
    <script type="text/javascript">
      $(function(){
