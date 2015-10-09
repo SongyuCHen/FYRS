@@ -27,10 +27,10 @@
       }
       
       #jdcx_head span.off1word{
-      	padding-left:28px;
+      	/*padding-left:28px;*/
       }
       #jdcx_head span.off2word{
-      	padding-left:40px;
+      	/*padding-left:40px;*/
       }
       #jdcx_find
       {
@@ -331,7 +331,7 @@
 <body>
     <div id="jdcx_head">
     	<div class="row">
-    		<span class="col-md-4">法律职务&nbsp;&nbsp;
+    		<span class="col-md-3">法律职务&nbsp;&nbsp;
     			<select name="flzw">
      				<option value="-1"></option>
       					<c:forEach items="${flzws}" var="flzw">
@@ -339,7 +339,7 @@
       					</c:forEach>
       			</select>
       		</span>
-      		<span class="col-md-4 off2word">部门&nbsp;&nbsp;
+      		<span class="col-md-3 off2word">部门&nbsp;&nbsp;
     			<select name="bm">
      				<option value="-1"></option>
         				<c:forEach items="${bms}" var="bm">
@@ -347,7 +347,7 @@
       					</c:forEach>
     			</select>
     		</span>    			
-    		<span class="col-md-4">职务类别&nbsp;&nbsp;
+    		<span class="col-md-3">职务类别&nbsp;&nbsp;
     			<select name="zwlb">
      				<option value="-1"></option>
        					<c:forEach items="${zwlbs}" var="zwlb">
@@ -355,9 +355,7 @@
       					</c:forEach>
     			</select>
     		</span>
-    	</div>
-    	<div class="row">
-    		<span class="col-md-4 off2word">专业&nbsp;&nbsp;
+    		<span class="col-md-3 off2word">&nbsp;&nbsp;&nbsp;&nbsp;专业&nbsp;&nbsp;
     			<select name="zy">
      				<option value="-1"></option>
         			<c:forEach items="${zys}" var="zy">
@@ -365,7 +363,10 @@
       				</c:forEach>
     			</select>
     		</span>
-    		<span class="col-md-4 off2word">职级&nbsp;&nbsp;
+    	</div>
+    	<div class="row">
+    		
+    		<span class="col-md-3 off2word">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职级&nbsp;&nbsp;
     			<select name="zj">
      				<option value="-1"></option>
        				<c:forEach items="${zjs}" var="zj">
@@ -373,7 +374,7 @@
       				</c:forEach>
     			</select>
     		</span>
-    		<span class="col-md-4 off2word">等级&nbsp;&nbsp;
+    		<span class="col-md-3 off2word">等级&nbsp;&nbsp;
     			<select name="dj">
      				<option value="-1"></option>
        				<c:forEach items="${djs}" var="dj">
@@ -381,9 +382,7 @@
       				</c:forEach>
     			</select>
     		</span>
-    	</div>
-    	<div class="row">
-    		<span class="col-md-4 off2word">学历&nbsp;&nbsp;
+    		<span class="col-md-3 off2word">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学历&nbsp;&nbsp;
     			<select name="xl">
      				<option value="-1"></option>
         			<c:forEach items="${xls}" var="xl">
@@ -391,7 +390,7 @@
       				</c:forEach>
     			</select>
     		</span>
-    		<span class="col-md-4 off1word">人员库&nbsp;&nbsp;
+    		<span class="col-md-3 off1word">人员库&nbsp;&nbsp;
     			<select name="ryk">
        				<c:forEach items="${ryks}" var="ryk">
          				<option value="${ryk.NDm}">${ryk.CMc}</option>
@@ -400,8 +399,7 @@
     		</span>
     	</div>
     	<div class="row">
-    		<span class="col-md-10"></span>
-    		<span class="col-md-2 btn-group"  id="jdcx_find">
+    		<span class="btn-group" style="float:right;margin-right:10px;" id="jdcx_find">
     			<button type="button" class="btn btn-primary" id="jdcx_btn_find">
        				<span class="glyphicon glyphicon-search"></span> 查询
        			</button>
