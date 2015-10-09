@@ -20,8 +20,8 @@
      }
       #whjlxx_list
       {
-         height: 470px;
-         overflow: auto;
+         /*height: 470px;
+         overflow: auto;*/
       }
       .operationDiv button{
       	 float:right;
@@ -152,8 +152,8 @@
      var initTable = function(dataTableId){
    	  $roles_oTable=$("#"+dataTableId+" #dataTable").dataTable({
    		   "sPaginationType" : "full_numbers",
-   		   "sScrollX" : "100%", // 横向滚动条
-		   "sScrollY" : "300px",
+   		   //"sScrollX" : "100%", // 横向滚动条
+		   //"sScrollY" : "300px",
    		   'bFilter' : false,
            'bSort' : false,
            'bLengthChange' : false,
@@ -179,6 +179,7 @@
            'bRetrieve':true,
            'bDestory':true
  		});
+   	  	adjustLR("whjlxx_list");
      };
      // 当法院被选择后
      var selectFyAfter = function(){

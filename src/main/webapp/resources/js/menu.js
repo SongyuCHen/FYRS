@@ -1,6 +1,6 @@
 //黑科技，让页面自适应浏览器最大窗口大小
 function makeLRalign(){
-	var h = screen.height-350;
+	var h = screen.height-250;
 	var lh = $(".contentLeftWrap").height();
 	var rh = $(".contentRightWrap").height();
 	//alert(lh+","+rh);
@@ -17,11 +17,14 @@ function makeLRalign(){
 
 function adjustLR(id){
 	var nh = $("#"+id).height()+$("#"+id).position().top;
+	var minH = screen.height-250;
 	//alert(nh+","+(screen.height-350)+","+$("#zzk_list").height()+","+$("#zzk_list").position().top);
-	if(nh>screen.height-350){
-		$(".contentLeftWrap").height(nh+"px");
-		$(".contentRightWrap").height(nh+"px");
+	if(nh<minH){
+		nh = minH;
 	}
+	$(".contentLeftWrap").height(nh+"px");
+	$(".contentRightWrap").height(nh+"px");
+	
 }
 $(function() {
 	var w = screen.width;

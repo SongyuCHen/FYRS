@@ -222,6 +222,7 @@
            'bRetrieve':true,
            'bDestory':true
  		});
+   	  	adjustLR("jgbgls_list");
      };
      var selectFyOrBmAfter = function(){
   	   var fydm = $(".xzfy_fybh").val();

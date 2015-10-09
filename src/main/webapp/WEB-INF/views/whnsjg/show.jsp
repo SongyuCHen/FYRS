@@ -220,6 +220,7 @@
            'bRetrieve':true,
            'bDestory':true
  		});
+   	  	adjustLR("whnsjg_list");
      };
      var selectFyOrBmAfter = function(){
   	   var fydm = $(".xzfy_fybh").val();
