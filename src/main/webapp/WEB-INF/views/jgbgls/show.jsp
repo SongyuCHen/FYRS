@@ -92,7 +92,7 @@
   			
   			
   			$.ajax({
-  			   url:"/main/dwxx/jgbglsBmPop.aj",
+  			   url:"/main/dwxx/addJgbgls.aj",
   			   type:"POST",
   			   data:{isOnlyBm:isOnlyBm,nlevel:nlevel,fydm:fydm,btnType:btnType,bmbh:bmbh,lvlevel:lvlevel},
   			   dataType:"html",
@@ -116,7 +116,7 @@
 				'buttons':{
 					"确定":function(){
 						$.ajax({
-							url:'/main/dwxx/jgbglsDeleteBm.aj',
+							url:'/main/dwxx/deleteJgbgls.aj',
 							type:"post",
 							data:{fydm:fydm,bmbh:bmbh},
 							dataType:'json',

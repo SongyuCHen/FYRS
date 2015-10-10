@@ -73,9 +73,10 @@ public class DwxxJgbglsController {
 	public void addJgbgls(Model model, HttpServletResponse response,
 			HttpServletRequest request) throws Exception {
 		Jgbg jgbg = new Jgbg();
-		String showKey = request.getParameter("showKey");
-		String[] code = NFyRybhCodeUtils.decode(showKey);
+		String fydm = request.getParameter("fydm");
+		String bmbh = request.getParameter("bmbh");
 		JgbgVO jgbgVO = new JgbgVO();
+		jgbg.setNFy(Integer.valueOf(fydm));
 		jgbgVO = jgxxService.addJgbg(jgbg);
 		ResponseBuilder builder = new ResponseBuilder();
 		builder.writeJsonResponse(response, jgbgVO);

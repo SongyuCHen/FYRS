@@ -1,5 +1,6 @@
 package nju.software.fyrs.service.impl;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,6 +9,7 @@ import nju.software.fyrs.biz.vo.BmTreeDataObject;
 import nju.software.fyrs.biz.vo.JgbgVO;
 import nju.software.fyrs.data.dao.JgbgDAO;
 import nju.software.fyrs.data.dao.JgxxDAO;
+import nju.software.fyrs.data.dao.RysxTablekeyDAO;
 import nju.software.fyrs.data.dataobject.Jgbg;
 import nju.software.fyrs.data.dataobject.Jgxx;
 import nju.software.fyrs.service.JgxxService;
@@ -17,6 +19,7 @@ import nju.software.fyrs.util.DmCommonList;
 public class JgxxServiceImpl implements JgxxService{
 	private JgxxDAO jgxxDAO;
 	private JgbgDAO jgbgDAO;
+	private RysxTablekeyDAO rysxTablekeyDAO;
 	public List<Jgxx> bmByFyId(int fyDm) {
 		return jgxxDAO.bmByFyId(fyDm);
 	}
@@ -181,6 +184,9 @@ public class JgxxServiceImpl implements JgxxService{
 	@Override
 	public JgbgVO addJgbg(Jgbg jgbg) {
 		// TODO Auto-generated method stub
+		int fydm = Integer.valueOf(jgbg.getNFy());
+		BigDecimal bd = rysxTablekeyDAO.getMaxId(fydm, "N_JGBGID");
+		jgbg.setNId(bd);
 		jgbgDAO.save(jgbg);
 		Jgbg newJgbg = getJgbgByIdAndId(jgbg.getNFy(), jgbg.getNId().intValue());
 		JgbgVO jgbgVO = new JgbgVO();
@@ -192,6 +198,9 @@ public class JgxxServiceImpl implements JgxxService{
 		jgbgVO.setCBgnr(newJgbg.getCBgnr());
 		jgbgVO.setCbgr(newJgbg.getCBgr());
 		return jgbgVO;
+	}
+	public void setRysxTablekeyDAO(RysxTablekeyDAO rysxTablekeyDAO) {
+		this.rysxTablekeyDAO = rysxTablekeyDAO;
 	}
 	
 	

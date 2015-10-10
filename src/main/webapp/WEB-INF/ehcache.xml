@@ -29,6 +29,15 @@
    timeToLiveSeconds="300"
    memoryStoreEvictionPolicy="LRU" />
    
+   <cache name="fyCache" 
+   eternal="false"
+   maxElementsInMemory="300"
+   overflowToDisk="false"
+   diskPersistent="false" 
+   timeToIdleSeconds="0"
+   timeToLiveSeconds="300"
+   memoryStoreEvictionPolicy="LRU" />
+   
 <cache name="sdcxCache" 
    eternal="false"
    maxElementsInMemory="100"

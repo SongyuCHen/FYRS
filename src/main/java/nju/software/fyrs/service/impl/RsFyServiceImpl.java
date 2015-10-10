@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.googlecode.ehcache.annotations.Cacheable;
+
 import nju.software.fyrs.biz.vo.FyTreeDataObject;
 import nju.software.fyrs.data.dao.DmDAO;
 import nju.software.fyrs.data.dataobject.Dm;
@@ -15,6 +17,7 @@ public class RsFyServiceImpl {
 	 * @param fyFjm 2% 表示查找天津所有法院，21% 表示查询一中院及下属法院 
 	 * @return
 	 */
+	@Cacheable(cacheName="fyCache")
 	public FyTreeDataObject FyTree(String fyfjm) {
 		List<Dm> fyDms = dmDAO.listDmByFyfjm(fyfjm);
 		if(fyDms.size() == 0)
