@@ -514,3 +514,8 @@ button,input,optgroup,select,textarea {
 	top:50%;
 	z-index:10;
 }
+
+/*remove the scroll bar of dialog*/
+.ui-dialog .ui-dialog-content{
+	overflow:visible;
+}
