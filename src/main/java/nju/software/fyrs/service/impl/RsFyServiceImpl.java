@@ -4,17 +4,30 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.googlecode.ehcache.annotations.Cacheable;
+
 import nju.software.fyrs.biz.vo.FyTreeDataObject;
 import nju.software.fyrs.data.dao.DmDAO;
 import nju.software.fyrs.data.dataobject.Dm;
 
 public class RsFyServiceImpl {
 	private DmDAO dmDAO;
+	
+	/*
+	 * 为了缓存
+	 */
+	@Cacheable(cacheName="rsfyCache")
+	public FyTreeDataObject FyTreeForCache(String fyfjm){
+		return FyTree(fyfjm);
+	}
+	
+	
 	/**
 	 * 这个方法最顶的树，只能是一级或二级
 	 * @param fyFjm 2% 表示查找天津所有法院，21% 表示查询一中院及下属法院 
 	 * @return
 	 */
+
 	public FyTreeDataObject FyTree(String fyfjm) {
 		List<Dm> fyDms = dmDAO.listDmByFyfjm(fyfjm);
 		if(fyDms.size() == 0)
