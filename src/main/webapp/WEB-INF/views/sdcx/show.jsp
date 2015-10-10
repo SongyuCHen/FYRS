@@ -91,6 +91,7 @@
 #resultShow_list
 {
   text-align: center;
+  margin-top:30px;
 }
 
 .contentLeftWrap{
@@ -98,6 +99,21 @@
 }
 .contentRightWrap{
 	height:650px;
+}
+
+#dataTable_filter{
+	left:-21px;
+}
+
+
+#tabs-result th{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#tabs-result td{
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 </style>
 <script type="text/javascript">
@@ -862,7 +878,7 @@
 	var initTable = function(dataTableId) {
 		$roles_oTable = $("#" + dataTableId + " #dataTable").dataTable({
 			"sPaginationType" : "full_numbers",
-			'bFilter' : false,
+			'bFilter' : true,
 			'bSort' : false,
 			'bLengthChange' : false,
 			'oLanguage' : {
@@ -874,7 +890,7 @@
 				"sInfoEmpty" : "显示第 0 至 0 项结果，共 0 项",
 				"sInfoFiltered" : "(由 _MAX_ 项结果过滤)",
 				"sInfoPostFix" : "",
-				"sSearch" : "搜索:",
+				"sSearch" : "",
 				"sUrl" : "",
 				"oPaginate" : {
 					"sFirst" : "首页",
@@ -890,6 +906,7 @@
 			//"sScrollY": "300px",
 			"sScrollX" : "100%", // 横向滚动条
 		});
+		$("#dataTable_filter").append("<div class='searching-icon'><span class='glyphicon glyphicon-search'></span></div>");
 	};
 	 // 生成一个不重复 ID 函数
     var idGenerator = function(prefix){
@@ -1029,13 +1046,26 @@
 		</div>
 		<div id="tabs-result">
 		   <div id="resultShow_list" class="main_list">
-		     <table id="dataTable" data-maxindex="${roles.size()}" class="dataTable" cellspacing="0" width="100%">
-			<thead>
-				<tr class="tableHead"><th class="sorting_disabled">序号</th><th class="sorting_disabled">法院</th><th class="sorting_disabled">姓名</th><th class="sorting_disabled">性别</th><th class="sorting_disabled">部门</th><th class="sorting_disabled">出生日期</th><th class="sorting_disabled">行政职务</th><th class="sorting_disabled">法律职务</th><th class="sorting_disabled">职级</th><th class="sorting_disabled">等级</th><th class="sorting_disabled">报表</th><th class="sorting_disabled">操作</th></tr>
-			</thead>
-			<tbody>
-			</tbody>
-		</table>
+		     <table id="dataTable" class="dataTable">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>法院</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>部门</th>
+						<th>出生日期</th>
+						<th>行政职务</th>
+						<th>法律职务</th>
+						<th>职级</th>
+						<th>等级</th>
+						<th>报表</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
 	       </div>
 		</div>
 	</div>

@@ -50,10 +50,6 @@
       {
         margin-top: 10px;
       }
-      #dataTable_filter
-      {
-        display:none;
-      }
         .ui-button-text-only .ui-button-text
       {
          padding: 0em 0em;
@@ -85,7 +81,7 @@
     			 }
     	     showLoading();
     		 // 把搜索框清空
-    		 $("#searchFun input").val("");
+    		// $("#searchFun input").val("");
     		 jsonStr = jsonStr.substring(0,jsonStr.length -1);
     		 jsonStr += '}';
     		 var json = JSON.parse(jsonStr);
@@ -201,9 +197,9 @@
     		
     	});
     	// 搜索
-    	$("#searchFun input").keyup(function(){
-    	     $roles_oTable.fnFilter($(this).val());
-    	});
+    	//$("#searchFun input").keyup(function(){
+    	  //   $roles_oTable.fnFilter($(this).val());
+    	//});
     	
         //  导出事件
         $("#jdcx_btn_export").live('click',function(){
@@ -274,7 +270,7 @@
  				"sInfoEmpty" : "显示第 0 至 0 项结果，共 0 项",
  				"sInfoFiltered" : "(由 _MAX_ 项结果过滤)",
  				"sInfoPostFix" : "",
- 				"sSearch" : "搜索:",
+ 				"sSearch" : "",
  				"sUrl" : "",
  				"oPaginate" : {
  					"sFirst" : "首页",
@@ -411,7 +407,7 @@
     </div> 
     
 	<div id="jdcx_middle">
-	   <span id="searchFun">搜索:<input type="text" name="" ></span>
+	   <span style="display:none" id="searchFun">搜索:<input type="text" name="" ></span>
 	   <div class="btn-group">
 		   <button type="button" class="btn btn-primary" id="jdcx_btn_print">
 		   		<span class="glyphicon glyphicon-print"></span> 打印

@@ -41,3 +41,7 @@
 .float-right{
 	float:right;
 }
+
+.wdDialog{
+	display:none;
+}

@@ -25,6 +25,8 @@ function adjustLR(id){
 	$(".contentLeftWrap").height(nh+"px");
 	$(".contentRightWrap").height(nh+"px");
 	
+	//搜索框中摆个放大镜
+	$("#dataTable_filter").append("<div class='searching-icon'><span class='glyphicon glyphicon-search'></span></div>");
 }
 
 

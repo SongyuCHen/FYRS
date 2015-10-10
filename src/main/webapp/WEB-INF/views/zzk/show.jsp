@@ -58,6 +58,7 @@
 	height: 30px;
 }
 
+
 </style>
 <script type="text/javascript">
 function zzktableBind(){
@@ -816,7 +817,6 @@ function zzktableBind(){
 		</div>
 	</div>
 	<img src="/resources/images/loading.gif" id="loadingSpinner"/>
-	<div class="searching-icon"><span class="glyphicon glyphicon-search"></span></div>
 	
 	<div class="operation btn-group">
 		<button type="button" class="btn btn-primary btn-sm" id="zzktj">

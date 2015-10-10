@@ -272,7 +272,7 @@
      var initTable = function(dataTableId){
    	  $htgl_oTable=$("#"+dataTableId+" #dataTable").dataTable({
    		   "sPaginationType" : "full_numbers", 
-   		   'bFilter' : false,
+   		   'bFilter' : true,
            'bSort' : false,
            'bLengthChange' : false,
  			'oLanguage' : {
@@ -283,7 +283,7 @@
  				"sInfoEmpty" : "显示第 0 至 0 项结果，共 0 项",
  				"sInfoFiltered" : "(由 _MAX_ 项结果过滤)",
  				"sInfoPostFix" : "",
- 				"sSearch" : "搜索:",
+ 				"sSearch" : "",
  				"sUrl" : "",
  				"oPaginate" : {
  					"sFirst" : "首页",

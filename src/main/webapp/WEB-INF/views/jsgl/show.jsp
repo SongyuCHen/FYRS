@@ -39,7 +39,7 @@
 			var operation_html="<a class='dlg_view' data-btn_type='1' href='javascript:void(0)'>查看</a><span>|</span>\t<a class='dlg_modify' data-btn_type='2' href='javascript:void(0)'>修改</a><span>|</span>\t<a class='i_delete' href='javascript:void(0)'>删除</a>";
 			$roles_oTable=$('#role_list #dataTable').dataTable({
 				"sPaginationType" : "full_numbers",
-				'bFilter' : false,
+				'bFilter' : true,
 	            'bSort' : false,
 	            'bLengthChange' : false,
 				'oLanguage' : {
@@ -50,7 +50,7 @@
 					"sInfoEmpty" : "显示第 0 至 0 项结果，共 0 项",
 					"sInfoFiltered" : "(由 _MAX_ 项结果过滤)",
 					"sInfoPostFix" : "",
-					"sSearch" : "搜索:",
+					"sSearch" : "",
 					"sUrl" : "",
 					"oPaginate" : {
 						"sFirst" : "首页",
@@ -64,7 +64,7 @@
 	            'bRetrieve':true,
 	            'bDestory':true
 			});
-			
+			adjustLR("role_list");
 			/*active选中的dataTable中的行*/
 			function activeSelectTr($node){
 				// 它只是简单地添加一个  class 作为标识，表示选中一行，也就是在 <tr> 添加  class 属性

@@ -8,7 +8,7 @@
 <style type="text/css">
 	.qxgl-head{
 		padding: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 50px;
 	color: black;
 	background-color:#EDEDED;
 	}
@@ -255,7 +255,7 @@
 			//"sScrollY" : "300px",
 			"bAutoWidth": true,
 			"bLengthChange" : false,
-			"bFilter":false,
+			"bFilter":true,
 			"oLanguage" : {
 				"sProcessing" : "处理中...",
 				"sLengthMenu" : "显示 _MENU_ 项结果",
@@ -264,7 +264,7 @@
 				"sInfoEmpty" : "显示第 0 至 0 项结果，共 0 项",
 				"sInfoFiltered" : "(由 _MAX_ 项结果过滤)",
 				"sInfoPostFix" : "",
-				"sSearch" : "搜索:",
+				"sSearch" : "",
 				"sUrl" : "",
 				"oPaginate" : {
 					"sFirst" : "首页",

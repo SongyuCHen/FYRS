@@ -40,6 +40,8 @@
     <!-- 全局样式 -->
     <spring:url value="/resources/css/main.css" var="app_css_url" />
     <link rel="stylesheet" type="text/css" media="screen" href="${app_css_url}" />
+    
+    <script type="text/javascript" src="/resources/js/menu.js"><jsp:text/></script>
     <title>法院人事</title>
 </head>
 <body>
@@ -71,6 +73,5 @@
     </div>
 </div>
 <div id="changePassword_dlg"></div>
-<script type="text/javascript" src="/resources/js/menu.js"><jsp:text/></script>
 </body>
 </html>

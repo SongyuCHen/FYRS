@@ -28,9 +28,10 @@ body {
 	margin: 0 auto;
 	width:1346px;
 	position: relative;
-	background-image: url(/resources/images/background.png);
+	/*background-image: url(/resources/images/background.png);
 	background-repeat: repeat-y;
-	/*border: 1px solid #5483A3;*/
+	border: 1px solid #5483A3;*/
+	background-color: #EDEDED;
 }
 
 .headerWrap {
@@ -485,7 +486,7 @@ button,input,optgroup,select,textarea {
 	float:left;
 	position:absolute;
 	top:-32px;
-	left:-7px;
+	left:-19px;
 }
 
 #dataTable_filter input{
@@ -496,10 +497,10 @@ button,input,optgroup,select,textarea {
 	padding-right:20px;
 }
 
-.searching-icon{
+#dataTable_filter .searching-icon{
 	float:left;
 	position:relative;
-	left:230px;
+	left:245px;
 	top:7px;
 	z-index:2;
 }
