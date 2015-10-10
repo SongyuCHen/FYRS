@@ -51,6 +51,14 @@
 {
 
 }
+
+.contentLeftWrap{
+	height:650px;
+}
+
+.contentRightWrap{
+	height:650px;
+}
 	</style>
 	<script type="text/javascript">
 	 var headTh = "";
@@ -381,11 +389,13 @@
 				}
 			},
 			'bSortClasses' : false,
-			'iDisplayLength' : 10,
+			'iDisplayLength' : 8,
 			'bRetrieve' : true,
 			'bDestory' : true
 		});
-		adjustLR("hmc_list");
+		//adjustLR("hmc_list");
+		//搜索框中摆个放大镜
+		$("#dataTable_filter").append("<div class='searching-icon'><span class='glyphicon glyphicon-search'></span></div>");
 	};
 	</script>
 </head>
