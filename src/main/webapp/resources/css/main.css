@@ -453,7 +453,7 @@ button,input,optgroup,select,textarea {
 	position: absolute;
 	right: 0px;
 	width: 120px;
-	top: -9px;
+	top: 20px;
 }
 
 .head-3-right ul li {
@@ -513,4 +513,9 @@ button,input,optgroup,select,textarea {
 	left:50%;
 	top:50%;
 	z-index:10;
+}
+
+/*remove the scroll bar of dialog*/
+.ui-dialog .ui-dialog-content{
+	overflow:visible;
 }
