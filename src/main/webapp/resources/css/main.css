@@ -519,3 +519,9 @@ button,input,optgroup,select,textarea {
 .ui-dialog .ui-dialog-content{
 	overflow:visible;
 }
+
+
+/*¼ÓÉîdialogÕÚÕÖ²ãÑÕÉ«*/
+.ui-widget-overlay { 
+	background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .80;filter:Alpha(Opacity=80);
+	 }
