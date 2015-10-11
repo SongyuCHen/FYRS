@@ -12,12 +12,26 @@ import nju.software.fyrs.data.dataobject.Dm;
 
 public class RsFyServiceImpl {
 	private DmDAO dmDAO;
+	
+	/*
+	 * 为了缓存
+	 */
+	@Cacheable(cacheName="rsfyCache")
+	public FyTreeDataObject FyTreeForCache(String fyfjm){
+		return FyTree(fyfjm);
+	}
+	
+	
 	/**
 	 * 这个方法最顶的树，只能是一级或二级
 	 * @param fyFjm 2% 表示查找天津所有法院，21% 表示查询一中院及下属法院 
 	 * @return
 	 */
+<<<<<<< HEAD
 	@Cacheable(cacheName="fyCache")
+=======
+
+>>>>>>> 80e8d9fa40f6a57a73a0c9291f1f75ed6ada21b9
 	public FyTreeDataObject FyTree(String fyfjm) {
 		List<Dm> fyDms = dmDAO.listDmByFyfjm(fyfjm);
 		if(fyDms.size() == 0)

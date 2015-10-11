@@ -113,7 +113,7 @@ public class XzFyXzBmController {
 	    			Boolean isXjfy = roleMenuService.findIsCkxjfy(RolesUtil.userGetRoleIds(request));
 	    			if(isXjfy)
 	    			{
-	    				fdo = rsFyService.FyTree(fjm);
+	    				fdo = rsFyService.FyTreeForCache(fjm);
 	    			}
 	    			// 表示虽然不是最底层，但是没有查看下级法院的权限
 	    			else
