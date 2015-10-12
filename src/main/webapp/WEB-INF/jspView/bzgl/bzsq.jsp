@@ -63,8 +63,17 @@
 		display: inline-block;
 		width: 80px;
 	}
+	
+	select.ui-datepicker-year{
+		color:gray;
+	}
 	</style>
 	<script type="text/javascript">
+	$(function(){
+		$("#add_csny").datepicker(
+				{changeYear:true}
+				);
+	});
 	function add_ry(){
 		var xm = $("#add_xm").val();
 		if(xm==""){
