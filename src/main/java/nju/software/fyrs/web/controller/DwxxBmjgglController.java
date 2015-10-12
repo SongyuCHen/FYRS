@@ -68,7 +68,7 @@ public class DwxxBmjgglController {
 				vo.setNCode(jgxx.getNCode());
 				vo.setCName(jgxx.getCName());
 				vo.setNLevel(jgxx.getNLevel());
-				vos.add(index, vo);
+				vos.add(index + 1, vo);
 			}			
 		}
 		
