@@ -162,13 +162,42 @@
 	    	  success:function(json){
 	    	  	  $("#organisation").empty();
 	    	  	  $node = $("#organisation");
-	    	  	  $li = $("<li data-ncode="+json[0].NCode+">"+json[0].CName+"</li>");
-	    	  	  $node.append($li);
-	    	  	  $ul = $("<ul></ul");
-	    	  	  $li.append($ul);
+	    	  	  $li_root = $("<li data-ncode="+json[0].NCode+">"+json[0].CName+"</li>");
+	    	  	  $node.append($li_root);
+	    	  	  $ul_level1 = $("<ul></ul>");
+	    	  	  $li_root.append($ul_level1);
+	    	  	  var state = 1;
+	    	  	  var $li_level1 = null;
+	    	  	  var $ul_level2 = null;
 	    		  for(var i=1;i<json.length;i++){
 	    		  	var jg = json[i];
-	    		  	$ul.append("<li data-ncode="+jg.NCode+">"+jg.CName+"</li>");
+	    		  	if(state==1){
+	    		  		if(jg.NLevel==1){
+	    		  			//1级-1级
+	    		  			$li_level1= $("<li data-ncode="+jg.NCode+">"+jg.CName+"</li>");
+	    		  			$ul_level1.append($li_level1);
+	    		  			$ul_level2 = null;
+	    		  		}else if(jg.NLevel==2){
+	    		  			//1级-2级
+	    		  			$ul_level2=$("<ul></ul>");
+	    		  			$ul_level2.append("<li data-ncode="+jg.NCode+">"+jg.CName+"</li>");
+	    		  			state=2;
+	    		  		}
+	    		  	}else if(state==2){
+	    		  		if(jg.NLevel==1){
+	    		  			//2级-1级  关闭之前的
+	    		  			$li_level1.append($ul_level2);
+	    		  			//建立新节点
+	    		  			$li_level1= $("<li data-ncode="+jg.NCode+">"+jg.CName+"</li>");
+	    		  			$ul_level1.append($li_level1);
+	    		  			$ul_level2 = null;
+	    		  			state=1;
+	    		  		}else if(jg.NLevel==2){
+	    		  			//2级-2级
+	    		  			$ul_level2.append("<li data-ncode="+jg.NCode+">"+jg.CName+"</li>");
+	    		  		}
+	    		  	}
+	    		  	
 	    		  }
 	    		  $("#organisation").orgChart({container: $("#main"), nodeClicked: onNodeClicked});
 	    	  }
