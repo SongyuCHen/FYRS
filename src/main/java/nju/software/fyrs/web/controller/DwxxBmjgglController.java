@@ -49,10 +49,27 @@ public class DwxxBmjgglController {
 		vofy.setCName(fyMc);
 		vos.add(vofy);
 		for(Jgxx jgxx:jgxxs){
-			JgxxVO vo = new JgxxVO();
-			vo.setNCode(jgxx.getNCode());
-			vo.setCName(jgxx.getCName());
-			vos.add(vo);
+			if(jgxx.getNLevel()==1){
+				JgxxVO vo = new JgxxVO();
+				vo.setNCode(jgxx.getNCode());
+				vo.setCName(jgxx.getCName());
+				vo.setNLevel(jgxx.getNLevel());
+				vos.add(vo);
+			}else{
+				String lvlCode = jgxx.getCLvlcode();
+				String parentlvlCode = lvlCode.substring(0,4).concat("00000000");
+				Jgxx parent = jgxxService.bmByFyidAndLvlCode(Integer.parseInt(fydm), parentlvlCode);
+				JgxxVO parentvo = new JgxxVO();
+				parentvo.setNCode(parent.getNCode());
+				parentvo.setCName(parent.getCName());
+				parentvo.setNLevel(parent.getNLevel());
+				int index = vos.indexOf(parentvo);
+				JgxxVO vo = new JgxxVO();
+				vo.setNCode(jgxx.getNCode());
+				vo.setCName(jgxx.getCName());
+				vo.setNLevel(jgxx.getNLevel());
+				vos.add(index, vo);
+			}			
 		}
 		
 		ResponseBuilder rb = new ResponseBuilder();

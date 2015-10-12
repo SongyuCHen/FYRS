@@ -202,6 +202,11 @@ public class JgxxServiceImpl implements JgxxService{
 	public void setRysxTablekeyDAO(RysxTablekeyDAO rysxTablekeyDAO) {
 		this.rysxTablekeyDAO = rysxTablekeyDAO;
 	}
+	@Override
+	public Jgxx bmByFyidAndLvlCode(int fydm, String lvlcode) {
+		// TODO Auto-generated method stub
+		return jgxxDAO.bhByFyIdAndLvlCode(fydm,lvlcode);
+	}
 	
 	
 	

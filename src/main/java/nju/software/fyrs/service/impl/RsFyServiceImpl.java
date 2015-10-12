@@ -27,11 +27,8 @@ public class RsFyServiceImpl {
 	 * @param fyFjm 2% 表示查找天津所有法院，21% 表示查询一中院及下属法院 
 	 * @return
 	 */
-<<<<<<< HEAD
-	@Cacheable(cacheName="fyCache")
-=======
 
->>>>>>> 80e8d9fa40f6a57a73a0c9291f1f75ed6ada21b9
+	@Cacheable(cacheName="fyCache")
 	public FyTreeDataObject FyTree(String fyfjm) {
 		List<Dm> fyDms = dmDAO.listDmByFyfjm(fyfjm);
 		if(fyDms.size() == 0)

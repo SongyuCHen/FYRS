@@ -2,6 +2,7 @@ package nju.software.fyrs.biz.vo;
 
 public class JgxxVO {
 	private Integer NCode;
+	private Short NLevel;
 	private String CName;
 
 	public Integer getNCode() {
@@ -19,5 +20,16 @@ public class JgxxVO {
 	public void setCName(String cName) {
 		CName = cName;
 	}
+
+	public Short getNLevel() {
+		return NLevel;
+	}
+
+	public void setNLevel(Short nLevel) {
+		NLevel = nLevel;
+	}
+
+	
+	
 
 }

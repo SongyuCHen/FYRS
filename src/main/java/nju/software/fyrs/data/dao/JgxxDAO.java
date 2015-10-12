@@ -250,6 +250,10 @@ public class JgxxDAO extends HibernateDaoSupport  {
 		String hql = "from Jgxx jx where jx.NFy = ? and jx.NCode = ?";
 		return (Jgxx) getSession().createQuery(hql).setParameter(0, fyDm).setParameter(1,ncode).uniqueResult();
 	}
+	public Jgxx bhByFyIdAndLvlCode(int fydm, String lvlcode){
+		String hql = "from Jgxx jx where jx.NFy = ? and jx.CLvlcode = ?";
+		return (Jgxx) getSession().createQuery(hql).setParameter(0, fydm).setParameter(1, lvlcode).uniqueResult();
+	}
 	public Jgxx bmByFydmAndName(int fydm, String name){
 		String hql = "from Jgxx jx where jx.NFy = ? and jx.CName like ?";
 		return (Jgxx) getSession().createQuery(hql).setParameter(0, fydm).setParameter(1, "%"+name+"%").uniqueResult();

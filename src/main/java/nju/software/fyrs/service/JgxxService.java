@@ -12,6 +12,7 @@ public interface JgxxService {
 	public List<Jgxx> bmByFyIdXssx(int fyDm);
 	public Jgxx bmByFyIdAndNcode(int fyDm,int ncode);
 	public Jgxx bmByFyIdAndNunicode(int fyDm,int unicode);
+	public Jgxx bmByFyidAndLvlCode(int fydm, String lvlcode);
 	public boolean deleteByFyIdAndNcode(int fyDm,int ncode);
 	
 	public List<Jgbg> getJgbgById(String fyDm);
