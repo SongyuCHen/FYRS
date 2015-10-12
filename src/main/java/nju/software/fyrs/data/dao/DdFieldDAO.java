@@ -277,6 +277,13 @@ public class DdFieldDAO extends HibernateDaoSupport
 	{
 		return getSession().createQuery("from DdField where CTableid = ? and BQresult = 1 order by NOrder ").setParameter(0,tableName).list();
 	}
+	
+	@SuppressWarnings("unchecked")
+	public DdField getDdFieldByCName(String cName)
+	{
+		return (DdField) getSession().createQuery("from DdField where CCnname = ? and BQresult = 1 order by NOrder ").setParameter(0,cName).list().get(0);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public List<DdField> listByTableNameCondtion(String tableName)
 	{

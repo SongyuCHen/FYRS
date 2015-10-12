@@ -56,6 +56,16 @@ public class DdFieldServiceImpl implements DdFieldService{
 			String fieldName) {
 		return ddFieldDAO.getCnnameByTableIdAndFieldName(tableId,fieldName);
 	}
+	@Override
+	public DdFieldVO getDdFieldByCName(String cName) {
+		// TODO Auto-generated method stub
+		DdField ddField= ddFieldDAO.getDdFieldByCName(cName);
+		DdFieldVO vo = new DdFieldVO();
+		vo.setCCnname(ddField.getCCnname());
+		vo.setCFieldname(ddField.getCFieldname());
+		vo.setNMaincode(ddField.getNMaincode()+"");
+		return vo;
+	}
 	
   
 }
