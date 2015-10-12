@@ -87,7 +87,10 @@ public class DwxxBmjgglController {
 			HttpServletResponse response, ModelMap model) throws Exception {
 		String fydm = request.getParameter("fydm");
 		String bmdm = request.getParameter("bmdm");
-		String filed = request.getParameter("filed");
+		String field = request.getParameter("field");
+		if(field==null){
+			field="xb";
+		}
 		RykcxModel cx = new RykcxModel();
 		cx.setFydm(Integer.valueOf(fydm));
 		cx.setBmdm(Integer.valueOf(bmdm));
@@ -97,44 +100,47 @@ public class DwxxBmjgglController {
 		String tjType = "";
 		String keyValue = "";
 		Map map = new HashMap();
-		if(filed.equals("xb")){
+		if(field.equals("xb")){
 			tjType = "性别";
 			for (RyviewModel ry : ryList) {
-				keyValue = ry.getXb();
+				keyValue = "\""+ry.getXb()+"\"";
 				Integer count = (Integer) map.get(keyValue);
 				map.put(keyValue, (count == null) ? 1 : count + 1);
 			}
-		}else if(filed.equals("xzzw")){
+		}else if(field.equals("xzzw")){
 			tjType = "行政职务";
 			for (RyviewModel ry : ryList) {
-				keyValue = ry.getXzzw();
+				keyValue = "\""+ry.getXzzw()+"\"";
 				Integer count = (Integer) map.get(keyValue);
 				map.put(keyValue, (count == null) ? 1 : count + 1);
 			}
-		}else if(filed.equals("zj")){
+		}else if(field.equals("zj")){
 			tjType = "职级";
 			for (RyviewModel ry : ryList) {
-				keyValue = ry.getZj();
+				keyValue =  "\""+ry.getZj()+"\"";
 				Integer count = (Integer) map.get(keyValue);
 				map.put(keyValue, (count == null) ? 1 : count + 1);
 			}
-		}else if(filed.equals("xl")){
+		}else if(field.equals("xl")){
 			tjType = "学历";
 			for (RyviewModel ry : ryList) {
-				keyValue = ry.getXl();
+				keyValue =  "\""+ry.getXl()+"\"";
 				Integer count = (Integer) map.get(keyValue);
 				map.put(keyValue, (count == null) ? 1 : count + 1);
 			}
 		}else{
 			tjType = "性别";
 			for (RyviewModel ry : ryList) {
-				keyValue = ry.getXb();
+				keyValue =  "\""+ry.getXb()+"\"";
 				Integer count = (Integer) map.get(keyValue);
 				map.put(keyValue, (count == null) ? 1 : count + 1);
 			}
 		}
-		
+		model.addAttribute("fydm",fydm);
+		model.addAttribute("bmdm",bmdm);
+		model.addAttribute("field",field);
 		model.addAttribute("bmmc",bmmc);
+		model.addAttribute("tjtype",tjType);
 		model.addAttribute("catlist",map.keySet());
 		model.addAttribute("statistic", map);
 		return "dwxx/pop/view_bmryfb";

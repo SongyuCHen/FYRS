@@ -1,13 +1,38 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <div id="mainScreen" style="height:450px;width:600px;"></div>
+<div id="title" style="position:relative;top:-400px;left:520px">
+	<select id="tjtype">
+		<option value="xb">性别</option>
+		<option value="xzzw">行政职务</option>
+		<option value="zj">职级</option>
+		<option value="xl">学历</option>
+	</select>
+</div>
+<div id="catlist" style="display:none">
+	${catlist}
+</div>
+<div id="statistic" style="display:none">
+	${statistic}
+</div>
 <script type="text/javascript" src="/resources/js/echarts/echarts-all.js"></script>
 <script type="text/javascript">
 	$(function(){
+		var fydm = '${fydm}';
+		var bmdm = '${bmdm}';
+		 $("#tjtype").find("option[value='${field}']").attr("selected",true);
+		var catlist = $.parseJSON($("#catlist").text());
+		var statistic = $.parseJSON($("#statistic").text().replace(/=/g,":"));
+		var data = [];
+		for(var i = 0 ; i < catlist.length ; i++){
+			data.push({value:statistic[catlist[i]],name:catlist[i]});
+		}
+		
 		var myChart = echarts.init(document.getElementById('mainScreen')); 
 		var option = {
 		    title : {
-		        text: '部门人员分布',
+		        text: '${bmmc}',
 		        x:'center'
 		    },
 		    tooltip : {
@@ -17,7 +42,7 @@
 		    legend: {
 		        orient : 'vertical',
 		        x : 'left',
-		        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+		        data : catlist
 		    },
 		    toolbox: {
 		        show : true,
@@ -46,17 +71,24 @@
 		            type:'pie',
 		            radius : '55%',
 		            center: ['50%', '60%'],
-		            data:[
-		                {value:335, name:'直接访问'},
-		                {value:310, name:'邮件营销'},
-		                {value:234, name:'联盟广告'},
-		                {value:135, name:'视频广告'},
-		                {value:1548, name:'搜索引擎'}
-		            ]
+		            data:data
 		        }
 		    ]
 		};
 		myChart.setOption(option); 
+		
+		$("#tjtype").change(function(){
+			var field = $("#tjtype").val();
+			$.ajax({
+        		url:"/main/dwxx/bmryfb.aj",
+        		type:"POST",
+        		data:{fydm:fydm,bmdm:bmdm,field:field},
+        		dataType:"html",
+        		success:function(html){
+					$(".bmryfb").html(html).dialog("open");            		
+        		}
+        	});
+		});
 	});
 	
 </script>
