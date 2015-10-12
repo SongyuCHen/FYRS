@@ -725,48 +725,48 @@ html,body {
 					class="gf_dy_table_4">
 					<tr>
 						<td align="center">年度考</br>核结果</td>
-						<td colspan="5"><c:forEach items="${khxxVOs}" var="khxxList">
+						<td colspan="6"><c:forEach items="${khxxVOs}" var="khxxList">
 									${khxxList.NNd}&nbsp;${khxxList.NKhjg}</br>
 							</c:forEach></td>
 						</td>
 					</tr>
 					<tr>
 						<td align="center">任<br /> 免<br /> 理<br /> 由</td>
-						<td colspan="5"><br /> <br /> <br /></td>
+						<td colspan="6"><br /> <br /> <br /></td>
 					</tr>
 					<tr>
 						<td width="85" rowspan="9" align="center">主要家庭成员及社会关系</td>
-						<td width="68" align="center">称 谓</td>
-						<td width="81" align="center">姓 名</td>
-						<td width="94" align="center">出生年月</td>
-						<td width="98" align="center">政治面貌</td>
-						<td width="198" align="center">工作单位及职务</td>
+						<td colspan="1" align="center">称 谓</td>
+						<td colspan="1" align="center">姓 名</td>
+						<td colspan="1" align="center">出生年月</td>
+						<td colspan="1" align="center">政治面貌</td>
+						<td colspan="2" align="center">工作单位及职务</td>
 					</tr>
 					<c:forEach items="${jtxxVOs}" var="jtxxList">
 						<tr>
-							<td width="68" align="center">${jtxxList.NYbrgx}</td>
-							<td width="81" align="center">${jtxxList.CXm}</td>
-							<td width="94" align="center">${jtxxList.DCsrq}</td>
-							<td width="98" align="center">${jtxxList.NZzmm}</td>
-							<td width="198" align="center">${jtxxList.CDwjzw}</td>
+							<td colspan="1" align="center">${jtxxList.NYbrgx}</td>
+							<td colspan="1" align="center">${jtxxList.CXm}</td>
+							<td colspan="1" align="center">${jtxxList.DCsrq}</td>
+							<td colspan="1" align="center">${jtxxList.NZzmm}</td>
+							<td colspan="2" align="center">${jtxxList.CDwjzw}</td>
 						</tr>
 					</c:forEach>
 
 
 					<tr>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
+						<td colspan="1">&nbsp;</td>
+						<td colspan="1">&nbsp;</td>
+						<td colspan="1">&nbsp;</td>
+						<td colspan="1">&nbsp;</td>
+						<td colspan="2">&nbsp;</td>
 					</tr>
 
 					<tr>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
+						<td colspan="1">&nbsp;</td>
+						<td colspan="1">&nbsp;</td>
+						<td colspan="1">&nbsp;</td>
+						<td colspan="1">&nbsp;</td>
+						<td colspan="2">&nbsp;</td>
 					</tr>
 
 
