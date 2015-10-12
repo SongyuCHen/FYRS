@@ -164,16 +164,7 @@
   				}
   			}
    		}); */
-   		var timeShowHeight = 0;
-   		$("#time-show .time-line-time").each(function(){
-   			timeShowHeight += $(this).height()+20;
-   		});
-   		$("#time-show .time-line-panel").each(function(){
-   			timeShowHeight += $(this).height();
-   		});
-		$("#time-line-line").css("height",timeShowHeight);
-		
-		
+   		
 		
 		
 		$('#jbbbxz_dlg').dialog({
@@ -262,8 +253,7 @@
 									'name' : name
 								},
 								success : function(html) {
-									$("#time-show").children().remove();
-									$("#time-show").html(html);
+									$("#time-show-wrapper").html(html);
 								}
 							});
 						});
@@ -392,78 +382,7 @@
 			</tbody>
 		</table>
 	</div>
-	<div id="time-show" class="time-line-wrapper">
-		<img id="time-line-line" src="/resources/images/time-line.png"/>
-		<div class="time-line-day">
-			<div class="time-line-time">2015年9月28日</div>
-			<div class="time-line-item">
-				<div class="time-line-dot"></div>
-				<div class="time-line-panel">
-					<div class= "panel panel-default">				
-  						<div class="panel-heading">Panel heading without title</div>
-  						<div class="panel-body">
-    						Panel content
-  						</div>
-  					</div>
-				</div>
-			</div>
-			<div class="time-line-item">
-				<div class="time-line-dot"></div>
-				<div class="time-line-panel">
-					<div class= "panel panel-default">				
-  						<div class="panel-heading">Panel heading without title</div>
-  						<div class="panel-body">
-    						Panel content
-  						</div>
-  					</div>
-				</div>
-			</div>
-		</div>
-		<div class="time-line-day">
-			<div class="time-line-time">2015年9月26日</div>
-			<div class="time-line-item">
-				<div class="time-line-dot"></div>
-				<div class="time-line-panel">
-					<div class= "panel panel-default">				
-  						<div class="panel-heading">Panel heading without title</div>
-  						<div class="panel-body">
-    						Panel content
-  						</div>
-  					</div>
-				</div>
-			</div>
-		</div>
-		<div class="time-line-day">
-			<div class="time-line-time">2015年9月26日</div>
-			<div class="time-line-item">
-				<div class="time-line-dot"></div>
-				<div class="time-line-panel">
-					<div class= "panel panel-default">				
-  						<div class="panel-heading">Panel heading without title</div>
-  						<div class="panel-body">
-    						Panel content
-  						</div>
-  					</div>
-				</div>
-			</div>
-		</div>
-		<div class="time-line-day">
-			<div class="time-line-time">2015年9月26日</div>
-			<div class="time-line-item">
-				<div class="time-line-dot"></div>
-				<div class="time-line-panel">
-					<div class= "panel panel-default">				
-  						<div class="panel-heading">Panel heading without title</div>
-  						<div class="panel-body">
-    						Panel content
-  						</div>
-  					</div>
-				</div>
-			</div>
-		</div>
-	
-	
-	</div>
+	<div id="time-show-wrapper"></div>
 	<div class="xzfy_dlg" isOnlyXzFy="0" isBmSelected="1" isFyAndBm="0"></div>
 	<div id="jbbbxz_dlg" style="display:none;"></div>
 </body>
