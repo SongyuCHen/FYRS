@@ -141,7 +141,7 @@
                 <value>nju.software.fyrs.data.dataobject.RyjbxxFzb</value>
                 <value>nju.software.fyrs.data.dataobject.FzbJlxx</value>
                 <value>nju.software.fyrs.data.dataobject.FzbPhoto</value>
-            <!--     <value>nju.software.fyrs.data.dataobject.Jgbg</value> --> 
+            	<value>nju.software.fyrs.data.dataobject.Jgbg</value>
                 <value>nju.software.fyrs.data.dataobject.RysxYujing</value>
                 <value>nju.software.fyrs.data.dataobject.RysxHt</value>
                 <value>nju.software.fyrs.data.dataobject.RysxHdbz</value>
@@ -396,13 +396,13 @@
 	<bean id="wdglDAO" class="nju.software.fyrs.data.dao.WdglDAO"></bean>
 	<bean id="xtglDrdcDAO" class="nju.software.fyrs.data.dao.XtglDrdcDAO"></bean>
 	<bean id="hdbzDAO" class="nju.software.fyrs.data.dao.HdbzDAO"></bean>
-	<!--  
+
 	<bean id="jgbgDAO" class="nju.software.fyrs.data.dao.JgbgDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	-->
+
 	<bean id="rysxHtDAO" class="nju.software.fyrs.data.dao.RysxHtDAO"></bean>
 	<bean id="yujingDAO" class="nju.software.fyrs.data.dao.YujingDAO"></bean>
 	<bean id="xiujiaDAO" class="nju.software.fyrs.data.dao.RysxXiujiaDAO"></bean>

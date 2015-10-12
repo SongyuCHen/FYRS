@@ -14,7 +14,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "T_JGBG")
-@IdClass(JgxxId.class)
+@IdClass(JgbgId.class)
 public class Jgbg implements java.io.Serializable {
 
 	// Fields
@@ -42,7 +42,6 @@ public class Jgbg implements java.io.Serializable {
 	/** full constructor */
 	private Jgbg(BigDecimal nId, Integer nFy, Date dBgsj, String cBbpfbh,
 			Date dBbpfsj, String cBgnr, String cBgr, byte[] iBbpfnr) {
-		super();
 		NId = nId;
 		NFy = nFy;
 		DBgsj = dBgsj;
@@ -54,7 +53,7 @@ public class Jgbg implements java.io.Serializable {
 	}	
 
 	@Id
-	@Column(name = "N_Fy")
+	@Column(name = "N_FY")
 	public Integer getNFy()
 	{
 		return NFy;
@@ -65,7 +64,7 @@ public class Jgbg implements java.io.Serializable {
 		NFy = nFy;
 	}
 	@Id
-	@Column(name = "N_Id")
+	@Column(name = "N_ID")
 	public BigDecimal getNId() {
 		return NId;
 	}
@@ -74,7 +73,7 @@ public class Jgbg implements java.io.Serializable {
 		NId = nId;
 	}
 	
-	@Column(name = "d_bgsj")
+	@Column(name = "D_BGSJ")
 	public Date getDBgsj() {
 		return DBgsj;
 	}
@@ -82,7 +81,7 @@ public class Jgbg implements java.io.Serializable {
 	public void setDBgsj(Date dBgsj) {
 		DBgsj = dBgsj;
 	}
-	@Column(name = "c_bbpfbh", length = 100)
+	@Column(name = "C_BBPFBH", length = 100)
 	public String getCBbpfbh() {
 		return CBbpfbh;
 	}
@@ -90,7 +89,7 @@ public class Jgbg implements java.io.Serializable {
 	public void setCBbpfbh(String cBbpfbh) {
 		CBbpfbh = cBbpfbh;
 	}
-	@Column(name = "d_bbpfsj")
+	@Column(name = "D_BBPFSJ")
 	public Date getDBbpfsj() {
 		return DBbpfsj;
 	}
@@ -98,7 +97,7 @@ public class Jgbg implements java.io.Serializable {
 	public void setDBbpfsj(Date dBbpfsj) {
 		DBbpfsj = dBbpfsj;
 	}
-	@Column(name = "c_bgnr", length = 255)
+	@Column(name = "C_BGNR", length = 255)
 	public String getCBgnr() {
 		return CBgnr;
 	}
@@ -106,7 +105,7 @@ public class Jgbg implements java.io.Serializable {
 	public void setCBgnr(String cBgnr) {
 		CBgnr = cBgnr;
 	}
-	@Column(name = "c_bgr", length = 20)
+	@Column(name = "C_BGR", length = 20)
 	public String getCBgr() {
 		return CBgr;
 	}
@@ -114,7 +113,7 @@ public class Jgbg implements java.io.Serializable {
 	public void setCBgr(String cBgr) {
 		CBgr = cBgr;
 	}
-	@Column(name = "i_bbpfnr")
+	@Column(name = "I_BBPFNR")
 	public byte[] getIBbpfnr() {
 		return IBbpfnr;
 	}

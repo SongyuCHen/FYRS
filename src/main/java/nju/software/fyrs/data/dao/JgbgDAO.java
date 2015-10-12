@@ -212,32 +212,35 @@ public class JgbgDAO extends HibernateDaoSupport {
 	@SuppressWarnings("unchecked")
 	public List<Jgbg> getJgbgByRybh(String fybh){
 		int nrybh = Integer.parseInt(fybh);
-		String hql = "from Jgbg where NFybh=?";
-		List<Jgbg> listJgbg = getHibernateTemplate().find(hql,fybh);		
+		String hql = "from Jgbg where NFy=?";
+		List<Jgbg> listJgbg = getHibernateTemplate().find(hql,nrybh);		
 		return listJgbg;
 	}
 	
 	@SuppressWarnings("unchecked")
 	public Jgbg getJgbgByRybhHtbh(String fybh,String id){
 		int nrybh = Integer.parseInt(fybh);
-		String hql = "from Jgbg where NFybh=? and NId=?";
-		List<Jgbg> listJgbg = getHibernateTemplate().find(hql,fybh,id);		
+		BigDecimal bd = new BigDecimal(id);
+		String hql = "from Jgbg where NFy=? and NId=?";
+		List<Jgbg> listJgbg = getHibernateTemplate().find(hql,nrybh,bd);		
 		return listJgbg.size()>0?listJgbg.get(0):null;
 	}
 	
 	@SuppressWarnings("unchecked")
 	public Jgbg getJgbgById(String fybh,String id){
 		int nrybh = Integer.parseInt(fybh);
-		String hql = "from Jgbg where NFybh=? and NId=?";
-		List<Jgbg> listJgbg = getHibernateTemplate().find(hql,fybh,id);		
+		BigDecimal bd = new BigDecimal(id);
+		String hql = "from Jgbg where NFy=? and NId=?";
+		List<Jgbg> listJgbg = getHibernateTemplate().find(hql,nrybh,bd);		
 		return listJgbg.size()>0?listJgbg.get(0):null;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public boolean delJgbgById(String fybh,String id){
 		int nrybh = Integer.parseInt(fybh);
 		BigDecimal bd = new BigDecimal(id);
-		String hql = "from Jgbg where NFybh=? and NId=?";
-		List<Jgbg> listJgbg = getHibernateTemplate().find(hql,fybh,id);	
+		String hql = "from Jgbg where NFy=? and NId=?";
+		List<Jgbg> listJgbg = getHibernateTemplate().find(hql,nrybh,bd);	
 		if(listJgbg==null || listJgbg.size()==0){
 			return false;
 		}else{

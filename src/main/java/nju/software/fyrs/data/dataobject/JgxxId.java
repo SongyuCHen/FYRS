@@ -1,7 +1,8 @@
 package nju.software.fyrs.data.dataobject;
 
 import javax.persistence.Column;
-
+import javax.persistence.Embeddable;
+@Embeddable
 public class JgxxId implements java.io.Serializable {
 
 	// Fields
