@@ -178,9 +178,12 @@ function zzktableBind(){
 		var rybhList, nameList;
 		initTable("zzk_list");
 		//弹窗
-   	 var pop=new Pop("这里是标题，哈哈",
-			"http://www.yanue.info/js/pop/pop.html",
-			"请输入你的内容简介，这里是内容简介.请输入你的内容简介，这里是内容简介.请输入你的内容简介，这里是内容简介");
+		setTimeout(function(){
+			var pop=new Pop("这里是标题，哈哈",
+					"http://www.yanue.info/js/pop/pop.html",
+					"请输入你的内容简介，这里是内容简介.请输入你的内容简介，这里是内容简介.请输入你的内容简介，这里是内容简介");
+		}, 1000);
+   	 
 		$('#jbbbxz_dlg').dialog({
 			autoOpen : false,
 			bgiframe : true,
