@@ -10,6 +10,11 @@
    			timeShowHeight += $(this).height();
    		});
 		$("#time-line-line").css("height",timeShowHeight);
+		var h = timeShowHeight+400>screen.height-250?timeShowHeight+400:screen.height-250;
+		$(".contentLeftWrap").height(h);
+		$(".contentRightWrap").height(h);
+		
+		
 	})
 </script>
 <div id="time-show" class="time-line-wrapper">
