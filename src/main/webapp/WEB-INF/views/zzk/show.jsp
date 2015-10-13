@@ -61,6 +61,8 @@
 
 </style>
 <script type="text/javascript">
+var g_calledByYr = false;
+var $roles_oTable = null;
 function zzktableBind(){
 	/*active选中的dataTable中的行*/
 	function activeSelectTr($node) {
@@ -235,6 +237,8 @@ function zzktableBind(){
 								success : function(json) {
 									if (json) {
 										$("#lskyr").dialog("close");
+										g_calledByYr = true;
+										selectBmAfter();
 									} else {
 										alert("引入人员失败，请刷新后重试");
 									}
@@ -683,7 +687,7 @@ function zzktableBind(){
 	}); // jquery
 	//  初始化表格
 	var initTable = function(dataTableId) {
-		var $roles_oTable = $("#" + dataTableId + " #dataTable").DataTable({
+		$roles_oTable = $("#" + dataTableId + " #dataTable").DataTable({
 			'iDisplayLength' : 10,
 			"sPaginationType" : "full_numbers",
 			"bStateSave" : true,
@@ -768,7 +772,12 @@ function zzktableBind(){
 						initTable("zzk_list");
 						$("#loadingSpinner").hide();//隐藏加载图片
 						zzktableBind();
-
+						if(g_calledByYr){
+							if($roles_oTable!=null){
+								$roles_oTable.fnPageChange("last");
+							}
+							g_calledByYr = false;
+						}
 					}
 				});
 	};
