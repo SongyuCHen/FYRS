@@ -6294,12 +6294,16 @@ public class RyjbxxServiceImpl implements RyjbxxService
 		vo.setNFy(rj.getNFy() + "");
 		vo.setNRybh(rj.getNRybh() + "");
 		vo.setCXm(rj.getCXm());
-		vo.setXb(dmDAO.dmByDmBxh(rj.getNXb(), ConstantsFyrs.NBXH_XB).getCMc());
-		vo.setNXl(dmDAO.dmByDmBxh(rj.getNXl(), ConstantsFyrs.NBXH_WHCD)
+		if(rj.getNXb() != null)
+			vo.setXb(dmDAO.dmByDmBxh(rj.getNXb(), ConstantsFyrs.NBXH_XB).getCMc());
+		if(rj.getNXl() != null)
+			vo.setNXl(dmDAO.dmByDmBxh(rj.getNXl(), ConstantsFyrs.NBXH_WHCD)
 				.getCMc());
-		vo.setXzzwMc(dmDAO.dmByDmBxh(rj.getNXzzw(), ConstantsFyrs.NBXH_XZZW)
+		if(rj.getNXzzw() != null)
+			vo.setXzzwMc(dmDAO.dmByDmBxh(rj.getNXzzw(), ConstantsFyrs.NBXH_XZZW)
 				.getCMc());
-		vo.setNZj(dmDAO.dmByDmBxh(rj.getNZj(), ConstantsFyrs.NBXH_ZJ).getCMc());
+		if(rj.getNZj() != null)
+			vo.setNZj(dmDAO.dmByDmBxh(rj.getNZj(), ConstantsFyrs.NBXH_ZJ).getCMc());
 		if(rj.getDCsrq()!=null){
 			vo.setNl(String.valueOf(DateUtil.getAge(rj.getDCsrq())));
 		}
