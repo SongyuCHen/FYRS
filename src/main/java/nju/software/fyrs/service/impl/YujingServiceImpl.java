@@ -1,6 +1,8 @@
 package nju.software.fyrs.service.impl;
 
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import nju.software.fyrs.biz.vo.YujingVO;
@@ -121,6 +123,30 @@ public class YujingServiceImpl implements YujingService{
 
 	public void setRysxTablekeyDAO(RysxTablekeyDAO rysxTablekeyDAO) {
 		this.rysxTablekeyDAO = rysxTablekeyDAO;
+	}
+
+	@Override
+	public List<YujingVO> getYujingByFyAndDate(String fydm, Date begin, Date end) {
+		// TODO Auto-generated method stub
+		List<RysxYujing> yujings = yujingDAO.getRysxYujingByFyAndDate(fydm, begin, end);
+		List<YujingVO> vos = new ArrayList<YujingVO>();
+		for(RysxYujing yujing:yujings){
+			YujingVO vo = new YujingVO();
+			int fy = yujing.getNFy();
+			int rybh = yujing.getNRybh();
+			Ryjbxx ry = ryjbxxDAO.getRyByFyAndRybh(fy, rybh);
+			Jgxx jgxx = jgxxDAO.bmByFyIdAndNcode(fy,ry.getNBm());
+			vo.setCXm(ry.getCXm());
+			vo.setCBm(jgxx.getCName());
+			vo.setNId(yujing.getNId().toString());
+			vo.setNFy(yujing.getNFy().toString());
+			vo.setNRybh(yujing.getNRybh().toString());
+			vo.setDYjsj(DateUtil.format(yujing.getDYjsj(), DateUtil.webFormat));
+			vo.setCYjsx(yujing.getCYjsx());
+			vo.setCBz(yujing.getCBz());
+			vos.add(vo);
+		}
+		return vos;
 	}
 	
 }

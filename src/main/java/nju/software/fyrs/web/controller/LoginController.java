@@ -2,6 +2,7 @@ package nju.software.fyrs.web.controller;
 
 import java.security.SignatureException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -10,19 +11,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import nju.software.fyrs.biz.vo.FyVO;
+import nju.software.fyrs.biz.vo.YujingVO;
 import nju.software.fyrs.data.dataobject.Log;
 import nju.software.fyrs.data.dataobject.Menu;
 import nju.software.fyrs.data.dataobject.Ryjbxx;
 import nju.software.fyrs.service.FyService;
 import nju.software.fyrs.service.LogService;
 import nju.software.fyrs.service.RyjbxxService;
+import nju.software.fyrs.service.YujingService;
 import nju.software.fyrs.service.impl.RoleMenuService;
 import nju.software.fyrs.service.model.UserContext;
 import nju.software.fyrs.util.ConstantsFyrs;
+import nju.software.fyrs.util.DateUtil;
 import nju.software.fyrs.util.NFyRybhCodeUtils;
 import nju.software.fyrs.util.PasswordMd5Utils;
 import nju.software.fyrs.util.RolesUtil;
 
+import org.apache.poi.hssf.record.formula.functions.Today;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -35,6 +40,7 @@ public class LoginController {
 	private RyjbxxService ryjbxxService;
 	private RoleMenuService roleMenuService;
 	private LogService logService;
+	private YujingService yujingService;
 	
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String showMain(HttpServletRequest request,
@@ -60,7 +66,8 @@ public class LoginController {
         String fymc = request.getParameter("fymc");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		
+		Boolean alarm = false;
+		StringBuffer tipContent = new StringBuffer();
 		Ryjbxx ryjbxx = ryjbxxService.getRyjbxxByUserNamePassowrd(username,Integer.valueOf(fydm));
 		if(ryjbxx  == null)
 		{
@@ -123,7 +130,22 @@ public class LoginController {
 		{
 			// 这种情况不大可能
 		    return "login/login";
+		}else{
+			for(Menu menu:menus){
+				if(menu.getMenuName().equals("预警管理"))
+					alarm = true;
+			}
 		}
+		if(alarm){
+			Date begin = new Date();
+			Date end = DateUtil.addDays(begin, 3);
+			List<YujingVO> yujingVOs = yujingService.getYujingByFyAndDate(fydm, begin, end);
+			for(YujingVO vo:yujingVOs){
+				tipContent.append(vo.getDYjsj()+":"+vo.getCXm()+" "+vo.getCBz()+"\n");
+			}
+		}
+		request.getSession().setAttribute("alarm",alarm);
+		request.getSession().setAttribute("tipContent",tipContent);
 		Menu menu = menus.get(0);
 		String path = menu.getHref();
         return "redirect:"+path;

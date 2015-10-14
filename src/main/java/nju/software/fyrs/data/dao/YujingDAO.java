@@ -2,9 +2,11 @@ package nju.software.fyrs.data.dao;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 import java.util.List;
 
 import nju.software.fyrs.data.dataobject.RysxYujing;
@@ -214,6 +216,14 @@ public class YujingDAO extends HibernateDaoSupport {
 		int nfy = Integer.parseInt(fy);
 		String hql = "from RysxYujing where NFy=?";
 		List<RysxYujing> listRysxYujing = getHibernateTemplate().find(hql,nfy);		
+		return listRysxYujing;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<RysxYujing> getRysxYujingByFyAndDate(String fy,Date begin, Date end){
+		int nfy = Integer.parseInt(fy);
+		String hql = "from RysxYujing where NFy=? and DYjsj>= ? and DYjsj <= ?";
+		List<RysxYujing> listRysxYujing = getHibernateTemplate().find(hql,nfy,begin,end);		
 		return listRysxYujing;
 	}
 	
