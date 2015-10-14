@@ -32,103 +32,17 @@
 
 #m-image {
 	float: left;
+	position:relative;
+	top:15px;
+}
+
+#time-show-wrapper{
+	float:left;
+	margin-left:50px;
 }
 
 #infoTable {
 	float: left;
-}
-
-#time-show {
-	clear: both;
-}
-
-#time-left {
-	width: 60px;
-	background-image: url("/resources/images/time-select-bg.png");
-	background-repeat: repeat-y;
-	background-position: 45px;
-	float: left;
-}
-
-#time-left ul {
-	list-style-type: none;
-	padding-left: 0px;
-}
-
-#time-left ul li {
-	margin: 10px 0px;
-}
-
-#time-left ul li span {
-	width: 40px;
-	display: -moz-inline-box;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#time-right {
-	vertical-align: top;
-	background-image: url("/resources/images/time-show-bg.png");
-	background-repeat: repeat-y;
-	background-position: 65px;
-	height: 350px;
-	overflow: scroll;
-	float: left;
-	padding-right: 15px;
-}
-
-#time-right-ul {
-	list-style-type: none;
-	padding-left: 0px;
-}
-
-#time-right-ul .time-show-circle {
-	padding: 0px 0px;
-	margin-left: 0px;
-	vertical-align: top;
-	margin-top: 7px;
-}
-
-#time-right-ul .time-show-arrow {
-	margin-left: 10px;
-	padding: 0px 0px;
-}
-
-.time-title {
-	display: inline-block;
-	vertical-align: top;
-	margin-top: 20px;
-	width: 60px;
-	height: 24px;
-}
-
-.time-title-image {
-	display: inline-block;
-	vertical-align: top;
-	margin-top: 20px;
-	height: 24px;
-}
-
-#time-right-content-ul {
-	padding: 0px 0px;
-	display: inline-block;
-	list-style-type: none;
-	background-image: url("/resources/images/time-event-bg2.gif");
-	width: 585px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin-left: -4px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#time-right-content-ul li {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#time-right-content-ul li a {
-	margin-left: 15px;
 }
 
 .tableHead th{
@@ -357,10 +271,10 @@
 		</span>
 	</div>
 	<div>
-		<span id="m-image"><img alt="个人图片"
+		<div id="m-image"><img alt="个人图片"
 			src="/resources/images/moren.png" id="perPhoto" width="97px"
-			height="122px"> </span>
-		<table id="infoTable" class="dataTable">
+			height="122px"> </div>
+	<!--  	<table id="infoTable" class="dataTable">
 			<thead>
 				<tr class="tableHead">
 					<th width="60px">姓名</th>
@@ -381,6 +295,7 @@
 				</tr>
 			</tbody>
 		</table>
+		-->
 	</div>
 	<div id="time-show-wrapper"></div>
 	<div class="xzfy_dlg" isOnlyXzFy="0" isBmSelected="1" isFyAndBm="0"></div>
