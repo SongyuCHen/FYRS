@@ -131,9 +131,16 @@ public class LoginController {
 			// 这种情况不大可能
 		    return "login/login";
 		}else{
-			for(Menu menu:menus){
-				if(menu.getMenuName().equals("预警管理"))
-					alarm = true;
+			outer:for(Menu menu:menus){
+				for(Menu subMenu : menu.getMenus()){
+					if(subMenu==null)
+						continue;
+					if("预警管理".equals(subMenu.getMenuName())){
+						alarm = true;
+						break outer;
+					}
+						
+				}
 			}
 		}
 		if(alarm){
@@ -144,7 +151,7 @@ public class LoginController {
 				tipContent.append(vo.getDYjsj()+":"+vo.getCXm()+" "+vo.getCBz()+"\n");
 			}
 		}
-		request.getSession().setAttribute("alarm",alarm);
+		request.getSession().setAttribute("alarm",alarm==true?"yes":"no");
 		request.getSession().setAttribute("tipContent",tipContent);
 		Menu menu = menus.get(0);
 		String path = menu.getHref();
@@ -212,5 +219,8 @@ public class LoginController {
 
 	public void setLogService(LogService logService) {
 		this.logService = logService;
+	}
+	public void setYujingService(YujingService yujingService) {
+		this.yujingService = yujingService;
 	}
 }

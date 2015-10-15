@@ -1,4 +1,4 @@
-//ºÚ¿Æ¼¼£¬ÈÃÒ³Ãæ×ÔÊÊÓ¦ä¯ÀÀÆ÷×î´ó´°¿Ú´óĞ¡
+//é»‘ç§‘æŠ€ï¼Œè®©é¡µé¢è‡ªé€‚åº”æµè§ˆå™¨æœ€å¤§çª—å£å¤§å°
 function makeLRalign(){
 	var h = screen.height-250;
 	var lh = $(".contentLeftWrap").height();
@@ -25,7 +25,7 @@ function adjustLR(id){
 	$(".contentLeftWrap").height(nh+"px");
 	$(".contentRightWrap").height(nh+"px");
 	
-	//ËÑË÷¿òÖĞ°Ú¸ö·Å´ó¾µ
+	//æœç´¢æ¡†ä¸­æ‘†ä¸ªæ”¾å¤§é•œ
 	$("#dataTable_filter").append("<div class='searching-icon'><span class='glyphicon glyphicon-search'></span></div>");
 }
 
