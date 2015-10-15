@@ -481,15 +481,10 @@
 									<div id="table_one_content">
 										<table class="inner_table" style="line-height:20px;">
 											<tr>
-												<!--<td rowspan="8" style="width:140px"><img src="resources/img/people_pic.png" /></td>-->
-												<td class="table_title">编号：</td>
-												<td class="table_content">${ryxx1.NRybh}</td>
 												<td class="table_title"><span style="color:red">*</span>身份证号：</td>
 												<td class="table_content"><input type="text" id="sfzh"
 													class="myLabel" value="${ryxx1.CSfzh}" />
 												</td>
-											</tr>
-											<tr>
 												<td class="table_title"><span style="color:red">*</span>部门：</td>
 												<td class="table_content"><div class="mySelect">
 														<select class="my_select_s" id="bm">
@@ -500,8 +495,6 @@
 														</select>
 													</div>
 												</td>
-												<td class="table_title">部门性质：</td>
-												<td class="table_content">${ryxx1.bmxz}</td>
 											</tr>
 											<tr>
 												<td class="table_title"><span style="color:red">*</span>姓名：</td>
@@ -562,18 +555,18 @@
 												<td class="table_content"><input type="text" id="csrq"
 													class="myDate_label" value="${ryxx1.DCsrq}" />
 												</td>
-												<td class="table_title">年龄：</td>
-												<td class="table_content">${ryxx1.NNl}</td>
-											</tr>
-											<tr>
 												<td class="table_title"><span style="color:red">*</span>籍贯：</td>
 												<td class="table_content"><input type="text" id="jg"
 													class="myLabel" value="${ryxx1.CJg}" />
 												</td>
+											</tr>
+											<tr>												
 												<td class="table_title">出生地：</td>
 												<td class="table_content"><input type="text" id="csd"
 													class="myLabel" value="${ryxx1.CCsd}" />
 												</td>
+												<td class="table_title"></td>
+												<td class="table_content"></td>
 											</tr>
 										</table>
 									</div>
@@ -603,26 +596,10 @@
 											</td>
 										</tr>
 										<tr>
-											<td class="table_title">政治面貌：</td>
-											<td class="table_content">${ryxx1.NZzmm}</td>
-											<td class="table_title">加入日期：</td>
-											<td class="table_content">${ryxx1.DZzmm}</td>
 											<td class="table_title">党组职务日期：</td>
 											<td class="table_content"><input type="text" id="dzzwrq"
 												class="myDate_label" value="${ryxx1.DDzzwrq}" />
 											</td>
-										</tr>
-										<tr>
-											<td class="table_title">法律职务：</td>
-											<td class="table_content">${ryxx1.NFlzw}</td>
-											<td class="table_title">任职日期：</td>
-											<td class="table_content">${ryxx1.DFlzwRzrq}</td>
-											<td class="table_title"></td>
-											<td class="table_content"></td>
-										</tr>
-										<tr>
-											<td class="table_title">兼职庭长：</td>
-											<td class="table_content">${ryxx1.NJrtz}</td>
 											<td class="table_title">党组任职：</td>
 											<td class="table_content"><div class="mySelect">
 													<select class="my_select_s" id="dzzw">
@@ -635,14 +612,6 @@
 													</select>
 												</div>
 											</td>
-											<td class="table_title"></td>
-											<td class="table_content"></td>
-										</tr>
-										<tr>
-											<td class="table_title">行政职务：</td>
-											<td class="table_content">${ryxx1.NXzzw}</td>
-											<td class="table_title">任职日期：</td>
-											<td class="table_content">${ryxx1.DXzzwRzrq}</td>
 											<td class="table_title"><span style="color:red">*</span>编制：</td>
 											<td class="table_content"><div class="mySelect">
 													<select class="my_select_s" id="bz">
@@ -655,45 +624,11 @@
 												</div>
 											</td>
 										</tr>
-										<tr>
-											<td class="table_title">职级：</td>
-											<td class="table_content">${ryxx1.NZj}</td>
-											<td class="table_title">职级日期：</td>
-											<td class="table_content">${ryxx1.DZjrq}</td>
-											<td class="table_title"></td>
-											<td class="table_content"></td>
-										</tr>
-										<tr>
-											<td class="table_title">等级：</td>
-											<td class="table_content">${ryxx1.NDj}</td>
-											<td class="table_title">等级日期：</td>
-											<td class="table_content">${ryxx1.DDjrq}</td>
-											<td class="table_title"></td>
-											<td class="table_content"></td>
-										</tr>
-										<tr>
-											<td class="table_title">公务员级别：</td>
-											<td class="table_content">${ryxx1.NGwyjb}</td>
-											<td class="table_title">公务员级别起算日期：</td>
-											<td class="table_content">${ryxx1.DGwyrq}</td>
-											<td class="table_title"></td>
-											<td class="table_content"></td>
-										</tr>
 									</table>
 								</div>
 								<div id="table_three" class="infoTable">
-									<table class="inner_table">
+									<table class="inner_table">								
 										<tr>
-											<td class="table_title">学历：</td>
-											<td class="table_content">${ryxx1.NXl}</td>
-											<td class="table_title">学位：</td>
-											<td class="table_content">${ryxx1.NXw}</td>
-											<td class="table_title">获得学位日期：</td>
-											<td class="table_content">${ryxx1.DHdxwrq}</td>
-										</tr>
-										<tr>
-											<td class="table_title">专业：</td>
-											<td class="table_content">${ryxx1.NZy}</td>
 											<td class="table_title">专业证书：</td>
 											<td class="table_content"><div class="mySelect">
 													<select class="my_select_s" id="zyzs">
@@ -710,13 +645,13 @@
 											<td class="table_content"><input type="text" id="hdzsrq"
 												class="myDate_label" value="${ryxx1.DHdzsrq}" />
 											</td>
-										</tr>
-										<tr>
 											<td class="table_title">取得法官资格证书时间：</td>
 											<td class="table_content"><input type="text"
 												id="qdfgzgzssj" class="myDate_label"
 												value="${ryxx1.DQdfgzgzs}" />
 											</td>
+										</tr>
+										<tr>											
 											<td class="table_title">取得法官资格证书类型：</td>
 											<td class="table_content"><div class="mySelect">
 													<select class="my_select_s" id="qdfgzgzs">
@@ -731,8 +666,9 @@
 												</div>
 											</td>
 											<td class="table_title"></td>
-											<td class="table_content"><br> <br>
-											</td>
+											<td class="table_content"></td>
+											<td class="table_title"></td>
+											<td class="table_content"></td>
 										</tr>
 									</table>
 								</div>
@@ -759,18 +695,18 @@
 											<td class="table_title"><span style="color:red">*</span>扣减工龄：</td>
 											<td class="table_content"><input type="text" id="kjgl"
 												class="myLabel" value="${ryxx1.NKjgl}" style="width:90px;display:inline-block;"/>年</td>
-											<td class="table_title">连续工龄：</td>
-											<td class="table_content">${ryxx1.lxgl}年</td>
-										</tr>
-										<tr>
 											<td class="table_title">进本院前法院年限：</td>
 											<td class="table_content"><input type="text"
 												id="jyqfynx" class="myLabel" value="${ryxx1.NJyqfynx}" style="width:90px;display:inline-block;"/>年</td>
-											<td class="table_title">法院工作合计年限：</td>
-											<td class="table_content">${ryxx1.fygzhjnx}年</td>
+										</tr>
+										<tr>
 											<td class="table_title">应加学制：</td>
 											<td class="table_content"><input type="text" id="yjxz"
 												class="myLabel" value="${ryxx1.NYjxz}" style="width:90px;display:inline-block;"/>年</td>
+											<td class="table_title"></td>
+											<td class="table_content"></td>
+											<td class="table_title"></td>
+											<td class="table_content"></td>
 										</tr>
 									</table>
 								</div>
