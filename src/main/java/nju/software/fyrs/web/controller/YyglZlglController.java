@@ -54,6 +54,8 @@ public class YyglZlglController {
 			String keyid = request.getParameter("keyid");
 			String fydm = request.getParameter("fydm");
 			vo = zlService.getZhaoluById(keyid, fydm);			
+		}else{
+			vo.setNFy(request.getParameter("fydm"));
 		}
 		List<Dm> listDmGw = dmService.getDmListByName("行政职务");
 		model.addAttribute("listDmGw", listDmGw);

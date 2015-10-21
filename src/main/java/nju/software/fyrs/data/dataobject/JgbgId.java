@@ -88,6 +88,7 @@ public class JgbgId implements java.io.Serializable {
 		return true;
 	}
 
+	
 
 	
 

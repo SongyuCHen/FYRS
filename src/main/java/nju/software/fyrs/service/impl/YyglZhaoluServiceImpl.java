@@ -62,10 +62,10 @@ public class YyglZhaoluServiceImpl implements YyglZhaoluService {
 		zhaolu.setCZplc(vo.getCZplc());
 		zhaolu.setCZpyq(vo.getCZpyq());
 		if(vo.getNZprs() != null) zhaolu.setNZprs(Integer.parseInt(vo.getNZprs()));
-		zhaolu.setNZpgw(Integer.parseInt(vo.getNZpgw()));
+		if(vo.getNZpgw() != null) zhaolu.setNZpgw(Integer.parseInt(vo.getNZpgw()));
 		zhaoluDAO.save(zhaolu);
 		vo.setNId(zhaolu.getNId().toString());
-		vo.setNZpgw(dmService.getDmByMc(zhaolu.getNZpgw(), "行政职务"));
+		if(vo.getNZpgw() != null) vo.setNZpgw(dmService.getDmByMc(zhaolu.getNZpgw(), "行政职务"));
 		return vo;
 		
 	}

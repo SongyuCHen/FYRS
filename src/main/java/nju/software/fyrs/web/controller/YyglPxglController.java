@@ -61,15 +61,16 @@ public class YyglPxglController {
 			String keyid = request.getParameter("keyid");
 			vo = pxjhService.getPxjhById(keyid, fydm);			
 		}else{
-			String rybh = request.getParameter("rybh");
 			vo.setNFy(fydm);;
 		}
 		List<Dm> listDmPxxs = dmService.getDmListByName("学习形式");
 		List<Dm> listDmPxzl = dmService.getDmListByName("培训种类");
+		List<Dm> listDmPxxz = dmService.getDmListByName("培训性质");
 		List<Dm> listDmZy = dmService.getDmListByName("专业");
 		List<Dm> listDmPxfs = dmService.getDmListByName("培训方式");
 		List<Dm> listDmJgzl = dmService.getDmListByName("培训机构");
 		model.addAttribute("listDmPxzl", listDmPxzl);
+		model.addAttribute("listDmPxxz", listDmPxxz);
 		model.addAttribute("listDmPxfs", listDmPxfs);
 		model.addAttribute("listDmZy", listDmZy);
 		model.addAttribute("listDmJgzl", listDmJgzl);

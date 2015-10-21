@@ -124,7 +124,7 @@
   	<br>
   	<br>
   	<br>
-  	<div class='fmgz'>淮安市中级人民法院政治部（处、科）（盖章）</div>
+  	<div class='fmgz'>某市中级人民法院政治部（处、科）（盖章）</div>
   	</div>
   </body>
 </html>

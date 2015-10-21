@@ -7880,7 +7880,7 @@ public class RyjbxxServiceImpl implements RyjbxxService
 		rysxXiujia.setCBz(vo.getCBz());
 		rysxHtDAO.interceptAddHt(rysxXiujia);
 		vo.setNId(bd.toString());
-		vo.setNHtlb(dmDAO.getDmByMc(rysxXiujia.getNHtlb(), "addHtxx"));
+		vo.setNHtlb(dmDAO.getDmByMc(rysxXiujia.getNHtlb(), "合同类别"));
 		vo.setNPrzw(dmDAO.getDmByMc(rysxXiujia.getNPrzw(), "行政职务"));
 		return vo;
 	}
@@ -8146,6 +8146,8 @@ public class RyjbxxServiceImpl implements RyjbxxService
 		shebDAO.interceptAddShebao(rysxShebao);
 		vo.setNId(bd.toString());
 		vo.setNType(dmDAO.getDmByMc(rysxShebao.getNType(), "保险类型"));
+		Double MFyhj = rysxShebao.getMDwyj() + rysxShebao.getMGryj();
+		vo.setMFyhj(MFyhj.toString());
 		return vo;
 	}
 

@@ -56,6 +56,13 @@ public class HeadTitleController {
 	  {
 		 return headCommon(request,"xtgl");
 	  }
+	  
+	  /** 书记员页签的地址映射 */
+	  @RequestMapping(value="/sjy/head.do",method = RequestMethod.GET)
+	  public String sjyHead(HttpServletRequest request)
+	  {
+		  return headCommon(request,"sjy");
+	  }
 	private String headCommon(HttpServletRequest request,String headName)
 	{
 		 List<Menu> menus = roleMenuService.listMenuByRoleIdParentMenuName(RolesUtil.userGetRoleIds(request),headName);

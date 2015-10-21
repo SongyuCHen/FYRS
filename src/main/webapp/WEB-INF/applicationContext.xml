@@ -263,7 +263,7 @@
 	<bean id="ryviewConvertor" class="nju.software.fyrs.service.convertor.RyviewConvertor"></bean>
 	<bean id="yujingService" class="nju.software.fyrs.service.impl.YujingServiceImpl"></bean>
 	<bean id="pxjhService" class="nju.software.fyrs.service.impl.YyglPxjhServiceImpl"></bean>
-	<bean id="zhaoluService" class="nju.software.fyrs.service.impl.YyglZhaoluServiceImpl"></bean>
+	<bean id="zlService" class="nju.software.fyrs.service.impl.YyglZhaoluServiceImpl"></bean>
 	<bean id="hdbzService" class="nju.software.fyrs.service.impl.HdbzServiceImpl"></bean>
 	<!-- manager -->
 	<bean id="ryjbxxManager" class="nju.software.fyrs.biz.manager.impl.RyjbxxManagerImpl"></bean>
@@ -397,11 +397,7 @@
 	<bean id="xtglDrdcDAO" class="nju.software.fyrs.data.dao.XtglDrdcDAO"></bean>
 	<bean id="hdbzDAO" class="nju.software.fyrs.data.dao.HdbzDAO"></bean>
 
-	<bean id="jgbgDAO" class="nju.software.fyrs.data.dao.JgbgDAO">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
+	<bean id="jgbgDAO" class="nju.software.fyrs.data.dao.JgbgDAO"></bean>
 
 	<bean id="rysxHtDAO" class="nju.software.fyrs.data.dao.RysxHtDAO"></bean>
 	<bean id="yujingDAO" class="nju.software.fyrs.data.dao.YujingDAO"></bean>

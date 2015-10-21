@@ -144,7 +144,7 @@
 			<div class="xzfy_dlg" isOnlyXzFy="1">
 			</div>
 			<div class="footer">
-				<p>版权所有&nbsp;淮安市中级人民法院&nbsp;&nbsp;|&nbsp;&nbsp;技术支持&nbsp;南京铉盈网络科技</p>
+				<p>版权所有&nbsp;某市中级人民法院&nbsp;&nbsp;|&nbsp;&nbsp;技术支持&nbsp;南京铉盈网络科技</p>
 			</div>
 		</div>
 	</div>

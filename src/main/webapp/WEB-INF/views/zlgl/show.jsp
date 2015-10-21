@@ -39,7 +39,17 @@
 		});
 		return result == 0 ? true : false;
 	}
+	function updateMaxIndex(id, value) {
+		$node = $("#" + id + "_list .dataTable");
+		if (value > $node.data("maxindex")) {
+			$node.data("maxindex", value);
+		} else if (value = $node.data("maxindex")) {
+			$node.data("maxindex", value - 1);
+		}
+	}
+	
      $(function(){
+     var operation_html = "<a class='dlg_view' data-btn_type='1'>查看</a><span>|</span>\t<a class='dlg_modify' data-btn_type='2'>修改</a><span>|</span>\t<a class='i_delete'>删除</a>";
          initTable("zlgl_list");
     	// initDataTable();
     	 
@@ -93,15 +103,7 @@
 							}
 						}).dialog("open");
 					} else {
-						if (!checkTime($("#checkDate1").val())) {
-							$("#J_dlg").html('<p>时间格式不正确</p>').dialog({
-								'buttons' : {
-									'确定' : function() {
-										$("#J_dlg").dialog("close");
-									}
-								}
-							}).dialog("open");
-						} else {
+						
 							var type = $(this).data("type");
 							var type_txt = type == 0 ? "添加": "修改";
 							var type_url = type == 0 ? "addzlgl.aj": "savezlgl.aj";
@@ -109,12 +111,12 @@
 								'showKey' : $('#menu_list').data('showkey'),
 								'NFy' : $("#zlgl_table").data("fydm"),
 								'NId' : $("#zlgl_table").data("keyid"),
-								'CXm':$("#zlgl_table").find(".even_td").eq(1).children().children().val(),
-								'DFfsj':$("#zlgl_table").find(".even_td").eq(2).children().val(),
-								'MJbxc':$("#zlgl_table").find(".even_td").eq(3).children().val(),
-								'MFlbt':$("#zlgl_table").find(".even_td").eq(4).children().val(),
-								'NKq':$("#zlgl_table").find(".even_td").eq(5).children().val(),
-								'CBz':$("#zlgl_table").find(".even_td").eq(6).children().val()
+								'CBh':$("#zlgl_table").find(".even_td").eq(0).children().val(),
+								'CPc':$("#zlgl_table").find(".even_td").eq(1).children().val(),
+								'NZpgw':$("#zlgl_table").find(".even_td").eq(2).children().children().val(),
+								'NZprs':$("#zlgl_table").find(".even_td").eq(3).children().val(),
+								'CZpyq':$("#zlgl_table").find(".even_td").eq(4).children().val(),
+								'CZplc':$("#zlgl_table").find(".even_td").eq(5).children().val()
 							};
 							$("#J_dlg").html('<p>是否确定'+ type_txt+ '该数据？</p>').dialog({
 								'buttons' : {
@@ -176,7 +178,7 @@
 							}).dialog("open");
 						}
 					}
-				});
+				);
 			}
 		});
 	}});
@@ -256,7 +258,7 @@
 		
      }); // jquery
      var initTable = function(dataTableId){
-   	  $yjgl_oTable=$("#"+dataTableId+" #dataTable").dataTable({
+   	  $zlgl_oTable=$("#"+dataTableId+" #dataTable").dataTable({
    		   "sPaginationType" : "full_numbers", 
    		   'bFilter' : true,
            'bSort' : false,
@@ -296,19 +298,19 @@
 	    	  data:{fydm:fydm},
 	    	  dataType:"json",
 	    	  success:function(json){
-	    		  var html = '<table id="dataTable" class="cell-border" cellspacing="0" width="100%"><thead><tr class="tableHead"><tr><th width="150px">编号</th><th width="150px">招聘批次</th><th width="80px">招聘岗位</th><th>人数</th><th>招聘要求</th><th>招聘流程</th><th width="100px">操作</th></tr></thead><tbody>';
+	    		  var html = '<table id="dataTable" data-maxindex="'+json.length+'" class="cell-border" cellspacing="0" width="100%"><thead><tr class="tableHead"><tr><th width="150px">序号</th><th width="150px">招录编号</th><th width="150px">招聘批次</th><th width="80px">招聘岗位</th><th>人数</th><th>招聘要求</th><th>招聘流程</th><th width="100px">操作</th></tr></thead><tbody>';
 				  for(var i = 0; i < json.length; i++)
 					  {
 					    var zlgl = json[i];
 					    html += "<tr>";
 					    html += '<td class="center">'+(i+1)+'</td>';
-					    html += '<td class="center">'+yjxx.CBh+'</td>';
-					    html += '<td class="center">'+yjxx.CPc+'</td>';
-					    html += '<td class="center">'+yjxx.NZpgw+'</td>';
-					    html += '<td class="center">'+yjxx.NZprs+'</td>';	
-					    html += '<td class="center">'+yjxx.CZpyq+'</td>';
-					    html += '<td class="center">'+yjxx.CZplc+'</td>';
-					    html += '<td class="center" data-fyDm="'+yjxx.fydm+'" data-keyid="'+gzxx.NId+'"><a class="dlg_modify" data-btn_Type="2" href="javascript:void(0)">修改</a><span>|</span> <a class="i_delete" href="javascript:void(0)">删除</a></td>';
+					    html += '<td class="center">'+zlgl.CBh+'</td>';
+					    html += '<td class="center">'+zlgl.CPc+'</td>';
+					    html += '<td class="center">'+zlgl.NZpgw+'</td>';
+					    html += '<td class="center">'+zlgl.NZprs+'</td>';	
+					    html += '<td class="center">'+zlgl.CZpyq+'</td>';
+					    html += '<td class="center">'+zlgl.CZplc+'</td>';
+					    html += '<td class="center" data-fyDm="'+zlgl.fydm+'" data-keyid="'+zlgl.NId+'"><a class="dlg_modify" data-btn_Type="2" href="javascript:void(0)">修改</a><span>|</span> <a class="i_delete" href="javascript:void(0)">删除</a></td>';
 					    html += "</tr>";											    
 					  }
 				  html += '</tbody></table>';
@@ -343,7 +345,8 @@
 			<thead>
 				<tr>
 				   <th><input type="checkbox"/></th>
-				    <th>编号</th>
+				    <th>序号</th>
+				    <th>招录编号</th>
 					<th>招聘批次</th>
 					<th>招聘岗位</th>
 					<th>人数</th>

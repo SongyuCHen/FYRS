@@ -561,7 +561,7 @@
 				</div>
 			</div>
 			<div class="footer">
-				<span>版权所有&nbsp;淮安市中级人民法院&nbsp;&nbsp;|&nbsp;&nbsp;技术支持
+				<span>版权所有&nbsp;某市中级人民法院&nbsp;&nbsp;|&nbsp;&nbsp;技术支持
 					南京铉盈网络科技有限公司</span>
 			</div>
 		</div>

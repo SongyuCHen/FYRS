@@ -148,7 +148,7 @@ public class LoginController {
 			Date end = DateUtil.addDays(begin, 3);
 			List<YujingVO> yujingVOs = yujingService.getYujingByFyAndDate(fydm, begin, end);
 			for(YujingVO vo:yujingVOs){
-				tipContent.append(vo.getDYjsj()+":"+vo.getCXm()+" "+vo.getCBz()+"\n");
+				tipContent.append(vo.getDYjsj()+":"+vo.getCXm()+" "+vo.getCBz()+"<br>");
 			}
 		}
 		request.getSession().setAttribute("alarm",alarm==true?"yes":"no");

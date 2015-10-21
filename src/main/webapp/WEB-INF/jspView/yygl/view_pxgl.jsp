@@ -124,8 +124,8 @@
 		<td class="odd_td">培训性质：</td>
 		<td class="even_td"><div class="mySelect">
 				<select class="my_select_s">
-					<c:forEach items="${listDmPxzl}" var="listDmPxzl">
-						<option value="${listDmPxzl.NDm}" >${listDmPxzl.CMc}</option>
+					<c:forEach items="${listDmPxxz}" var="listDmPxxz">
+						<option value="${listDmPxxz.NDm}" >${listDmPxxz.CMc}</option>
 					</c:forEach>
 				</select> <input type="text" class="my_input_s" value="${pxgl.NXz}" />
 			</div></td>

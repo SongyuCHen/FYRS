@@ -151,15 +151,16 @@
 																if (type == 2) {
 																	$current_node = $("#pxgl_list .dataTable tbody .active");
 																	$current_node.find("td:nth-child(2)").text(json.CPxjg);
-																	$current_node.find("td:nth-child(3)").text(json.DJsrq);																	
+																	$current_node.find("td:nth-child(3)").text(json.DKsrq);																	
 																	$current_node.find("td:nth-child(4)").text(json.DJsrq);
-																	$current_node.find("td:nth-child(5)").text(json.CPxdx);
-																	$current_node.find("td:nth-child(6)").text(json.NPxzl);
-																	$current_node.find("td:nth-child(7)").text(json.MPxys);
+																	$current_node.find("td:nth-child(5)").text(json.CPxbmc);																	
+																	$current_node.find("td:nth-child(6)").text(json.CPxdx);
+																	$current_node.find("td:nth-child(7)").text(json.NPxzl);
+																	$current_node.find("td:nth-child(8)").text(json.MPxys);
 																} else {
 																	var index = $("#pxgl_list .dataTable").data("maxindex") + 1;
 																	updateMaxIndex("pxgl",index);
-																	$pxgl_oTable.fnAddData([index,json.CXm,json.NZj,json.MJbxc,json.MFlbt,json.NKq,json.DFfsj,json.MXj,operation_html]);
+																	$pxgl_oTable.fnAddData([index,json.CPxjg,json.DKsrq,json.DJsrq,json.CPxbmc,json.CPxdx,json.NPxzl,json.MPxys,operation_html]);
 																	$new_row = $($pxgl_oTable.fnGetNodes($("#pxgl_list .dataTable tbody tr").size() - 1));// 获得刚才新添加的列
 																	$new_row.find("td").addClass("center");
 																	$new_row.find("td:last").data('keyid',json.NId);
@@ -318,8 +319,9 @@
 					    html += "<tr>";
 					    html += '<td class="center">'+(i+1)+'</td>';
 					    html += '<td class="center">'+pxxx.CPxjg+'</td>';
+					    html += '<td class="center">'+pxxx.DKsrq+'</td>';
 					    html += '<td class="center">'+pxxx.DJsrq+'</td>';
-					    html += '<td class="center">'+pxxx.DJsrq+'</td>';
+					    html += '<td class="center">'+pxxx.CPxbmc+'</td>';
 					    html += '<td class="center">'+pxxx.CPxdx+'</td>';	
 					    html += '<td class="center">'+pxxx.NPxzl+'</td>';
 					    html += '<td class="center">'+pxxx.MPxys+'</td>';
